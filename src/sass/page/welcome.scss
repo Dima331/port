@@ -1,0 +1,88 @@
+.forest {
+    height: 100vh;
+    background-image: url("/assets/images/content/forest.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyrigh {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    color: #fff;
+}
+
+.authorization {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+}
+
+.authorization__link {
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 30px;
+    color: #fff;
+    //font-family: "Roboto";
+    &:hover {
+        border-color: $green_low;
+        background-color: $green_middle;
+    }
+}
+
+.welcome {
+    width: 380px;
+    height: 395px;
+    border-radius: 5px;
+    background-color: rgba($dark, 0.6);
+    position: relative;
+}
+
+.welcome__img {
+    width: 140px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-image: url("/assets/images/content/face.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcome__text {
+    color: #fff;
+}
+
+.welcome__content {
+    padding: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+.nav{
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+}
+.menu__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.menu__item-link{
+    padding: 15px 30px;
+    background-color: $green_low;
+    
+}
+.menu__item{
+    height: 100%;
+    border-left: 2px solid rgb(222, 227, 231);
+}

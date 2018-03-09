@@ -1,0 +1,32 @@
+extends ../template
+
+block variables
+    - var title = 'Добро пожаловать'
+
+block content
+    .forest
+      .authorization
+        a.authorization__link(href='#') Авторизоваться
+      .welcome
+        .welcome__content
+          .welcome__img
+          .welcome__text
+            h2 Владимир Астахов
+            h3 Личный сайт веб разработчика
+          ul.social
+            li.social__item
+              a.social__item-link(href='#')  
+            li.social__item
+              a.social__item-link(href='#')
+            li.social__item
+              a.social__item-link(href='#')
+        nav.nav
+          ul.menu__list
+            li.menu__item
+              a.menu__item-link(href='#') Мои работы
+            li.menu__item
+              a.menu__item-link(href='#') Обо мне
+            li.menu__item
+              a.menu__item-link(href='#') Блог
+      .copyrigh
+        .copyrigh__text   © Владимир Астахов | создано с любовью в LoftSchool | 2016
