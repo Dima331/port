@@ -64,6 +64,7 @@ function svgo() {
                 pretty: true
             }
         }))
+        //не работает
         /*.pipe(cheerio({
             run: function ($) {
                 $('[fill]').removeAttr('fill');

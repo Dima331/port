@@ -10,6 +10,7 @@ const config = {
             sourceMap: true
         })
     ]
+    //не работает
    /* ,
     module: {
         rules: [
