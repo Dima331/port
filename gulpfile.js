@@ -13,24 +13,23 @@ const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
-const svgSprite = require('gulp-svg-sprite');
-const svgmin = require('gulp-svgmin');
-const cheerio = require('gulp-cheerio');
-const replace = require('gulp-replace');
-
-
 const cache = require('gulp-cache');           // Подключаем библиотеку кеширования
 const imagemin = require('gulp-imagemin');     // Подключаем библиотеку для работы с изображениями
 const pngquant = require('imagemin-pngquant'); // Подключаем библиотеку для работы с png
 
-
-
-
-
-// В конце
 const cssnano = require('gulp-cssnano');           // сжатие, удаление map в конце.
 const autoprefixer = require('gulp-autoprefixer'); // autoprefixer.
-var uncss = require('gulp-uncss');                 // удаление неиспользованные стили
+const uncss = require('gulp-uncss');                 // удаление неиспользованные стили
+
+const Stylelint = require('gulp-stylelint');
+const sassGlob = require('gulp-sass-glob');
+const plumber = require('gulp-plumber');
+const eslint = require('gulp-eslint');
+
+const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
 
 const paths = {
     root: './build',
@@ -57,23 +56,22 @@ const paths = {
     }
 
 }
-
-function svg()  {
+// создание спайта svg
+function svgo() {
     return gulp.src('src/i/*.svg')
-        // minify svg
         .pipe(svgmin({
             js2svg: {
                 pretty: true
             }
         }))
-        .pipe(cheerio({
+        /*.pipe(cheerio({
             run: function ($) {
                 $('[fill]').removeAttr('fill');
                 $('[stroke]').removeAttr('stroke');
                 $('[style]').removeAttr('style');
             },
             parserOptions: { xmlMode: true }
-        }))
+        }))*/
         .pipe(replace('&gt;', '>'))
         .pipe(svgSprite({
             mode: {
@@ -88,14 +86,22 @@ function svg()  {
 // scss
 function styles() {
     return gulp.src('./src/sass/app.scss')
+        .pipe(plumber())
+        .pipe(Stylelint({
+            reporters: [
+                { formatter: 'string', console: true }
+            ]
+        }))
+        .pipe(sassGlob())
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(cssnano())
+        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(uncss({
+            html: ['build/**/*.html']
+        }))
         .pipe(sourcemaps.write())
-        //.pipe(cssnano())   
-        //.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        //.pipe(uncss({
-        //    html: ['build/**/*.html']
-        //}))
+
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(paths.styles.dest));
 }
@@ -106,6 +112,7 @@ function templates() {
         .pipe(pug({ pretty: true }))
         .pipe(gulp.dest(paths.root));
 }
+
 // очистка
 function clean() {
     return del(paths.root);
@@ -114,6 +121,8 @@ function clean() {
 // webpack
 function scripts() {
     return gulp.src('src/js/app.js')
+        .pipe(plumber())
+        .pipe(eslint())
         .pipe(gulpWebpack(webpackConfig, webpack))
         .pipe(gulp.dest(paths.scripts.dest));
 }
@@ -137,12 +146,12 @@ function server() {
 // сжатие картинок
 function images() {
     return gulp.src(paths.images.src)
-      //  .pipe(cache(imagemin({
-      //      interlaced: true,
-      //      progressive: true,
-      //      svgoPlugins: [{ removeViewBox: true }],
-      //      use: [pngquant()]
-      //  })))
+        //  .pipe(cache(imagemin({
+        //      interlaced: true,
+        //      progressive: true,
+        //      svgoPlugins: [{ removeViewBox: true }],
+        //      use: [pngquant()]
+        //  })))
         .pipe(gulp.dest(paths.images.dest))
 }
 
@@ -156,7 +165,7 @@ exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
 exports.fonts = fonts;
-exports.svg = svg;
+exports.svgo = svgo;
 
 gulp.task('default', gulp.series(
     clean,

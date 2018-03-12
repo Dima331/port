@@ -5,28 +5,34 @@ block variables
 
 block content
     .forest
-      .authorization
-        a.authorization__link(href='#') Авторизоваться
       .welcome
         .welcome__content
-          .welcome__img
-          .welcome__text
-            h2 Владимир Астахов
-            h3 Личный сайт веб разработчика
-          ul.social
-            li.social__item
-              a.social__item-link(href='#')  
-            li.social__item
-              a.social__item-link(href='#')
-            li.social__item
-              a.social__item-link(href='#')
+          .welcome__login.login
+            .login__title Авторизуйтесь
+            .login__border
+            form.login__form(action="#")
+              .form__row
+                label(for="1")
+                input(type="text", name="login" value="Логин")
+              .form__row  
+                label(for="2")
+                input(type="password", name="password" value="Пароль")
+              .form__row   
+                input(type="checkbox", name="checkbox" value="Я человек" id="3")
+                label(for="3") Я человек
+              .form__row  
+                .login__text Вы точно не робот?
+              .form__row
+                input(type="radio", name="radio" value="Да")
+                label(for="4") Да
+                input(type="radio", name="radio" value="Не уверен")
+                label(for="5") Не уверен
+                
         nav.nav
           ul.menu__list
             li.menu__item
-              a.menu__item-link(href='#') Мои работы
+              a.menu__item-link(href='#') На главную
             li.menu__item
-              a.menu__item-link(href='#') Обо мне
-            li.menu__item
-              a.menu__item-link(href='#') Блог
+              a.menu__item-link(href='#') Войти
       .copyrigh
         .copyrigh__text   © Владимир Астахов | создано с любовью в LoftSchool | 2016

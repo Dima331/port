@@ -1,0 +1,19 @@
+.social__item-vk{
+    width: 30px;
+    height: 22px;
+}
+.social__item-git{
+    width: 30px;
+    height: 22px;
+}
+.social__item-in{
+    width: 30px;
+    height: 22px;
+}
+.social__item-svg{
+    fill: aliceblue;
+    opacity: 0.7;
+    &:hover{
+        fill: $green_low;
+    }
+}
