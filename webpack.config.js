@@ -11,7 +11,7 @@ const config = {
         })
     ]
     //не работает
-   /* ,
+    ,
     module: {
         rules: [
             {
@@ -20,12 +20,12 @@ const config = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                      presets: ['@babel/preset-env']
+                      presets: ['env']
                     }
                 }
             }
         ]
-    }*/
+    }
 };
 
 module.exports = config;
