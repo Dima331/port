@@ -9,9 +9,7 @@ const config = {
         new UglifyJSPlugin({
             sourceMap: true
         })
-    ]
-    //не работает
-    ,
+    ],
     module: {
         rules: [
             {
