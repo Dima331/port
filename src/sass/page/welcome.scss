@@ -1,6 +1,6 @@
 .forest {
     height: 100vh;
-    background-image: url("assets/images/content/forest.jpg");
+    background-image: url("/assets/images/content/forest.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -8,27 +8,30 @@
     justify-content: center;
     align-items: center;
 }
+
 .copyrigh {
     position: absolute;
     bottom: 5%;
     color: #fff;
 }
-.welcome__tilte{
+
+.welcome__tilte {
     font-weight: 500;
     margin-top: 10px;
     margin-bottom: 5px;
     font-size: 28px;
 }
-.welcome__text{
+
+.welcome__text {
     margin-bottom: 29px;
 }
-  
-.welcome__about{
+
+.welcome__about {
     font-weight: 400;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
 }
-  
+
 .authorization {
     position: absolute;
     top: 5%;
@@ -42,8 +45,7 @@
     padding: 15px 30px;
     display: inline-block;
     border-radius: 30px;
-    color: #fff;
-    //font-family: "Roboto";
+    color: #fff; //font-family: "Roboto";
     &:hover {
         border-color: $green_low;
         background-color: $green_middle;
@@ -53,11 +55,10 @@
 .welcome {
     width: 380px;
     border-radius: 5px;
-    background-color: rgba($dark, 0.6);
+    background-color: rgba(18, 38, 32, 0.6);
     display: flex;
     flex-direction: column;
 }
-
 
 .welcome__img {
     width: 140px;
@@ -78,144 +79,180 @@
     padding: 40px 20px;
     text-align: center;
 }
-.social{
-    display:flex;
+
+.social {
+    display: flex;
     justify-content: space-evenly;
 }
-.social__item-link{
+
+.social__item-link {
     display: inline-block;
 }
 
-.social__item:last-child{
+.social__item:last-child {
     margin-left: 0px;
 }
-.menu__list{
+
+.menu__list {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 45px;
 }
-.nav{
+
+.nav {
     flex: 1;
-}/*
-.menu__item-link{
-    padding: 15px 30px;
-    background-color: $green_low;
-    
-}*/
-.menu__item-link{
+}
+
+.menu__item-link {
     background-color: $green_low;
     width: 100%;
     line-height: 2.7;
     text-align: center;
-    &:hover{
+    &:hover {
         background-color: $green_middle;
-    }   
+    }
 }
-.menu__item{
+
+.menu__item {
     height: 100%;
     border-left: 2px solid rgb(222, 227, 231);
     display: flex;
     justify-content: center;
     flex: 1;
 }
-.menu__item:first-child{
+
+.menu__item:first-child {
     border-left: 0px solid rgb(222, 227, 231);
 }
 
 
 /*------------------ логин-------------------------*/
 
-.login__title{
-        font-size: 35px;
-        color: rgb(255, 255, 255);
-        text-transform: uppercase; 
-        font-family: 'Sansus';
+.login__title {
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-family: 'Sansus';
 }
 
-.login__border{
+.login__border {
     background-color: rgb(255, 255, 255);
     width: 90px;
     height: 3px;
     margin: 30px auto;
-  }
-.login__form{
+}
+
+.login__form {
     display: flex;
     flex-direction: column;
-
 }
-input[type="text"], input[type="password"]{
+
+input[type="text"],
+input[type="password"] {
     background-color: rgb(255, 255, 255);
     border-radius: 30px;
-    height: 45px;
+    padding: 15px 5px 15px 65px;
+    font-size: 16px;
+    font-weight: 600;
     border: 0;
     width: 100%;
-  }
-  input[type="text"]:focus, input[type="password"]:focus{
+    position: relative;
+}
+
+input[type="text"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder {
+    color: rgba(55, 62, 66, 0.5);
+
+}
+
+.form__row {
+    position: relative;
+    color:rgba(#fff ,0.8);
+}
+
+.form__row-icon {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    height: 100%;
+    border-radius: 30px 0 0 30px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    background-color: #f0efe9;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
     outline: none;
 }
 
-input[type="checkbox"]{
-    @extend .visually-hidden;
+input[type="checkbox"] {
+   display: none;
 }
-input[type="radio"]{
-    @extend .visually-hidden;
+
+input[type="radio"] { 
+    display: none;
 }
-input[type="radio"]+label:before {
-    content: "";
-    display: inline-block;
-    width: rem(15px);
-    height: rem(15px);
-    margin-right: rem(7px);
-    background-clip: content-box;
+
+.form__row {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.form__toggle-input:checked + .form__toggle-fake .form__toggle-fake_flag {
+    opacity: 1;
+   // fill: rgb(255, 255, 255);
+}
+.form__toggle-fake_dot {
+    width: 8px;
+    height: 8px;
+    background-color: $green_low;
+    border-radius: 50%;
+}
+.form__row-last{
+    margin: 0;
+}
+
+.form__row-torggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+.form__toggle-fake {
+    width: rem(20px);
+    height: rem(20px);
     background-color: #fff;
+    border-radius: 2px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__toggle-input:checked + .form__toggle-fake{
+    background-color: $green_low;
+    box-shadow: 0 0 rem(15px) rgb(124, 247, 171);
+    transition: background-color 300ms;
+    transition:  box-shadow 300ms;
+}
+.form__toggle-input:checked + .form__toggle-fake .form__toggle-fake_flag {
+    opacity: 1;
+    fill: rgb(255, 255, 255);
+}
+.form__toggle-fake_flag {
+    opacity: 0;
+    transition: opacity 300ms;
+    fill: #fff;
+}
+.form__row-title{
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+.form__toggle-fake_radio {
     border-radius: 50%;
 }
 
-input[type="radio"]:checked + label:before {
-   background-color: #e35028;
-   border: rem(4px) solid #FFF;
-}
-input[type="radio"]:focus + label:before {
-    box-shadow: 0 0 rem(15px) rgb(249, 180, 59);
-}
 
-
-input[type="checkbox"]+label:before {
-    content: "";
-    display: inline-block;
-    width: rem(15px);
-    height: rem(15px);
-    background-color: #fff;
-    margin-right: rem(7px);
-
-}
-input[type="checkbox"]:checked + label:before {
-    content: "\2714";
-    text-align: center;
-    line-height: 1.2;
-    color:#e35028;
-    font-weight: 900;
-    background-clip: content-box;
-    background: #ffffff; 
-}
-input[type="checkbox"]:focus + label:before{
-    box-shadow: 0 0 rem(30px) rgb(249, 180, 59);
-}
-.order-link-reset{
-    margin-left: rem(20px);
-    color: #fff;
-    font-weight: 500;
-    font-size: 0.8125rem;
-    vertical-align: middle;
-    text-transform: none;
-    text-transform: uppercase;
-}
-.form__row{
-    margin-bottom: 20px;
-}
-/*
-<div class="form__row checkbox">
-    <input type="checkbox" name="checkbox" id="checkbox-1">
-    <label for="checkbox-1" class="checkbox__label">Оплата по карте</label>
-</div>*/

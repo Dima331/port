@@ -1,2 +1,2 @@
 const ddsfn = "dsfsdf";
-alert(ddsfn);
+//alert(ddsfn);
