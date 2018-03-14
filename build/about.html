@@ -9,7 +9,60 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/styles/app.min.css">
     <script src="assets/scripts/bundle.js" defer></script>
+  <style>
+    body {
+  margin: 0;
+  
+}
+
+.box {
+  margin: 50px auto;
+  background-color: crimson;
+}
+
+svg {
+  display: block;
+}
+
+.traingle .left{
+  fill: #4CAF50;
+}
+.traingle .right{
+  fill: #ccc;
+}
+    </style>
   </head>
   <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__social"></div>
+        <div class="header__hamburger"></div>
+        <div class="header__svg"></div>
+        <div class="header__content">
+          <div class="header__content-img"></div>
+          <div class="header__content-title"></div>
+          <div class="header__content-about"></div>
+        </div>
+        <div class="header__triangles">
+          <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+            <polygon class="left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+            <polygon class="right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+          </svg>
+          <!--svg.header__triangles-leftuse(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_bg_left") 
+          -->
+          <!--svg.header__triangles-rightuse(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_bg_right")            
+          -->
+
+        </div>
+
+        <div class="box">
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
+    <polygon class = "left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+    <polygon class = "right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+  </svg>
+</div>
+        <div class="header__arrow"></div>
+      </header>
+    </div>
   </body>
 </html>

@@ -4,4 +4,23 @@ block variables
     - var title = 'Обо мне'
 
 block content
-    
+    .wrapper
+        header.header
+            .header__social
+
+            .header__hamburger
+            .header__svg
+            .header__content
+                .header__content-img
+                .header__content-title
+                .header__content-about
+            .header__triangles
+                svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle
+                    polygon(points="0,0   0,86   500.8,86   500.8,75.5").left
+                    polygon(points="1000,0   1000,86   500,86   500,75.5").right
+                //svg.header__triangles-left
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_bg_left") 
+                //svg.header__triangles-right
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_bg_right")            
+            .header__arrow
+            

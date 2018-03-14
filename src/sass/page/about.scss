@@ -1,0 +1,40 @@
+.header{
+    height: 100vh;
+    background-image: url("/assets/images/content/forest.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*
+.header__triangles{
+    display: flex;
+    width: 100%;
+}
+.header__triangles-right{
+    width: 50%;
+}
+svg {
+    display: block;
+}
+.header__triangles-left{
+    width: 50%;
+}*/
+
+.header__triangles {
+    margin: 50px auto;
+    background-color: crimson;
+  }
+  
+  svg {
+    display: block;
+  }
+  
+.traingle .left{
+fill: #4CAF50;
+}
+.traingle .right{
+fill: #ccc;
+}
