@@ -201,10 +201,7 @@ input[type="radio"] {
     display: flex;
     justify-content: space-evenly;
 }
-.form__toggle-input:checked + .form__toggle-fake .form__toggle-fake_flag {
-    opacity: 1;
-   // fill: rgb(255, 255, 255);
-}
+
 .form__toggle-fake_dot {
     width: 8px;
     height: 8px;
@@ -234,9 +231,9 @@ input[type="radio"] {
 
 .form__toggle-input:checked + .form__toggle-fake{
     background-color: $green_low;
-    box-shadow: 0 0 rem(15px) rgb(124, 247, 171);
+    //box-shadow: 0 0 rem(15px) rgb(124, 247, 171);
     transition: background-color 300ms;
-    transition:  box-shadow 300ms;
+    //transition:  box-shadow 300ms;
 }
 .form__toggle-input:checked + .form__toggle-fake .form__toggle-fake_flag {
     opacity: 1;
@@ -253,6 +250,10 @@ input[type="radio"] {
 }
 .form__toggle-fake_radio {
     border-radius: 50%;
+}
+.form__toggle-input:checked + .form__toggle-fake_radio {
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 
