@@ -17,6 +17,12 @@
         fill: $green_low;
     }
 }
+.social__item-svg-header{
+    fill: aliceblue;
+    &:hover{
+        fill: $green_low;
+    }
+}
 .form__row-login{
     width: 15px;
     height: 17px;
@@ -32,4 +38,20 @@
     width: 12px;
     height: 9px;
     stroke: #fff;
+}
+.arrow-down-svg{
+    width: 26px;
+    height: 16px;
+    fill: #fff;
+
+
+}
+.about__left-about{
+    fill: #e2ebd0;    
+}
+.contacts-row__icon{
+    width: 25px;
+    height: 25px;
+    fill: $green_low;
+    margin-right: 20px;
 }

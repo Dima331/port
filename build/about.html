@@ -9,60 +9,228 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/styles/app.min.css">
     <script src="assets/scripts/bundle.js" defer></script>
-  <style>
-    body {
-  margin: 0;
-  
-}
-
-.box {
-  margin: 50px auto;
-  background-color: crimson;
-}
-
-svg {
-  display: block;
-}
-
-.traingle .left{
-  fill: #4CAF50;
-}
-.traingle .right{
-  fill: #ccc;
-}
-    </style>
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <div class="header__social"></div>
-        <div class="header__hamburger"></div>
-        <div class="header__svg"></div>
-        <div class="header__content">
-          <div class="header__content-img"></div>
-          <div class="header__content-title"></div>
-          <div class="header__content-about"></div>
+    <header class="header">
+      <div class="header__social">
+        <ul class="social">
+          <li class="social__item social__item-header"><a class="social__item-link" href="#">
+              <svg class="social__item-vk social__item-svg-header">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
+              </svg></a></li>
+          <li class="social__item social__item-header"><a class="social__item-link" href="#">
+              <svg class="social__item-git social__item-svg-header">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
+              </svg></a></li>
+          <li class="social__item social__item-header"><a class="social__item-link" href="#">
+              <svg class="social__item-in social__item-svg-header">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
+              </svg></a></li>
+        </ul>
+      </div>
+      <div class="header__hamburger hamburger"><a class="hamburger__link" href="#">
+          <svg class="hamburger__link-svg">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#hamburger"> </use>
+          </svg></a></div>
+      <div class="header__svg">
+        <svg class="header__svg-title">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#portfolio_header"></use>
+        </svg>
+      </div>
+      <div class="header__content">
+        <!--.section-titleimg(src="", alt="").section-title__pic
+        -->
+        <div class="header__user user">
+          <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="W"></div>
+          <div class="user__description">
+            <div class="user__description-name">Владимир Астахов</div>
+            <div class="user__description-info">Личный сайт разработчика</div>
+          </div>
         </div>
-        <div class="header__triangles">
-          <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
-            <polygon class="left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
-            <polygon class="right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+      </div>
+      <div class="header__arrow arrow-down">
+        <svg class="arrow-down-svg">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
+        </svg>
+      </div>
+    </header>
+    <section class="section about">
+      <div class="about__left">
+        <div class="triangle tringle_fill_white about__left-triangle"></div>
+        <div class="about__left-title">
+          <div class="block-title">Обо мне</div>
+        </div>
+        <div class="about__left-svg">
+          <svg class="about__left-about">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_header"></use>
           </svg>
-          <!--svg.header__triangles-leftuse(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_bg_left") 
-          -->
-          <!--svg.header__triangles-rightuse(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_bg_right")            
-          -->
-
         </div>
-
-        <div class="box">
-  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
-    <polygon class = "left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
-    <polygon class = "right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
-  </svg>
-</div>
-        <div class="header__arrow"></div>
-      </header>
-    </div>
+        <div class="about__left-content">
+          <div class="user-description">
+            <div class="user-description__image"><img class="user-description__avatar" src="assets/images/content/face.jpg" alt="W"></div>
+          </div>
+          <div class="user-description__title">
+            <div class="block-subtitle">Кто я</div>
+          </div>
+          <div class="user-description__text text-content">
+            <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
+            <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!      </p>
+          </div>
+        </div>
+      </div>
+      <div class="about__right">
+        <div class="triangle tringle_fill_beige about__right-triangle"></div>
+        <div class="about__right-title">
+          <div class="block-subtitle">Чем я могу быть вам полезен</div>
+        </div>
+        <div class="about__right-text text-content">
+          <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
+        </div>
+        <div class="about__right-content">
+          <ul class="skills-list">
+            <li class="skills-list__item">
+              <div class="skills-row">
+                <div class="skills-row__title">Frontend
+                  <ul class="skills-row__list">
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <div class="skill__circle"></div>
+                        <div class="skill__title">Html5</div>
+                      </div>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <div class="skill__circle"></div>
+                        <div class="skill__title">css3</div>
+                      </div>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <div class="skill__circle"></div>
+                        <div class="skill__title">JavaScript</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="skills-list__item">
+              <div class="skills-row">
+                <div class="skills-row__title">Backend
+                  <ul class="skills-row__list">
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <div class="skill__circle"></div>
+                        <div class="skill__title">Html5</div>
+                      </div>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <div class="skill__circle"></div>
+                        <div class="skill__title">css3</div>
+                      </div>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <div class="skill__circle"></div>
+                        <div class="skill__title">JavaScript</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="skills-list__item">
+              <div class="skills-row">
+                <div class="skills-row__title">Workflow
+                  <ul class="skills-row__list">
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <div class="skill__circle"></div>
+                        <div class="skill__title">Html5</div>
+                      </div>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <div class="skill__circle"></div>
+                        <div class="skill__title">css3</div>
+                      </div>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <div class="skill__circle"></div>
+                        <div class="skill__title">JavaScript</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section map">
+      <div class="google-map"></div>
+      <div class="map__contacts">
+        <div class="contacts"></div>
+        <div class="contacts__title">
+          <div class="block-subtitle">Контакты</div>
+        </div>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <div class="contacts-row">
+              <svg class="contacts-row__icon">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#skype"></use>
+              </svg>
+              <div class="contacts-row__content">skype_kdn</div>
+            </div>
+          </li>
+          <li class="contacts__item">   
+            <div class="contacts-row">
+              <svg class="contacts-row__icon">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#envelope2"></use>
+              </svg>
+              <div class="contacts-row__content">astahov@gmail.com</div>
+            </div>
+          </li>
+          <li class="contacts__item">
+            <div class="contacts-row">
+              <svg class="contacts-row__icon">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#phone"></use>
+              </svg>
+              <div class="contacts-row__content">+79211 123 23 23</div>
+            </div>
+          </li>
+          <li class="contacts__item">
+            <div class="contacts-row">
+              <svg class="contacts-row__icon">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#map_marker"></use>
+              </svg>
+              <div class="contacts-row__content">Новосибирск</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <footer class="map__footer footer">
+        <div class="footer__row">
+          <div class="footer__row-up">
+            <div class="footer__col footer__col-left"></div>
+            <nav class="menu"></nav>
+            <div class="footer__col footer__col-right"></div>
+            <ul class="socials socials_rounded">
+              <li class="socials__item"></li><a class="socials__item socials__item_vk" href=""></a>
+              <li class="socials__item"></li><a class="socials__item socials__item_fb" href=""></a>
+              <li class="socials__item"></li><a class="socials__item socials__item_in" href=""></a>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="footer__row-down">
+            <p> © Владимир Астахов | создано с любовью в LoftSchool | 2016  </p>
+          </div>
+        </div>
+      </footer>
+    </section>
   </body>
 </html>
