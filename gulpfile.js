@@ -171,7 +171,13 @@ exports.fonts = fonts;
 exports.svgo = svgo;
 
 gulp.task('default', gulp.series(
-    clean,
-    gulp.parallel(styles, templates, fonts, images, scripts),
+    //clean,
+    gulp.parallel(
+        styles, 
+        templates 
+        //fonts, 
+        //images, 
+        //scripts
+    ),
     gulp.parallel(watch, server)
 ));

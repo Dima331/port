@@ -38,9 +38,15 @@ block content
         .header__arrow.arrow-down
             svg.arrow-down-svg
                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
+        .triangle.tringle_fill_white.about__left-triangle
+                    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle
+                        polygon(points="0,0   0,86   500.8,86   500.8,75.5").left
+        .triangle.tringle_fill_beige.about__right-triangle
+            svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle
+                        polygon(points="1000,0   1000,86   500,86   500,75.5").right
     section.section.about
         .about__left
-            .triangle.tringle_fill_white.about__left-triangle
+            
             .about__left-title
                 .block-title Обо мне
             .about__left-svg
@@ -57,7 +63,6 @@ block content
                     p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                     p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!      
         .about__right
-            .triangle.tringle_fill_beige.about__right-triangle
             .about__right-title
                 .block-subtitle Чем я могу быть вам полезен
             .about__right-text.text-content
@@ -69,11 +74,21 @@ block content
                             .skills-row
                                 .skills-row__title #{item}
                                     ul.skills-row__list
-                                        each skill in ['Html5', 'css3', 'JavaScript']
-                                            li.skills-row__item
-                                                .skill
-                                                    .skill__circle
-                                                    .skill__title #{skill}
+                                        li.skills-row__item
+                                            svg(viewBox="0 0 110 110").circles
+                                                circle(r="45" cx="50%" cy="50%" fill="none").circle__first
+                                                circle(r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)").circle__second.circle-25    
+                                            span.item__title HTML &amp; CSS
+                                        li.skills-row__item
+                                            svg(viewBox="0 0 110 110").circles
+                                                circle(r="45" cx="50%" cy="50%" fill="none").circle__first
+                                                circle(r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)").circle__second.circle-25    
+                                            span.item__title HTML javaScript
+                                        li.skills-row__item
+                                            svg(viewBox="0 0 110 110").circles
+                                                circle(r="45" cx="50%" cy="50%" fill="none").circle__first
+                                                circle(r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)").circle__second.circle-25    
+                                            span.item__title Node.js
     section.section.map
         .google-map
         .map__contacts
@@ -106,13 +121,38 @@ block content
         footer.map__footer.footer
             .footer__row
                 .footer__row-up
-                    .footer__col.footer__col-left
-                    nav.menu
-                    .footer__col.footer__col-right
-                    ul.socials.socials_rounded
-                        each item in ['vk', 'fb', 'in']
-                            li.socials__item
-                            a(href="" class=`socials__item socials__item_${item}`)
+                    ul.footer__menu
+                        li.footer__item
+                            .footer__item-school
+                                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+                        li.footer__item
+                            ul.nav.footer__nav
+                                li.nav__item
+                                    a(href='#') Мои работы
+                                li.nav__item
+                                    a(href='#') обо мне
+                                li.nav__item
+                                    a(href='#') Блог
+                                li.nav__item
+                                    a(href='#') Авторизация  
+                            ul.socials.footer__socials
+                                li.social__item.social__item-header
+                                    a.social__item-link(href='#')
+                                        svg.social__item-vk.social__item-svg-header
+                                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk") 
+                                li.social__item.social__item-header
+                                    a.social__item-link(href='#')
+                                        svg.social__item-git.social__item-svg-header
+                                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github") 
+                                li.social__item.social__item-header
+                                    a.social__item-link(href='#')
+                                        svg.social__item-in.social__item-svg-header
+                                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in") 
+                        li.footer__item
+                            .footer__item-quote
+                                p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                                p — Martin Golding
+
             .footer__row
                 .footer__row-down
                     p  © Владимир Астахов | создано с любовью в LoftSchool | 2016  
