@@ -90,19 +90,19 @@ function svgo() {
 function styles() {
     return gulp.src('./src/sass/app.scss')
         .pipe(plumber())
-        .pipe(Stylelint({
-            reporters: [
-                { formatter: 'string', console: true }
-            ]
-        }))
+        //.pipe(Stylelint({
+        //    reporters: [
+        //        { formatter: 'string', console: true }
+        //    ]
+        //}))
         .pipe(sassGlob())
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(cssnano())
-        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(uncss({
-            html: ['build/**/*.html']
-        }))
+        //.pipe(cssnano())
+        //.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        //.pipe(uncss({
+        //    html: ['build/**/*.html']
+        //}))
         .pipe(sourcemaps.write())
 
         .pipe(rename({ suffix: '.min' }))

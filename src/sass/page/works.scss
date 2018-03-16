@@ -1,0 +1,111 @@
+.myworks__slider{
+    height: 750px;
+    width: 1180px;  
+    margin: 0 auto;
+    background-color: rgb(197, 207, 218);
+}
+.slider__item{
+    display: flex;
+}
+.slider__item-left{
+    flex: 1;
+
+}
+.slider__item-right{
+    flex: 1;
+}
+.slider__item-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info__slider{
+    width: 340px;
+}
+.block-subtitle-slider{
+    text-align: left;
+    padding: 0;
+    padding-bottom: 20px;
+}
+.info__slider-info{
+    margin: 30px 0 40px 0;
+}
+.info__slider-info{
+    color: $green_low;
+}
+.info__slider-btn{
+    @extend .authorization__link;
+    background-color: $green_low;
+    border: none;
+    padding: 0;
+}
+.info__slider-btn-link{
+    display: flex;
+    padding: 15px 25px;
+}
+.about-me{
+    position: relative;
+    background-color: rgba(181, 209, 158, 0.829);
+    background-image: url("/assets/images/content/bg-work.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 300px;
+}
+.about-me__content{
+    width: 780px;
+    margin: 0 auto;
+}
+.reviews{
+    display: flex;
+    justify-content: space-between;
+}
+.reviews__item-pic {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+}
+.reviews__item-img{
+    border-radius: 50%;
+}
+.block-title-about-me{
+    width: 50%;
+    margin: 30px auto;
+
+}
+.reviews__item{
+    width: 48%;
+}
+.reviews__item-description{
+    margin-top: 20px;
+    @extend .text-content;
+}
+.reviews__item-description-who{
+    margin-top: 20px;
+    text-align: center;
+}
+.reviews__item-description-name{
+    color: $green_low;
+    font-weight: 900;
+}
+.about-me__relations{
+    width: 380px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: rgba(218, 219, 214,.6);
+    margin-top: 60px;
+}
+.about-me__arrow{
+    display: flex;
+    justify-content: center;
+    margin-top: 115px;
+    transform: rotate(180deg);
+}
+textarea {
+    resize: none;
+    height: 110px;
+}
+.reviews__item-description-text::before{
+    content: "❝";
+    font-size: 40px;
+}

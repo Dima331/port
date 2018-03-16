@@ -149,7 +149,7 @@
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"], textarea {
     background-color: rgb(255, 255, 255);
     border-radius: 30px;
     padding: 15px 5px 15px 65px;
@@ -159,7 +159,7 @@ input[type="password"] {
     width: 100%;
     position: relative;
 }
-
+textarea::-webkit-input-placeholder,
 input[type="text"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder {
     color: rgba(55, 62, 66, 0.5);
@@ -182,7 +182,7 @@ input[type="password"]::-webkit-input-placeholder {
     align-items: center;
     background-color: #f0efe9;
 }
-
+textarea,
 input[type="text"]:focus,
 input[type="password"]:focus {
     outline: none;
@@ -195,7 +195,9 @@ input[type="checkbox"] {
 input[type="radio"] { 
     display: none;
 }
-
+textarea{
+    height: 140px;
+}
 .form__row {
     margin-bottom: 20px;
     display: flex;
