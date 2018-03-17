@@ -18,6 +18,7 @@
   padding-bottom: 20px;
   position: relative;
   z-index: 2;
+  line-height: 0.8;
 }
 
 .block-title::after{
@@ -41,9 +42,28 @@
 .block-subtitle{
   @extend .block-title;
   font-size: 35px;
-  width: 100%;
+  width: 100%; 
+  line-height: 1;
   color: rgb(86, 99, 88);
 }
 .block-subtitle-white{
   color: #fff;
+}
+.block-subtitle-width{
+  width: 50%;
+  margin: 0 auto;
+
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.main{
+  flex: 1 0 auto;
+}
+.footer{
+  flex: 0 0 auto;
+  width: 100%;
+  z-index: 1;
 }

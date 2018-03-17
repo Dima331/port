@@ -30,6 +30,23 @@
     fill: #c4cbcd;
     margin: 0 auto;
 }*/
+.hamburger__link-svg{
+    width: 40px;
+    height: 35px;
+    fill: #fff;
+}
+.traingle .left{
+    fill: #ebefe2;
+    }
+    .right{
+    fill: #f4f5f0;
+    }
+.header__placeholder-title{
+    fill: #fff;
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+}
 .form__row-icon{
     width: 15px;
     height: 17px;
@@ -52,7 +69,7 @@
 .about__left-about{
     fill: #e2ebd0;    
 }
-.contacts-row__icon{
+.contacts__item-icon{
     width: 25px;
     height: 25px;
     fill: $green_low;

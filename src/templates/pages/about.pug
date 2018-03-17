@@ -4,124 +4,58 @@ block variables
     - var title = 'Обо мне'
 
 block content
-    header.header
-        .header__social
-            ul.social
-                li.social__item.social__item-header
-                    a.social__item-link(href='#')
-                        svg.social__item-vk.social__item-svg-header
-                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk") 
-                li.social__item.social__item-header
-                    a.social__item-link(href='#')
-                        svg.social__item-git.social__item-svg-header
-                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github") 
-                li.social__item.social__item-header
-                    a.social__item-link(href='#')
-                        svg.social__item-in.social__item-svg-header
-                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in") 
-        .header__hamburger.hamburger
-            a.hamburger__link(href='#')
-                svg.hamburger__link-svg
-                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#hamburger") 
-        .header__svg
-            svg.header__svg-title
-                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#portfolio_header")
-        .header__content
-            //.section-title
-                img(src="", alt="").section-title__pic
-            .header__user.user
-                .user__pic
-                    img(src="assets/images/content/face.jpg", alt="W").user__pic-img
-                .user__description
-                    .user__description-name Владимир Астахов
-                    .user__description-info Личный сайт разработчика
-        .header__arrow.arrow-down
-            svg.arrow-down-svg
-                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
-        .triangle.tringle_fill_white.about__left-triangle
-                    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle
-                        polygon(points="0,0   0,86   500.8,86   500.8,75.5").left
-        .triangle.tringle_fill_beige.about__right-triangle
-            svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle
-                        polygon(points="1000,0   1000,86   500,86   500,75.5").right
-    section.section.about
-        .about__left
+    .wrapper    
+        main.main
+            include ../common/header.pug
+            section.section.about
+                .about__left
+                    .about__left-title
+                        h2.block-title Обо мне
+                    //.about__left-svg
+                        svg.about__left-about
+                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_header")        
+                    .about__left-content
+                        .user-description__image
+                            img(src="assets/images/content/face.jpg", alt="full phote").user-description__avatar
+                        .user-description__title
+                            .block-subtitle Кто я
+                        .user-description__text.text-content
+                            p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!      
+                .about__right
+                    .about__right-title
+                        .block-subtitle.block-subtitle-width Чем я могу быть вам полезен
+                    .about__right-text.text-content
+                        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                        include ../common/skill.pug
             
-            .about__left-title
-                .block-title Обо мне
-            .about__left-svg
-                svg.about__left-about
-                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_header")
-                     
-            .about__left-content
-                .user-description
-                    .user-description__image
-                        img(src="assets/images/content/face.jpg", alt="W").user-description__avatar
-                .user-description__title
-                    .block-subtitle Кто я
-                .user-description__text.text-content
-                    p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!      
-        .about__right
-            .about__right-title
-                .block-subtitle Чем я могу быть вам полезен
-            .about__right-text.text-content
-                p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-            .about__right-content
-                ul.skills-list
-                    each item in ['Frontend', 'Backend', 'Workflow']
-                        li.skills-list__item
-                            .skills-row
-                                .skills-row__title #{item}
-                                    ul.skills-row__list
-                                        li.skills-row__item
-                                            svg(viewBox="0 0 110 110").circles
-                                                circle(r="45" cx="50%" cy="50%" fill="none").circle__first
-                                                circle(r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)").circle__second.circle-25    
-                                            span.item__title HTML &amp; CSS
-                                        li.skills-row__item
-                                            svg(viewBox="0 0 110 110").circles
-                                                circle(r="45" cx="50%" cy="50%" fill="none").circle__first
-                                                circle(r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)").circle__second.circle-25    
-                                            span.item__title HTML javaScript
-                                        li.skills-row__item
-                                            svg(viewBox="0 0 110 110").circles
-                                                circle(r="45" cx="50%" cy="50%" fill="none").circle__first
-                                                circle(r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)").circle__second.circle-25    
-                                            span.item__title Node.js
-    section.section.map
-        .google-map
-        .map__contacts
-            .contacts
-            .contacts__title
-                .block-subtitle Контакты
-            ul.contacts__list
-                - var contacts = [['skype', 'skype_kdn'],['mail', 'astahov@gmail.com'],['phone', '+79211 123 23 23'],['mark', 'Новосибирск'],]
-
-                li.contacts__item
-                    .contacts-row
-                        svg.contacts-row__icon
-                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#skype")
-                        .contacts-row__content skype_kdn
-                li.contacts__item    
-                    .contacts-row
-                        svg.contacts-row__icon
-                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#envelope2")
-                        .contacts-row__content astahov@gmail.com
-                li.contacts__item
-                    .contacts-row
-                        svg.contacts-row__icon
-                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#phone")
-                        .contacts-row__content +79211 123 23 23
-                li.contacts__item
-                    .contacts-row
-                        svg.contacts-row__icon
-                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#map_marker")
-                        .contacts-row__content Новосибирск
-        footer.map__footer.footer
+            
+            
+            section.section.map
+                .google-map
+                .map__contact
+                    h3.block-subtitle Контакты
+                    ul.contacts__list.contacts__list-margin
+                        li.contacts__item
+                            svg.contacts__item-icon
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#skype")
+                            .contacts__item-title skype_kdn
+                        li.contacts__item    
+                            svg.contacts__item-icon
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#envelope2")
+                            .contacts__item-title astahov@gmail.com
+                        li.contacts__item
+                            svg.contacts__item-icon
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#phone")
+                            .contacts__item-title +79211 123 23 23
+                        li.contacts__item
+                            svg.contacts__item-icon
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#map_marker")
+                            .contacts__item-title Новосибирск
+        footer.footer
             .footer__row
                 .footer__row-up
-                    ul.footer__menu
+                    ul.footer__list
                         li.footer__item
                             .footer__item-school
                                 p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
@@ -130,7 +64,7 @@ block content
                                 li.nav__item
                                     a(href='#') Мои работы
                                 li.nav__item
-                                    a(href='#') обо мне
+                                    a(href='#') Обо мне
                                 li.nav__item
                                     a(href='#') Блог
                                 li.nav__item
@@ -152,7 +86,6 @@ block content
                             .footer__item-quote
                                 p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
                                 p — Martin Golding
-
             .footer__row
                 .footer__row-down
                     p  © Владимир Астахов | создано с любовью в LoftSchool | 2016  

@@ -28,34 +28,29 @@
 .social__item-header:last-child{
     margin-right: 0;
 }
-.traingle .left{
-fill: #ebefe2;
-}
-.right{
-fill: #f4f5f0;
-}
 .hamburger__link{
     display: inline-block;
-}
-.hamburger__link-svg{
-    width: 40px;
-    height: 35px;
-    fill: #fff;
 }
 .header__hamburger{
     position: absolute;
     top: 35px;
     right: 20px;
 }
-.header__svg{
+.header__placeholder{
     position: absolute;
-
+    width: 84%;
+    height: 30%;
+}
+.arrow-down{
+    height: 100%;
+    width: 100%;
+}
+.triangles{
+   position: absolute;
+    bottom: 0;
+    width: 100%; 
 }
 
-.header__svg-title{
-    fill: #fff;
-    opacity: 0.3;
-}
 .header__content{
     z-index: 2;
 }
@@ -81,6 +76,7 @@ fill: #f4f5f0;
 .header__arrow{
    position: absolute;
    bottom: 55px;
+   z-index: 1;
 
 }
 .about{
@@ -109,19 +105,24 @@ fill: #f4f5f0;
 .about__left-title{
     position: relative;
 }
-
-.user-description__image{
+.about__left-content{
     margin: 20px 0;
 }
+.user-description__image{
+    margin: 0 0 20px 0;
+}
 
-
+.skills-list-margin{
+    margin-top: 60px;
+    font-style: normal;
+}
 .text-content{
     color: rgb(86, 99, 88);
     line-height: 1.5;
     font-style: italic;
 }
 .user-description__text,.about__right-text{
-    margin: 20px 0;
+    margin-top: 20px;
 }
 .skills-row__item{
     width: 110px;
@@ -150,25 +151,27 @@ fill: #f4f5f0;
     align-items: center;
     height: 100vh;
 }
-.map__contacts{
+.map__contact{
     position: absolute;
     width: 380px;
     padding: 30px 40px;
     border-radius: 5px;
     background-color: rgba(244, 245, 240, .8);
 }
-.contacts-row{
-    display: flex;
-}
+
 .contacts__item{
-    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
   
 }
-.footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.contacts__item:last-child{
+    margin-bottom: 0;
+  
 }
+.contacts__list-margin{
+    margin-top: 20px;
+}
+
 .footer__row{
     //width: 100%;
 }
@@ -187,7 +190,7 @@ fill: #f4f5f0;
         border: 0;
     }
 }
-.footer__menu{
+.footer__list{
     display: flex;
     background-color: rgba(55, 62, 66, .8);
     color: #fff;
@@ -216,7 +219,7 @@ fill: #f4f5f0;
   }
   
   .skills-list__item{
-      margin-top: 40px;
+      margin-bottom: 40px;
   }
 
 .circles {
