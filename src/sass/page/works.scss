@@ -34,7 +34,7 @@
     color: $green_low;
 }
 .info__slider-btn{
-    @extend .authorization__link;
+    @extend .authorization-btn__link ;
     background-color: $green_low;
     border: none;
     padding: 0;

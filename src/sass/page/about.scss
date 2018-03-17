@@ -86,16 +86,6 @@ fill: #f4f5f0;
 .about{
     display: flex;
 }
-.block-title{
-    font-size: 63px;
-    font-family: 'Sansus';
-    color: rgb(55, 62, 66);
-    text-transform: uppercase;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    z-index: 2;
-}
 .about__left{
     background-color: #ebefe2;
     width: 50%;
@@ -119,23 +109,12 @@ fill: #f4f5f0;
 .about__left-title{
     position: relative;
 }
-.block-title::after{
-    content: "";
-    height: 100%;
-    width: 100px;
-    position: absolute;
-    left: 38%;
-    bottom: 0;
-    border-bottom: 3px solid #373e42;
-}
+
 .user-description__image{
     margin: 20px 0;
 }
-.block-subtitle{
-    @extend .block-title;
-    font-size: 35px;
-    color: rgb(86, 99, 88);
-}
+
+
 .text-content{
     color: rgb(86, 99, 88);
     line-height: 1.5;

@@ -8,3 +8,42 @@
     padding: 0;
     border: 0;
   }
+
+.block-title{
+  font-size: 63px;
+  font-family: 'Sansus';
+  color: rgb(55, 62, 66);
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.block-title::after{
+  content: "";
+  width: 100%;
+  position: absolute;
+  //left: 36%;
+  left:0;
+  bottom: 0;
+  border-bottom: 3px solid #373e42;
+}
+.block-subtitle-white::after{
+  content: "";
+  width: 100%;
+  position: absolute;
+  //left: 36%;
+  left:0;
+  bottom: 0;
+  border-bottom: 3px solid #fff;
+}
+.block-subtitle{
+  @extend .block-title;
+  font-size: 35px;
+  width: 100%;
+  color: rgb(86, 99, 88);
+}
+.block-subtitle-white{
+  color: #fff;
+}

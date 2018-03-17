@@ -1,37 +1,53 @@
-<!--extends ../template
-<div class="forest">
-  <div class="authorization"><a class="authorization__link" href="#">Авторизоваться</a></div>
-  <div class="welcome">
-    <div class="welcome__content">
-      <div class="welcome__img"></div>
-      <div class="welcome__text">
-        <h2 class="welcome__tilte">Владимир Астахов</h2>
-        <h3 class="welcome__about">Личный сайт веб разработчика</h3>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Добро пожаловать</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="assets/styles/app.min.css">
+    <script src="assets/scripts/bundle.js" defer></script>
+  </head>
+  <body>
+    <div class="forest">
+      <div class="authorization-btn">
+        <button class="authorization-btn__link" alt="Кнопка авторизоваться">Авторизоваться</button>
       </div>
-      <ul class="social">
-        <li class="social__item"><a class="social__item-link" href="#">
-            <svg class="social__item-vk social__item-svg">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
-            </svg></a></li>
-        <li class="social__item"><a class="social__item-link" href="#">
-            <svg class="social__item-git social__item-svg">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
-            </svg></a></li>
-        <li class="social__item"><a class="social__item-link" href="#">
-            <svg class="social__item-in social__item-svg">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
-            </svg></a></li>
-      </ul>
+      <main class="main welcome">
+        <div class="welcome__content welcome__content-margin">
+          <div class="welcome__pic"><img class="welcome__pic-img" src="assets/images/content/face.jpg" alt="Картинка автора"></div>
+          <div class="welcome__description description-info">
+            <h2 class="description-info__name">Владимир Астахов</h2>
+            <h3 class="description-info__about">Личный сайт веб разработчика</h3>
+          </div>
+          <ul class="social">
+            <li class="social__item"><a class="social__item-link" href="#">
+                <svg class="social__item-vk social__item-svg">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__item-link" href="#">
+                <svg class="social__item-git social__item-svg">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__item-link" href="#">
+                <svg class="social__item-in social__item-svg">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <nav class="nav">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__item-link" href="#">Мои работы</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Обо мне</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Блог</a></li>
+          </ul>
+        </nav>
+      </main>
+      <div class="footer-copyrigh">
+        <div class="footer-copyrigh__text">  © Владимир Астахов | создано с любовью в LoftSchool | 2018</div>
+      </div>
     </div>
-    <nav class="nav">
-      <ul class="menu__list">
-        <li class="menu__item"><a class="menu__item-link" href="#">Мои работы</a></li>
-        <li class="menu__item"><a class="menu__item-link" href="#">Обо мне</a></li>
-        <li class="menu__item"><a class="menu__item-link" href="#">Блог</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="copyrigh">
-    <div class="copyrigh__text">  © Владимир Астахов | создано с любовью в LoftSchool | 2016</div>
-  </div>
-</div>
+  </body>
+</html>
