@@ -4,78 +4,131 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    include ../common/header.pug
-    section.section.myworks
-        .myworks-title
-            .block-title Мои работы
-        .about__left-svg
-            //svg.about__left-about
-                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header")
-        .myworks__slider
-            ul.slider
-                li.slider__item
-                    .slider__item-left
-                        .slider__item-left-pic
-                            img(src="assets/images/content/work-1.png", alt="#")    
-                    .slider__item-right
-                        .info__slider
-                            .block-subtitle.block-subtitle-slider Сайт школы онлайн образования
-                            .info__slider-info HTML, CSS, JAVASCRIPT
-                            .info__slider-btn 
-                                a(href="#").info__slider-btn-link 
-                                    svg.info__slider-btn-svg
-                                        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
-                                    span Посмотреть сайт
-        .myworks__slider-left
-        .myworks__slider-right
-    section.section.about-me
-        .about-me__content
-            .block-title.block-title-about-me Что обо мне говорят
-                //svg.about__left-about
-                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header")
-            ul.about-me__reviews.reviews
-                li.reviews__item
-                    .reviews__item-pic 
-                        img(src="assets/images/content/face_teacher.jpg", alt="#").reviews__item-img
-                    .reviews__item-description
-                        .reviews__item-description-text
-                            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, ea earum provident laboriosam exercitationem mollitia asperiores velit quasi sequi suscipit vero harum, recusandae ullam voluptate, vitae molestiae ipsum consequatur eos!
-                        .reviews__item-description-who
-                            .reviews__item-description-name
-                                p Lorem ipsum
-                            .reviews__item-description-job
-                                p Lorem ipsum
-                    .reviews__item-quot
-                li.reviews__item
-                    .reviews__item-pic 
-                        img(src="assets/images/content/face_teacher_2.jpg", alt="#").reviews__item-img
-                    .reviews__item-description
-                        .reviews__item-description-text
-                            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, ea earum provident laboriosam exercitationem mollitia asperiores velit quasi sequi suscipit vero harum, recusandae ullam voluptate, vitae molestiae ipsum consequatur eos!
-                        .reviews__item-description-who
-                            .reviews__item-description-name
-                                p Lorem ipsum
-                            .reviews__item-description-job
-                                p Lorem ipsum
-            .about-me__relations
-                .block-subtitle Связаться со мной
-                form(action="").login__form
-                    .form__row
-                        label(for="1")
-                            input(type="text", name="login" placeholder="Логин").login
-                    .form__row
-                        label(for="2")
-                            input(type="password", name="password" placeholder="Пароль")
-                    .form__row 
-                        textarea(name="assa", cols="30", rows="10")
-                nav.nav
-                    ul.menu__list
-                        li.menu__item
-                            a.menu__item-link(href='#') На главную
-                        li.menu__item
-                            a.menu__item-link(href='#') Войти
-            .about-me__arrow.arrow-down
-                a(href="#").about-me__arrow-link
-                    svg.arrow-down-svg
-                        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#stars1")
+    .wrapper    
+        main.main
+            header.header
+                .header__social
+                    ul.social
+                        li.social__item.social__item-header
+                            a.social__item-link(href='#')
+                                svg.social__item-vk.social__item-svg-header
+                                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk") 
+                        li.social__item.social__item-header
+                            a.social__item-link(href='#')
+                                svg.social__item-git.social__item-svg-header
+                                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github") 
+                        li.social__item.social__item-header
+                            a.social__item-link(href='#')
+                                svg.social__item-in.social__item-svg-header
+                                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in") 
+                .header__hamburger.hamburger
+                    button.hamburger__link
+                        svg.hamburger__link-svg
+                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#hamburger") 
+                .header__placeholder 
+                    svg.header__placeholder-title
+                        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#portfolio_header")
+                .header__content
+                    .header__user.user
+                        .user__pic
+                            img(src="assets/images/content/face.jpg", alt="face").user__pic-img
+                        .user__description
+                            .user__description-name Владимир Астахов
+                            .user__description-info Личный сайт разработчика
+                .header__arrow
+                    button.arrow-down
+                        svg.arrow-down-svg
+                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
+                .triangle.tringle_fill_white.about__left-triangle
+                    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle
+                        polygon(points="0,0   0,86   500.8,86   500.8,75.5").left.left-white
+                        polygon(points="1000,0   1000,86   500,86   500,75.5").right.right-white
+            
+
+
+
+
+
+
+            section.section.myworks
+                .myworks-title
+                    h2.block-title Мои работы
+                .about__left-svg
+                    //svg.about__left-about
+                        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header")
+                .myworks__slider
+                    ul.slider
+                        li.slider__item
+                            .slider__item-left
+                                .slider__item-left-pic
+                                    img(src="assets/images/content/work-1.png", alt="#")    
+                            .slider__item-right
+                                .info__slider
+                                    .block-subtitle.block-subtitle-slider Сайт школы онлайн образования
+                                    .info__slider-info HTML, CSS, JAVASCRIPT
+                                    .info__slider-btn 
+                                        a(href="#").info__slider-btn-link 
+                                            svg.info__slider-btn-svg
+                                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
+                                            span Посмотреть сайт
+                .myworks__slider-left
+                .myworks__slider-right
+
+
+
+
+
+            section.section.about-me
+                .about-me__content
+                    h2.block-title.block-title-about-me Что обо мне говорят
+                        //svg.about__left-about
+                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header")
+                    ul.about-me__reviews.reviews
+                        li.reviews__item
+                            .reviews__item-pic 
+                                img(src="assets/images/content/face_teacher.jpg", alt="#").reviews__item-img
+                            blockquote.reviews__item-description.quot
+                                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, ea earum provident laboriosam exercitationem mollitia asperiores velit quasi sequi suscipit vero harum, recusandae ullam voluptate, vitae molestiae ipsum consequatur eos!
+                                cite.quot__who
+                                    .quot__who-name
+                                        p Lorem ipsum
+                                    .quot__who-job
+                                        p Lorem ipsum
+                            //.reviews__item-quot
+                        li.reviews__item
+                            .reviews__item-pic 
+                                img(src="assets/images/content/face_teacher_2.jpg", alt="#").reviews__item-img
+                            blockquote.reviews__item-description.quot
+                                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, ea earum provident laboriosam exercitationem mollitia asperiores velit quasi sequi suscipit vero harum, recusandae ullam voluptate, vitae molestiae ipsum consequatur eos!
+                                cite.quot__who
+                                    .quot__who-name
+                                        p Lorem ipsum
+                                    .quot__who-job
+                                        p Lorem ipsum
+
+
+                    .about-me__relations.about-me__relations-margin
+                        form(action="№").about-me__form
+                            h2.block-subtitle.block-subtitle-margin Связаться со мной
+                            .form__row
+                                label(for="name").about-me__form-label
+                                    input(type="text", name="login" placeholder="Имя" id="name").about-me__form-input
+                            .form__row
+                                label(for="email").about-me__form-label
+                                    input(type="text", name="password" placeholder="Email" id="email").about-me__form-input
+                            .form__row.form__row-last
+                                label(for="message").about-me__form-label
+                                    textarea(name="message",id="message" cols="30", rows="10" placeholder="Ваше сообщение")
+                        ul.menu__list
+                            li.menu__item
+                                a.menu__item-link(href='#') На главную
+                            li.menu__item
+                                a.menu__item-link(href='#') Войти
+                    .about-me__arrow.arrow-down
+                        button(href="#").about-me__arrow-link
+                            svg.arrow-down-svg
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
+        
+        
+        
         include ../common/footer.pug

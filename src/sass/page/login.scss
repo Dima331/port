@@ -30,11 +30,13 @@ input[type="password"], textarea {
     border: 0;
     width: 85%;
     position: relative;
+    font-family: 'Roboto';
 }
 textarea::-webkit-input-placeholder,
 input[type="text"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder {
-    color: rgba(55, 62, 66, 0.5);
+    color: rgba(55, 62, 66, 0.4);
+    font-weight: 500;
 }
 
 .form__row {
