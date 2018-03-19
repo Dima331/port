@@ -176,7 +176,7 @@
     //width: 100%;
 }
 .footer__row-down{
-    padding: 5px 0;
+    padding: 5px 5px;
     color: #ffffff;
     //width: 100%;
     text-align: center;
@@ -323,6 +323,7 @@
     width: 100%;
     position: absolute;
     bottom: 0;
+    margin-bottom: -1px;
   }
   .about__right-triangle{
     width: 100%;

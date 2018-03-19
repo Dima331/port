@@ -45,7 +45,6 @@ li {
     list-style: none;
 }
 
-p,
 h3,
 h4 {
     padding: 0;
@@ -89,6 +88,9 @@ button:focus{
 }
 button:active{
     outline: 0;
+}
+p{
+    margin-top: 0;
 }
 button:hover{
     cursor: pointer;

@@ -5,48 +5,141 @@ block variables
 
 block content
     .wrapper    
+        header.header
+            .header__social
+                ul.social
+                    li.social__item.social__item-header
+                        a.social__item-link(href='#')
+                            svg.social__item-vk.social__item-svg-header
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk") 
+                    li.social__item.social__item-header
+                        a.social__item-link(href='#')
+                            svg.social__item-git.social__item-svg-header
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github") 
+                    li.social__item.social__item-header
+                        a.social__item-link(href='#')
+                            svg.social__item-in.social__item-svg-header
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in") 
+            .header__hamburger.hamburger
+                button.hamburger__link
+                    svg.hamburger__link-svg
+                        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#hamburger") 
+            .header__placeholder.header__placeholder-blog 
+                svg.header__placeholder-title
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#blog_header")
+            .header__content
+                .header__user.user
+                    .user__pic
+                        img(src="assets/images/content/face.jpg", alt="face").user__pic-img
+                    .user__description.user__description-margin
+                        h2.user__description-name.block-title.block-title-blog.block-subtitle-white Блог
+                        .user__description-info Статья, которые я написал
+            .triangle.tringle_fill_white.about__left-triangle
+                svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle
+                    polygon(points="0,0   0,86   500.8,86   500.8,75.5").left.left-white
+                    polygon(points="1000,0   1000,86   500,86   500,75.5").right.right-white
         main.main
-            header.header
-                .header__social
-                    ul.social
-                        li.social__item.social__item-header
-                            a.social__item-link(href='#')
-                                svg.social__item-vk.social__item-svg-header
-                                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk") 
-                        li.social__item.social__item-header
-                            a.social__item-link(href='#')
-                                svg.social__item-git.social__item-svg-header
-                                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github") 
-                        li.social__item.social__item-header
-                            a.social__item-link(href='#')
-                                svg.social__item-in.social__item-svg-header
-                                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in") 
-                .header__hamburger.hamburger
-                    button.hamburger__link
-                        svg.hamburger__link-svg
-                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#hamburger") 
-                .header__placeholder 
-                    svg.header__placeholder-title
-                        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#portfolio_header")
-                .header__content
-                    .header__user.user
-                        .user__pic
-                            img(src="assets/images/content/face.jpg", alt="face").user__pic-img
-                        .user__description
-                            .user__description-name Владимир Астахов
-                            .user__description-info Личный сайт разработчика
-                .header__arrow
-                    button.arrow-down
-                        svg.arrow-down-svg
-                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
-                .triangle.tringle_fill_white.about__left-triangle
-                    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle
-                        polygon(points="0,0   0,86   500.8,86   500.8,75.5").left.left-white
-                        polygon(points="1000,0   1000,86   500,86   500,75.5").right.right-white
-        section.section.blog
-            
-
-
-
+            section.section.blog
+                aside.blog__left
+                    ul.blog-menu
+                        li.blog-menu__item.blog-menu__item-active
+                            a(href="#").blog-menu__item-link Самое важное в SASS
+                        li.blog-menu__item 
+                            a(href="#").blog-menu__item-link Самое важное в SASS
+                        li.blog-menu__item.blog-menu__item-active
+                            a(href="#").blog-menu__item-link Самое важное в SASS Самое важное в SASS Самое важное в SASS
+                        li.blog-menu__item 
+                            a(href="#").blog-menu__item-link Самое важное в SASS
+                        li.blog-menu__item 
+                            a(href="#").blog-menu__item-link Самое важное в SASS
+                .blog__right
+                    h2.visually-hidden Блог
+                    article.blog-descripshion
+                        h3.blog-descripshion-title Блог
+                        .blog-descripshion-date
+                            time.time(datetime="2018-03-22") 22 марта 2018
+                        .blog-descripshion-text.text-content
+                            p Lorem ipsum, dolor sit amet consectetur eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,adipisicing elit. Eaque quidem aut sequi eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus
+                            |repellat nobis voluptas ab impedit autem eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                            |eos quibusdam consectetur blanditiis minus, eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                            |adipisci veritatis dolorum a nihil voluptate numquam.eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                            p Lorem ipsum, dolor sit amet consectetur 
+                            |adipisicing elit. Eaque quidem aut sequi 
+                            |repellat nobis voluptas ab impedit autem 
+                            |eos quibusdam consectetur blanditiis minus, 
+                            |adipisci veritatis dolorum a nihil voluptate numquam.
+                            p Lorem ipsum, dolor sit amet consectetur 
+                            |adipisicing elit. Eaque quidem aut sequi 
+                            |repellat nobis voluptas ab impedit autem 
+                            |eos quibusdam consectetur blanditiis minus, 
+                            |adipisci veritatis dolorum a nihil voluptate numquam.
+                            p Lorem ipsum, dolor sit amet consectetur 
+                            |adipisicing elit. Eaque quidem aut sequi 
+                            |repellat nobis voluptas ab impedit autem 
+                            |eos quibusdam consectetur blanditiis minus, 
+                            |adipisci veritatis dolorum a nihil voluptate numquam.
+                            p Lorem ipsum, dolor sit amet consectetur 
+                            |adipisicing elit. Eaque quidem aut sequi 
+                            |repellat nobis voluptas ab impedit autem 
+                            |eos quibusdam consectetur blanditiis minus, 
+                            |adipisci veritatis dolorum a nihil voluptate numquam.
+                    article.blog-descripshion
+                        h3.blog-descripshion-title Блог
+                        .blog-descripshion-date
+                            time.time(datetime="2018-03-22") 22 марта 2018
+                        .blog-descripshion-text.text-content
+                            p Lorem ipsum, dolor sit amet consectetur eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,adipisicing elit. Eaque quidem aut sequi eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus
+                            |repellat nobis voluptas ab impedit autem eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                            |eos quibusdam consectetur blanditiis minus, eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                            |adipisci veritatis dolorum a nihil voluptate numquam.eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                            p Lorem ipsum, dolor sit amet consectetur 
+                            |adipisicing elit. Eaque quidem aut sequi 
+                            |repellat nobis voluptas ab impedit autem 
+                            |eos quibusdam consectetur blanditiis minus, 
+                            |adipisci veritatis dolorum a nihil voluptate numquam.
+                            p Lorem ipsum, dolor sit amet consectetur 
+                            |adipisicing elit. Eaque quidem aut sequi 
+                            |repellat nobis voluptas ab impedit autem 
+                            |eos quibusdam consectetur blanditiis minus, 
+                            |adipisci veritatis dolorum a nihil voluptate numquam.
+                            p Lorem ipsum, dolor sit amet consectetur 
+                            |adipisicing elit. Eaque quidem aut sequi 
+                            |repellat nobis voluptas ab impedit autem 
+                            |eos quibusdam consectetur blanditiis minus, 
+                            |adipisci veritatis dolorum a nihil voluptate numquam.
+                            p Lorem ipsum, dolor sit amet consectetur 
+                            |adipisicing elit. Eaque quidem aut sequi 
+                            |repellat nobis voluptas ab impedit autem 
+                            |eos quibusdam consectetur blanditiis minus, 
+                            |adipisci veritatis dolorum a nihil voluptate numquam.
+                    article.blog-descripshion
+                        h3.blog-descripshion-title Блог
+                        .blog-descripshion-date
+                            time.time(datetime="2018-03-22") 22 марта 2018
+                        .blog-descripshion-text.text-content
+                            p Lorem ipsum, dolor sit amet consectetur eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,adipisicing elit. Eaque quidem aut sequi eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus
+                            |repellat nobis voluptas ab impedit autem eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                            |eos quibusdam consectetur blanditiis minus, eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                            |adipisci veritatis dolorum a nihil voluptate numquam.eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                            p Lorem ipsum, dolor sit amet consectetur 
+                            |adipisicing elit. Eaque quidem aut sequi 
+                            |repellat nobis voluptas ab impedit autem 
+                            |eos quibusdam consectetur blanditiis minus, 
+                            |adipisci veritatis dolorum a nihil voluptate numquam.
+                            p Lorem ipsum, dolor sit amet consectetur 
+                            |adipisicing elit. Eaque quidem aut sequi 
+                            |repellat nobis voluptas ab impedit autem 
+                            |eos quibusdam consectetur blanditiis minus, 
+                            |adipisci veritatis dolorum a nihil voluptate numquam.
+                            p Lorem ipsum, dolor sit amet consectetur 
+                            |adipisicing elit. Eaque quidem aut sequi 
+                            |repellat nobis voluptas ab impedit autem 
+                            |eos quibusdam consectetur blanditiis minus, 
+                            |adipisci veritatis dolorum a nihil voluptate numquam.
+                            p Lorem ipsum, dolor sit amet consectetur 
+                            |adipisicing elit. Eaque quidem aut sequi 
+                            |repellat nobis voluptas ab impedit autem 
+                            |eos quibusdam consectetur blanditiis minus, 
+                            |adipisci veritatis dolorum a nihil voluptate numquam.
 
         include ../common/footer.pug

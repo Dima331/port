@@ -12,61 +12,148 @@
   </head>
   <body>
     <div class="wrapper">   
-      <main class="main">
-        <header class="header">
-          <div class="header__social">
-            <ul class="social">
-              <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                  <svg class="social__item-vk social__item-svg-header">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
-                  </svg></a></li>
-              <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                  <svg class="social__item-git social__item-svg-header">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
-                  </svg></a></li>
-              <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                  <svg class="social__item-in social__item-svg-header">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
-                  </svg></a></li>
-            </ul>
-          </div>
-          <div class="header__hamburger hamburger">
-            <button class="hamburger__link">
-              <svg class="hamburger__link-svg">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#hamburger"> </use>
-              </svg>
-            </button>
-          </div>
-          <div class="header__placeholder"> 
-            <svg class="header__placeholder-title">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#portfolio_header"></use>
+      <header class="header">
+        <div class="header__social">
+          <ul class="social">
+            <li class="social__item social__item-header"><a class="social__item-link" href="#">
+                <svg class="social__item-vk social__item-svg-header">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
+                </svg></a></li>
+            <li class="social__item social__item-header"><a class="social__item-link" href="#">
+                <svg class="social__item-git social__item-svg-header">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
+                </svg></a></li>
+            <li class="social__item social__item-header"><a class="social__item-link" href="#">
+                <svg class="social__item-in social__item-svg-header">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="header__hamburger hamburger">
+          <button class="hamburger__link">
+            <svg class="hamburger__link-svg">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#hamburger"> </use>
             </svg>
-          </div>
-          <div class="header__content">
-            <div class="header__user user">
-              <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="face"></div>
-              <div class="user__description">
-                <div class="user__description-name">Владимир Астахов</div>
-                <div class="user__description-info">Личный сайт разработчика</div>
-              </div>
+          </button>
+        </div>
+        <div class="header__placeholder header__placeholder-blog"> 
+          <svg class="header__placeholder-title">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#blog_header"></use>
+          </svg>
+        </div>
+        <div class="header__content">
+          <div class="header__user user">
+            <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="face"></div>
+            <div class="user__description user__description-margin">
+              <h2 class="user__description-name block-title block-title-blog block-subtitle-white">Блог</h2>
+              <div class="user__description-info">Статья, которые я написал</div>
             </div>
           </div>
-          <div class="header__arrow">
-            <button class="arrow-down">
-              <svg class="arrow-down-svg">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
-              </svg>
-            </button>
+        </div>
+        <div class="triangle tringle_fill_white about__left-triangle">
+          <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+            <polygon class="left left-white" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+            <polygon class="right right-white" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+          </svg>
+        </div>
+      </header>
+      <main class="main">
+        <section class="section blog">
+          <aside class="blog__left">
+            <ul class="blog-menu">
+              <li class="blog-menu__item blog-menu__item-active"><a class="blog-menu__item-link" href="#">Самое важное в SASS</a></li>
+              <li class="blog-menu__item"> <a class="blog-menu__item-link" href="#">Самое важное в SASS</a></li>
+              <li class="blog-menu__item blog-menu__item-active"><a class="blog-menu__item-link" href="#">Самое важное в SASS Самое важное в SASS Самое важное в SASS</a></li>
+              <li class="blog-menu__item"> <a class="blog-menu__item-link" href="#">Самое важное в SASS</a></li>
+              <li class="blog-menu__item"> <a class="blog-menu__item-link" href="#">Самое важное в SASS</a></li>
+            </ul>
+          </aside>
+          <div class="blog__right">
+            <h2 class="visually-hidden">Блог</h2>
+            <article class="blog-descripshion">
+              <h3 class="blog-descripshion-title">Блог</h3>
+              <div class="blog-descripshion-date">
+                <time class="time" datetime="2018-03-22">22 марта 2018</time>
+              </div>
+              <div class="blog-descripshion-text text-content">
+                <p>Lorem ipsum, dolor sit amet consectetur eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,adipisicing elit. Eaque quidem aut sequi eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus</p>repellat nobis voluptas ab impedit autem eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                eos quibusdam consectetur blanditiis minus, eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                adipisci veritatis dolorum a nihil voluptate numquam.eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+              </div>
+            </article>
+            <article class="blog-descripshion">
+              <h3 class="blog-descripshion-title">Блог</h3>
+              <div class="blog-descripshion-date">
+                <time class="time" datetime="2018-03-22">22 марта 2018</time>
+              </div>
+              <div class="blog-descripshion-text text-content">
+                <p>Lorem ipsum, dolor sit amet consectetur eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,adipisicing elit. Eaque quidem aut sequi eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus</p>repellat nobis voluptas ab impedit autem eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                eos quibusdam consectetur blanditiis minus, eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                adipisci veritatis dolorum a nihil voluptate numquam.eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+              </div>
+            </article>
+            <article class="blog-descripshion">
+              <h3 class="blog-descripshion-title">Блог</h3>
+              <div class="blog-descripshion-date">
+                <time class="time" datetime="2018-03-22">22 марта 2018</time>
+              </div>
+              <div class="blog-descripshion-text text-content">
+                <p>Lorem ipsum, dolor sit amet consectetur eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,adipisicing elit. Eaque quidem aut sequi eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus</p>repellat nobis voluptas ab impedit autem eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                eos quibusdam consectetur blanditiis minus, eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                adipisci veritatis dolorum a nihil voluptate numquam.eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+              </div>
+            </article>
           </div>
-          <div class="triangle tringle_fill_white about__left-triangle">
-            <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
-              <polygon class="left left-white" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
-              <polygon class="right right-white" points="1000,0   1000,86   500,86   500,75.5"></polygon>
-            </svg>
-          </div>
-        </header>
+        </section>
       </main>
-      <section class="section blog"></section>
       <footer class="footer">
         <div class="footer__row">
           <div class="footer__row-up">

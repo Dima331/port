@@ -5,12 +5,17 @@ block variables
 
 block content
     .wrapper    
+        include ../common/header.pug
         main.main
-            include ../common/header.pug
             section.section.about
                 .about__left
                     .about__left-title
-                        h2.block-title Обо мне
+                        .title-block
+                            .title-block-pic
+                                svg.title-block-svg
+                                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_header")        
+                            h2.block-title Обо мне
+                            .title-block__border
                     //.about__left-svg
                         svg.about__left-about
                             use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_header")        
@@ -18,13 +23,17 @@ block content
                         .user-description__image
                             img(src="assets/images/content/face.jpg", alt="full phote").user-description__avatar
                         .user-description__title
-                            .block-subtitle Кто я
+                            .title-block
+                                .block-subtitle Кто я
+                                .title-block__border
                         .user-description__text.text-content
                             p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                             p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!      
                 .about__right
                     .about__right-title
-                        .block-subtitle.block-subtitle-width Чем я могу быть вам полезен
+                        .title-block
+                            .block-subtitle.block-subtitle-width Чем я могу быть вам полезен
+                            .title-block__border
                     .about__right-text.text-content
                         p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
                         include ../common/skill.pug
@@ -34,7 +43,9 @@ block content
             section.section.map
                 .google-map
                 .map__contact
-                    h3.block-subtitle Контакты
+                    .title-block
+                        h3.block-subtitle Контакты
+                        .title-block__border
                     ul.contacts__list.contacts__list-margin
                         li.contacts__item
                             svg.contacts__item-icon

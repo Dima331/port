@@ -8,47 +8,20 @@
     margin: 0 auto;
     background-color: rgb(197, 207, 218);
 }
-.slider__item{
-    display: flex;
-}
-.slider__item-left{
-    flex: 1;
 
-}
-.slider__item-right{
-    flex: 1;
-}
-.slider__item-right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.info__slider{
-    width: 340px;
-}
-.block-subtitle-slider{
-    text-align: left;
-    padding: 0;
-    padding-bottom: 20px;
-}
-.info__slider-info{
-    margin: 30px 0 40px 0;
-}
-.info__slider-info{
-    color: $green_low;
-}
-.info__slider-btn{
-    @extend .authorization-btn__link ;
-    background-color: $green_low;
-    border: none;
-    padding: 0;
-}
-.info__slider-btn-link{
-    display: flex;
-    padding: 15px 25px;
-}
 .about-me__reviews{
     margin-top: 40px;
+}
+.title-block-pic{
+    position: absolute;
+    width: 100%;
+    top: -72px;
+}
+.title-block-pic-top{
+    top: 0px;
+}
+.myworks-title,.title-block{
+    position: relative;
 }
 .about-me{
     position: relative;
@@ -83,6 +56,9 @@
     margin: 0 auto;
     line-height: 1;
 }
+.quot__who-name p, .quot__who-job p{
+    margin: 0;
+}
 .reviews__item{
     width: 48%;
 }
@@ -92,7 +68,6 @@
     margin-top: 20px;
 }
 .quot__who{
-    margin-top: 20px;
     text-align: center;
     display: block;
 }
@@ -134,6 +109,20 @@ textarea {
 .about-me__form-label .about-me__form-input{
     width: 100%;
     border-radius: 30px;
+}
+.slider__btns{
+    display: flex;
+}
+.slider__btns-left, .slider__btns-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider__display-img{
+    width: 500px;
+    height: 325px;
 }
 /*
 .reviews__item-description-text::before{

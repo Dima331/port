@@ -67,8 +67,9 @@
 
 
 }
-.about__left-about{
-    fill: #e2ebd0;    
+.title-block-svg{
+    fill: #e2ebd0;  
+    width: 100%;
 }
 .contacts__item-icon{
     width: 25px;
@@ -76,7 +77,7 @@
     fill: $green_low;
     margin-right: 20px;
 }
-.info__slider-btn-svg{
+.intelligence__btn-svg{
     width: 20px;
     height: 20px;
     fill: #fff;
@@ -87,4 +88,15 @@
 }
 .left-white{
     fill: #fff;
+}
+.arrow__left-up{
+    fill: #fff;
+    transform: rotate(180deg);
+    width: 43px;
+    height: 27px;
+}
+.arrow__left-down{
+    fill: #fff; 
+    width: 43px;
+    height: 27px;
 }
