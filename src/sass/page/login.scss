@@ -1,13 +1,16 @@
 /*------------------ логин-------------------------*/
+
 .login__title {
     font-size: 35px;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-family: 'Sansus';
 }
-.login-margin{
+
+.login-margin {
     margin: 0 20px;
 }
+
 .login__border {
     background-color: rgb(255, 255, 255);
     width: 90px;
@@ -21,7 +24,8 @@
 }
 
 input[type="text"],
-input[type="password"], textarea {
+input[type="password"],
+textarea {
     background-color: #fff;
     border-radius: 0 30px 30px 0;
     padding: 15px 5px 15px 14px;
@@ -31,7 +35,11 @@ input[type="password"], textarea {
     width: 85%;
     position: relative;
     font-family: 'Roboto';
+    @include phones {
+        width: 80%;
+    }
 }
+
 textarea::-webkit-input-placeholder,
 input[type="text"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder {
@@ -41,12 +49,13 @@ input[type="password"]::-webkit-input-placeholder {
 
 .form__row {
     position: relative;
-    color:rgba(#fff ,0.8);
+    color: rgba(#fff, 0.8);
     margin-bottom: 20px;
     display: flex;
     justify-content: space-evenly;
 }
-.form__row-spacebetwin{
+
+.form__row-spacebetwin {
     justify-content: space-between;
 }
 
@@ -61,7 +70,11 @@ input[type="password"]::-webkit-input-placeholder {
     width: 15%;
     align-items: center;
     background-color: #f0efe9;
+    @include phones {
+        width: 20%;
+    }
 }
+
 textarea,
 input[type="text"]:focus,
 input[type="password"]:focus {
@@ -69,22 +82,25 @@ input[type="password"]:focus {
 }
 
 input[type="checkbox"] {
-   @extend .visually-hidden;
-}
-
-input[type="radio"] { 
     @extend .visually-hidden;
 }
-textarea{
+
+input[type="radio"] {
+    @extend .visually-hidden;
+}
+
+textarea {
     height: 140px;
 }
+
 .form__toggle-fake_dot {
     width: 8px;
     height: 8px;
     background-color: $green_low;
     border-radius: 50%;
 }
-.form__row-last{
+
+.form__row-last {
     margin: 0;
 }
 
@@ -94,6 +110,7 @@ textarea{
     cursor: pointer;
     justify-content: center;
 }
+
 .form__toggle-fake {
     width: rem(20px);
     height: rem(20px);
@@ -105,29 +122,38 @@ textarea{
     justify-content: center;
 }
 
-.form__toggle-input:checked + .form__toggle-fake{
+.form__toggle-input:checked+.form__toggle-fake {
     background-color: $green_low;
     transition: background-color 300ms;
 }
-.form__toggle-input:checked + .form__toggle-fake .form__toggle-fake_flag {
+
+.form__toggle-input:checked+.form__toggle-fake .form__toggle-fake_flag {
     opacity: 1;
     fill: rgb(255, 255, 255);
 }
+
 .form__toggle-fake_flag {
     opacity: 0;
     transition: opacity 300ms;
     fill: #fff;
 }
-.form__row-title{
+
+.form__row-title {
     font-weight: 900;
     margin-bottom: 15px;
 }
+
 .form__toggle-fake_radio {
     border-radius: 50%;
 }
-.form__toggle-input:checked + .form__toggle-fake_radio {
+
+.form__toggle-input:checked+.form__toggle-fake_radio {
     border-radius: 50%;
     background-color: #fff;
 }
 
-
+@media screen and (max-height: 561px) {
+    .form__row {
+        margin-bottom: 10px;
+    }
+}

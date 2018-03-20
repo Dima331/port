@@ -11,17 +11,21 @@
 /* -- кнопка авторизации --*/
 .authorization-btn {
     position: absolute;
-    top: 5%;
-    right: 10%;
+    top: 3%;
+    right: 5%;
+    @include phones{
+        right: auto;
+    }
 }
 
 .authorization-btn__link {
     border-width: 1px;
     border-color: rgb(255, 255, 255);
     border-style: solid;
-    padding: 15px 30px;
+    padding: 13px 30px;
     display: inline-block;
     border-radius: 30px;
+    font-weight: 500;
     color: #fff;
     &:hover {
         border-color: $green_low;
@@ -39,6 +43,12 @@
     flex-direction: column;
     padding-top: 40px;
     flex: none;
+    @include tablets{
+        width: 350px;
+    }
+    @include phones{
+        width: 300px;
+    }
 }
 .welcome__content {
     text-align: center;
@@ -75,7 +85,13 @@
 .footer-copyrigh{
     position: absolute;
     bottom: 5%;
+    padding: 0 20px;    
     color: #fff;
+    text-align: center;
+    @include phones{
+        bottom: 2%;
+        font-weight: 300;
+    }
 }
 
 
@@ -122,3 +138,14 @@
     border-left: 0px solid rgb(222, 227, 231);
 }
 
+@media screen and (max-height: 561px) {
+    .welcome  {
+        padding-top: 20px;
+        }
+        .welcome__content-margin {
+            margin-bottom: 20px;
+        }
+        .welcome__description {
+            margin: 20px 0 20px 0;
+        }
+    }
