@@ -186,11 +186,14 @@
     //width: 100%;
 }
 .footer__row-down{
-    padding: 5px 5px;
+    padding: 10px 10px;
     color: #ffffff;
     //width: 100%;
     text-align: center;
     background-color: rgba($green_low, .8);
+}
+.footer__row-down p{
+    margin: 0
 }
 .footer__item{
     flex: 1;
