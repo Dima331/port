@@ -17,7 +17,7 @@
 }
 
 @mixin full__screen {
-    @media screen and (max-width: $full__screen) {
+    @media screen and (min-width: $full__screen) {
         @content;
     }
 }

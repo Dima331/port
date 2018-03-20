@@ -112,6 +112,8 @@
 
 .menu__list {
     display: flex;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
 }
 
 .menu__item-link {

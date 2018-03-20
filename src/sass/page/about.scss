@@ -87,7 +87,10 @@
     width: 50%;
     position: relative;
     padding: 0 80px;
-
+    @include full__screen{
+        padding: 0 40px;
+        display: flex;
+    }
 }
 .about__right{
     width: 50%;
@@ -104,9 +107,16 @@
 }
 .about__left-title{
     position: relative;
+    @include full__screen{
+        flex: 1;
+    }
 }
 .about__left-content{
     margin: 20px 0;
+    @include full__screen{
+        margin: 0;
+         flex: 1;
+    }
 }
 .user-description__image{
     margin: 0 0 20px 0;
@@ -119,7 +129,7 @@
 .text-content{
     color: rgb(86, 99, 88);
     line-height: 1.5;
-    font-style: italic;
+    //font-style: italic;
 }
 .user-description__text,.about__right-text{
     margin-top: 20px;

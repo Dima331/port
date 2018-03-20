@@ -62,15 +62,21 @@
 
 }
 .wrapper{
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
   //height: 100%;
+  position: relative;
 }
 .main{
-  flex: 1 0 auto;
+  //flex: 1 0 auto;
 }
 .footer{
-  flex: 0 0 auto;
-  width: 100%;
+  //flex: 0 0 auto;
+  //width: 100%;
   z-index: 1;
+  position: absolute;
+  bottom: 0;
+}
+.footer-position{
+  position: unset;
 }

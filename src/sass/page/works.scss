@@ -30,7 +30,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 228px;
 }
 .about-me__content{
     width: 780px;
@@ -82,7 +82,10 @@
     
 }
 .about-me__form{
-    padding: 45px 20px 20px 20px;
+    padding-top: 45px;
+}
+.form-inbut{
+    margin: 0 20px 20px 20px;
 }
 .block-subtitle-margin{
     margin-bottom: 40px;
@@ -94,7 +97,8 @@
 .about-me__arrow{
     display: flex;
     justify-content: center;
-    margin-top: 115px;
+    margin-top: 85px;
+    margin-bottom: 85px;
     transform: rotate(180deg);
 }
 textarea {
@@ -113,6 +117,7 @@ textarea {
 .slider__btns{
     display: flex;
 }
+
 .slider__btns-left, .slider__btns-right{
     width: 50%;
     height: 100%;
@@ -121,8 +126,13 @@ textarea {
     align-items: center;
 }
 .slider__display-img{
-    width: 500px;
-    height: 325px;
+    max-height: 485px;
+}
+.slide-list{
+    position: relative;
+}
+.slide-list__item{
+    position: absolute;
 }
 /*
 .reviews__item-description-text::before{
