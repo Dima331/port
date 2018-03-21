@@ -8,12 +8,15 @@
     justify-content: center;
     align-items: center;
 }
+
+
 /* -- кнопка авторизации --*/
+
 .authorization-btn {
     position: absolute;
     top: 3%;
     right: 5%;
-    @include phones{
+    @include phones {
         right: auto;
     }
 }
@@ -31,10 +34,19 @@
         border-color: $green_low;
         background-color: $green_middle;
     }
+    &:focus {
+        border-color: $green_low;
+        background-color: $green_middle;
+    }
+    &:active {
+        border-color: $green_low;
+        background-color: #2e9177;
+    }
 }
-/* -- Коннец --*/
+
 
 /* -- Окно --*/
+
 .welcome {
     width: 380px;
     border-radius: 5px;
@@ -43,90 +55,64 @@
     flex-direction: column;
     padding-top: 40px;
     flex: none;
-    @include tablets{
+    @include tablets {
         width: 350px;
     }
-    @include phones{
+    @include phones {
         width: 300px;
     }
 }
+
 .welcome__content {
     text-align: center;
-    
 }
-.welcome__content-margin{
+
+.welcome__content_margin {
     margin-bottom: 40px;
 }
-.welcome__pic{
+
+.welcome__pic {
     width: 140px;
     height: 140px;
     background-color: #fff;
     margin: 0 auto;
     border-radius: 50%;
 }
-.welcome__pic-img{
+
+.welcome__pic-img {
     border-radius: 50%;
 }
-.welcome__description{
+
+.welcome__description {
     margin: 20px 0 40px 0;
 }
-.description-info__name{
+
+.description-info__name {
     color: #fff;
     margin-bottom: 10px;
 }
-.description-info__about{
+
+.description-info__about {
     font-weight: 400;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
 }
+
+
 /* -- Окно  конец --*/
 
+
 /*-- футер welcome -- */
-.footer-copyrigh{
+
+.footer-copyrigh {
     position: absolute;
     bottom: 5%;
-    padding: 0 20px;    
+    padding: 0 20px;
     color: #fff;
     text-align: center;
-    @include phones{
+    @include phones {
         bottom: 2%;
         font-weight: 300;
-    }
-}
-
-
-/* -- Социалки --*/
-.social {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.social__item-link {
-    display: inline-block;
-}
-
-.social__item:last-child {
-    margin-left: 0px;
-}
-/* -- Социалки  конец --*/
-
-.menu__list {
-    display: flex;
-    border-radius: 0 0 5px 5px;
-    overflow: hidden;
-}
-
-.menu__item-link {
-    background-color: $green_low;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 10px;
-    color: #fff;
-    &:hover {
-        background-color: $green_middle;
     }
 }
 
@@ -141,13 +127,13 @@
 }
 
 @media screen and (max-height: 561px) {
-    .welcome  {
+    .welcome {
         padding-top: 20px;
-        }
-        .welcome__content-margin {
-            margin-bottom: 20px;
-        }
-        .welcome__description {
-            margin: 20px 0 20px 0;
-        }
     }
+    .welcome__content-margin {
+        margin-bottom: 20px;
+    }
+    .welcome__description {
+        margin: 20px 0 20px 0;
+    }
+}

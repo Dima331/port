@@ -100,7 +100,12 @@
     margin-top: 85px;
     margin-bottom: 85px;
     transform: rotate(180deg);
+    &:hover{
+        transform: scale(1.5) rotate(180deg);
+        transition: all 0.2s linear;
+    }
 }
+
 textarea {
     resize: none;
     height: 110px;

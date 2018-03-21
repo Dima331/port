@@ -1,18 +1,18 @@
-.blog{
-   // padding-top: 70px;
+.header_blog{
+ height: 50vh;
 }
 .block-title-blog{
     font-size: 63px;
     color: #fff;
     text-transform: uppercase;
     padding-bottom: 40px;
-    margin-bottom: 40px;
 }
 .user__description-margin{
     margin-top: 30px;
 }
 .header__placeholder-blog{
-    top: 41%;
+    top: 37%;
+    height: 47%;
 }
 
 .blog-descripshion-text{
@@ -57,6 +57,12 @@
 }
     box-shadow: 3px 0px 0px 0px $green_low;
 }
+.blog-menu__item:hover{
+    .blog-menu__item-link{
+    color: $green_low;
+}
+    box-shadow: 3px 0px 0px 0px $green_low;
+}
 .blog-descripshion{
     width: 80%;
     padding-bottom: 50px;
@@ -75,7 +81,11 @@
 .blog-descripshion-date{
     margin-bottom: 20px;
     color: rgb(197, 207, 218);
+    
+}
 
+.user__description-info_margin{
+    margin-top: 40px;
 }
 /*
 .blog-menu__item-link:hover{

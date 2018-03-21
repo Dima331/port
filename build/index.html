@@ -13,31 +13,31 @@
   <body>
     <div class="forest">
       <main class="main welcome">
-        <div class="welcome__content welcome__content-margin">
-          <form class="form login login-margin" action="#">
+        <div class="welcome__content welcome__content_margin">
+          <form class="form form_margin" action="#">
             <div class="form__row">
               <div class="title-block">
-                <h2 class="block-subtitle block-subtitle-white">Авторизуйтесь</h2>
-                <div class="title-block__border-white"></div>
+                <h2 class="block-subtitle block-subtitle_white">Авторизуйтесь</h2>
+                <div class="title-block__border_white"></div>
               </div>
             </div>
-            <div class="form__row form__row-spacebetwin">
-              <div class="form__row-label">
-                <svg class="form__row-icon">
+            <div class="form__row form__row-spacebetwin input-icon">
+              <div class="input-icon__label">
+                <svg class="input-icon__icon">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#login"> </use>
                 </svg>
               </div>
-              <label for="login"></label>
-              <input class="login" type="text" name="login" placeholder="Логин" id="login">
+              <label for="login"><span class="visually-hidden">Логин</span></label>
+              <input class="input-icon__login" type="text" name="login" placeholder="Логин" id="login">
             </div>
-            <div class="form__row form__row-spacebetwin">
-              <div class="form__row-label">
-                <svg class="form__row-icon">
+            <div class="form__row form__row-spacebetwin input-icon">
+              <div class="input-icon__label">
+                <svg class="input-icon__icon">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#password"> </use>
                 </svg>
               </div>
-              <label for="password"></label>
-              <input class="password" type="password" name="password" placeholder="Пароль" id="password">
+              <label for="password"><span class="visually-hidden">Пароль</span></label>
+              <input class="input-icon__password" type="password" name="password" placeholder="Пароль" id="password">
             </div>
             <div class="form__row">  
               <label class="form__row-torggle" for="checkbox"> 
@@ -50,10 +50,10 @@
                 <div class="form__title">Я человек</div>
               </label>
             </div>
-            <div class="form__row form__row-title">
-              <div class="login__text">Вы точно не робот?</div>
+            <div class="form__row form__row-text">
+              <p>Вы точно не робот?</p>
             </div>
-            <div class="form__row form__row-last">
+            <div class="form__row form__row_last">
               <label class="form__row-torggle" for="radio"> 
                 <input class="form__toggle-input" type="radio" name="radio" value="Да" id="radio" checked>
                 <div class="form__toggle-fake form__toggle-fake_radio">
@@ -62,11 +62,11 @@
                 <div class="form__title">Да  </div>
               </label>
               <label class="form__row-torggle" for="radio_2"> 
-                <input class="form__toggle-input" type="radio" name="radio" id="radio_2" value="Да">
+                <input class="form__toggle-input" type="radio" name="radio" id="radio_2" value="Нет">
                 <div class="form__toggle-fake form__toggle-fake_radio">
                   <div class="form__toggle-fake_flag form__toggle-fake_dot"></div>
                 </div>
-                <div class="form__title">Не уверен </div>
+                <div class="form__title">Не уверен       </div>
               </label>
             </div>
           </form>

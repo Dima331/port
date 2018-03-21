@@ -87,6 +87,7 @@
 .intelligence__btn-link{
     display: flex;
     padding: 15px 25px;
+    
 }
 .intelligence__btn{
     border-width: 1px;
@@ -94,10 +95,20 @@
     border-style: solid;
     display: inline-block;
     border-radius: 30px;
+    overflow: hidden;
     color: #fff;
     background-color: $green_low;
     border: none;
     padding: 0;
+    &:hover{
+        background-color: $green_middle;
+    }
+    &:focus { 
+        background-color: $green_middle;
+    }
+    &:active {
+        background-color: #2e9177;
+    }
 }
 .arrow__left,.arrow__right{
     width: 100%;

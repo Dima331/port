@@ -50,7 +50,7 @@ h4 {
     padding: 0;
     margin: 0;
 }
-h2{
+h2,h1{
     margin: 0;
     font-weight: 500;
     line-height: 0.8;
@@ -83,12 +83,13 @@ button {
     -moz-user-select: none;
     -ms-user-select: none;
 }
+/*
 button:focus{
     outline: 0;
 }
 button:active{
     outline: 0;
-}
+}*/
 p{
     margin-top: 0;
 }
