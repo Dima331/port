@@ -16,15 +16,15 @@
         <div class="header__social">
           <ul class="social">
             <li class="social__item social__item_margin"><a class="social__item-link" href="#">
-                <svg class="social__item-vk social__item-svg-header social__item-svg">
+                <svg class="social__item-vk social__item-svg">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
                 </svg></a></li>
             <li class="social__item social__item_margin"><a class="social__item-link" href="#">
-                <svg class="social__item-git social__item-svg-header social__item-svg">
+                <svg class="social__item-git social__item-svg">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
                 </svg></a></li>
             <li class="social__item social__item_margin"><a class="social__item-link" href="#">
-                <svg class="social__item-in social__item-svg-header social__item-svg">
+                <svg class="social__item-in social__item-svg">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
                 </svg></a></li>
           </ul>
@@ -42,7 +42,7 @@
           </svg>
         </div>
         <div class="header__content">
-          <div class="header__user user">
+          <div class="user">
             <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="W"></div>
             <div class="user__description">
               <div class="user__description-name">Владимир Астахов</div>
@@ -57,10 +57,10 @@
             </svg>
           </button>
         </div>
-        <div class="triangle tringle_fill_white about__left-triangle">
-          <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
-            <polygon class="left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
-            <polygon class="right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+        <div class="triangle tringle_fill_white">
+          <svg class="traingle__pic" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+            <polygon class="traingle__pic-left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+            <polygon class="traingle__pic-right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
           </svg>
         </div>
       </header>
@@ -82,7 +82,7 @@
               <div class="user-description__image"><img class="user-description__avatar" src="assets/images/content/face.jpg" alt="full phote"></div>
               <div class="user-description__title">
                 <div class="title-block">
-                  <div class="block-subtitle">Кто я</div>
+                  <h2 class="block-subtitle">Кто я</h2>
                   <div class="title-block__border"></div>
                 </div>
               </div>
@@ -95,7 +95,7 @@
           <div class="about__right">
             <div class="about__right-title">
               <div class="title-block">
-                <div class="block-subtitle block-subtitle-width">Чем я могу быть вам полезен</div>
+                <h2 class="block-subtitle block-subtitle_width">Чем я могу быть вам полезен</h2>
                 <div class="title-block__border"></div>
               </div>
             </div>
@@ -190,7 +190,7 @@
               <h2 class="block-subtitle">Контакты</h2>
               <div class="title-block__border"></div>
             </div>
-            <ul class="contacts__list contacts__list-margin">
+            <ul class="contacts__list contacts__list_margin">
               <li class="contacts__item">
                 <svg class="contacts__item-icon">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#skype"></use>
@@ -220,7 +220,7 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__row footer__row_padding">
+        <div class="footer__row footer__row_padding-weight">
           <div class="footer__col"> 
             <div class="footer-text">
               <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
@@ -255,10 +255,8 @@
             </div>
           </div>
         </div>
-        <div class="footer__row">
-          <div class="footer__row-down">
-            <p> © Владимир Астахов | создано с любовью в LoftSchool | 2016   </p>
-          </div>
+        <div class="footer__row footer__row-min">
+          <p> © Владимир Астахов | создано с любовью в LoftSchool | 2016   </p>
         </div>
       </footer>
     </div>

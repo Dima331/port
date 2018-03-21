@@ -48,7 +48,7 @@
     color: #fff;
 }
 
-.block-subtitle-width {
+.block-subtitle_width {
     width: 50%;
     margin: 0 auto;
 }
@@ -59,7 +59,9 @@
     //height: 100%;
     position: relative;
 }
-
+.block-subtitle_margin{
+    margin-bottom: 40px;
+}
 .main {
     //flex: 1 0 auto;
 }
@@ -73,6 +75,6 @@
     width: 100%;
 }
 
-.footer-position {
+.footer_position {
     position: unset;
 }

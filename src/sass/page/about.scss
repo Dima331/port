@@ -182,23 +182,12 @@
     margin-bottom: 0;
   
 }
-.contacts__list-margin{
+.contacts__list_margin{
     margin-top: 20px;
 }
 
-.footer__row{
-    //width: 100%;
-}
-.footer__row-down{
-    padding: 10px 10px;
-    color: #ffffff;
-    //width: 100%;
-    text-align: center;
-    background-color: rgba($green_low, .8);
-}
-.footer__row-down p{
-    margin: 0
-}
+
+
 .footer__col{
     flex: 1;
     border-right: 1px solid rgba(255, 255, 255, .2);
@@ -207,13 +196,27 @@
         border: 0;
     }
 }
-.footer__row_padding{
-    display: flex;
+.footer__row{
+    color: #fff; 
     background-color: rgba(55, 62, 66, .8);
-    color: #fff;
+    display: flex;
+}
+
+.footer__row-min{
+    padding: 10px 10px;
+    justify-content: center;
+    background-color: rgba($green_low, .8);
+}
+
+.footer__row_padding-weight{
     padding: 30px 0;
     font-weight: 300;
 }
+
+.footer__row-min p{
+    margin: 0
+}
+
 .nav_footer{
     display: flex;
     justify-content: space-between;
@@ -355,7 +358,7 @@
   .circles:hover .circle-100 {
      stroke-dasharray: 282.6 282.6;
   }
-  .about__left-triangle{
+  .triangle{
     width: 100%;
     position: absolute;
     bottom: 0;

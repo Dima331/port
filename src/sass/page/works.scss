@@ -87,10 +87,8 @@
 .form-inbut{
     margin: 0 20px 20px 20px;
 }
-.block-subtitle-margin{
-    margin-bottom: 40px;
-}
-.about-me__relations-margin{
+
+.about-me__relations_margin{
    margin: 0 auto;
    margin-top: 60px; 
 }
@@ -138,7 +136,9 @@ textarea {
 }
 .slide-list__item{
     position: absolute;
+    height: 100%;
 }
+
 /*
 .reviews__item-description-text::before{
     content: "❝";

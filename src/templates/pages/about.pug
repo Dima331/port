@@ -21,7 +21,7 @@ block content
                             img(src="assets/images/content/face.jpg", alt="full phote").user-description__avatar
                         .user-description__title
                             .title-block
-                                .block-subtitle Кто я
+                                h2.block-subtitle Кто я
                                 .title-block__border
                         .user-description__text.text-content
                             p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
@@ -29,21 +29,18 @@ block content
                 .about__right
                     .about__right-title
                         .title-block
-                            .block-subtitle.block-subtitle-width Чем я могу быть вам полезен
+                            h2.block-subtitle.block-subtitle_width Чем я могу быть вам полезен
                             .title-block__border
                     .about__right-text.text-content
                         p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
                         include ../common/skill.pug
-            
-            
-            
             section.section.map
                 .google-map
                 .map__contact
                     .title-block
                         h2.block-subtitle Контакты
                         .title-block__border
-                    ul.contacts__list.contacts__list-margin
+                    ul.contacts__list.contacts__list_margin
                         li.contacts__item
                             svg.contacts__item-icon
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#skype")

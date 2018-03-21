@@ -4,21 +4,22 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    .wrapper    
+    .wrapper  
+        //include ../common/header.pug  
         header.header
             .header__social
                 ul.social
                     li.social__item.social__item_margin
                         a.social__item-link(href='#')
-                            svg.social__item-vk.social__item-svg-header.social__item-svg
+                            svg.social__item-vk.social__item-svg
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk") 
                     li.social__item.social__item_margin
                         a.social__item-link(href='#')
-                            svg.social__item-git.social__item-svg-header.social__item-svg
+                            svg.social__item-git.social__item-svg
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github") 
                     li.social__item.social__item_margin
                         a.social__item-link(href='#')
-                            svg.social__item-in.social__item-svg-header.social__item-svg
+                            svg.social__item-in.social__item-svg
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in") 
             .header__hamburger.hamburger
                 button.hamburger__link
@@ -28,9 +29,9 @@ block content
                 svg.header__placeholder-title
                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#portfolio_header")
             .header__content
-                .header__user.user
+                .user
                     .user__pic
-                        img(src="assets/images/content/face.jpg", alt="face").user__pic-img
+                        img(src="assets/images/content/face.jpg", alt="W").user__pic-img
                     .user__description
                         .user__description-name Владимир Астахов
                         .user__description-info Личный сайт разработчика
@@ -38,13 +39,14 @@ block content
                 button.arrow-down
                     svg.arrow-down-svg
                         use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
-            .triangle.tringle_fill_white.about__left-triangle
-                svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle
-                    polygon(points="0,0   0,86   500.8,86   500.8,75.5").left.left-white
-                    polygon(points="1000,0   1000,86   500,86   500,75.5").right.right-white
+            .triangle.tringle_fill_white
+                svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle__pic
+                    polygon(points="0,0   0,86   500.8,86   500.8,75.5").traingle__pic-left.traingle__pic-left_white
+                    polygon(points="1000,0   1000,86   500,86   500,75.5").traingle__pic-right.traingle__pic-right_white
+        
+        
+        
         main.main  
-
-
             section.section.myworks
                 .myworks-title
                     .title-block
@@ -53,13 +55,10 @@ block content
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header")        
                         h1.block-title Мои работы
                         .title-block__border
-                .about__left-svg
-                    //svg.about__left-about
-                        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header")
                 .slider
                     .slider__info
                         .intelligence
-                            .block-subtitle.block-subtitle-slider Сайт школы онлайн образования
+                            h2.block-subtitle.block-subtitle-slider Сайт школы онлайн образования
                             .intelligence__text HTML, CSS, JAVASCRIPT
                             .intelligence__btn 
                                 a(href="#").intelligence__btn-link 
@@ -75,15 +74,12 @@ block content
                                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
                             .slide-list__item
                                 img(src="assets/images/content/face.jpg", alt="face").slide-list-img
-                        .slider__btns-right.arrow
+                        .slider__btns-right.arrow.slide-list
                             button(href="#").arrow__right
-                                svg.arrow__left-up
+                                svg.arrow__right-up
                                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
                             .slide-list__item
                                 img(src="assets/images/content/face.jpg", alt="face").slide-list-img
-
-
-                
                 //.myworks__slider
                     ul.slider
                         li.slider__item
@@ -102,20 +98,14 @@ block content
                 //.myworks__slider-left
                 //.myworks__slider-right
 
-
-
-
-
             section.section.about-me
                 .about-me__content
                     .title-block
                         .title-block-pic.title-block-pic-top
                             svg.title-block-svg
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_header")        
-                        h2.block-title.block-title-about-me Что обо мне говорят
+                        h1.block-title.block-title-about-me Что обо мне говорят
                         .title-block__border
-                        //svg.about__left-about
-                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header")
                     ul.about-me__reviews.reviews
                         li.reviews__item
                             .reviews__item-pic 
@@ -138,11 +128,9 @@ block content
                                         p Lorem ipsum
                                     .quot__who-job
                                         p Lorem ipsum
-
-
-                    .about-me__relations.about-me__relations-margin
+                    .about-me__relations.about-me__relations_margin
                         form(action="#").about-me__form
-                            h2.block-subtitle.block-subtitle-margin Связаться со мной
+                            h2.block-subtitle.block-subtitle_margin Связаться со мной
                             .form-inbut
                                 .form__row
                                     label(for="name").about-me__form-label
@@ -160,12 +148,11 @@ block content
                                 li.menu__item
                                     a.menu__item-link(href='#') Отправить
                                 li.menu__item
-                                    a.menu__item-link(href='#') Очистить
+                                    button.menu__item-link(href='#') Очистить
                     .about-me__arrow.arrow-down
                         button(href="#").about-me__arrow-link
                             svg.arrow-down-svg
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
-        
         
         footer.footer
             include ../common/footer.pug
