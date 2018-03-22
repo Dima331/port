@@ -1,14 +1,14 @@
-
-@mixin phones {
-    @media screen and (max-width: $phones) {
-        @content;
-    }
-}
 @mixin tablets {
     @media screen and (max-width: $tab) {
         @content;
     }
 }
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
 @mixin screen {
     @media screen and (max-width: $screen) {
         @content;

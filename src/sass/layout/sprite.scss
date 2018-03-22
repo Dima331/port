@@ -67,7 +67,11 @@
     }
     .traingle__pic-right{
     fill: #f4f5f0;
+    @include tablets{
+        fill: #ebefe2;
     }
+    }
+
 .header__placeholder-title{
     fill: #fff;
     opacity: 0.3;
