@@ -9,25 +9,22 @@ block content
         .welcome__content.welcome__content_margin
             form.form.form_margin(action="#")
               .form__row
-                .title-block
                   h2.block-subtitle.block-subtitle_white Авторизуйтесь
-                  .title-block__border_white
               .form__row.form__row-spacebetwin.input-icon
                 .input-icon__label
                   svg.input-icon__icon
                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#login") 
-                label(for="login")
-                  span.visually-hidden Логин
+                label(for="login").visually-hidden Логин
                 input(type="text", name="login" placeholder="Логин" id="login").input-icon__login
               .form__row.form__row-spacebetwin.input-icon
                 .input-icon__label
                   svg.input-icon__icon
                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#password")  
-                label(for="password")
-                  span.visually-hidden Пароль
+                label(for="password").visually-hidden Пароль
                 input(type="password", name="password" placeholder="Пароль" id="password").input-icon__password
               .form__row   
                 label(for="checkbox").form__row-torggle 
+                  .visually-hidden Я человек
                   input(type="checkbox", name="checkbox" value="Я человек" id="checkbox").form__toggle-input
                   .form__toggle-fake
                     svg.form__toggle-fake_flag.form__toggle-fake_check
@@ -36,12 +33,14 @@ block content
               .form__row.form__row-text
                 p Вы точно не робот?
               .form__row.form__row_last
-                label(for="radio").form__row-torggle 
+                label(for="radio" ).form__row-torggle 
+                  .visually-hidden Да
                   input(type="radio", name="radio" value="Да" id="radio" checked).form__toggle-input
                   .form__toggle-fake.form__toggle-fake_radio
                     .form__toggle-fake_flag.form__toggle-fake_dot
                   .form__title Да  
                 label(for="radio_2").form__row-torggle 
+                  .visually-hidden Не уверен
                   input(type="radio", name="radio" id="radio_2" value="Нет").form__toggle-input
                   .form__toggle-fake.form__toggle-fake_radio
                     .form__toggle-fake_flag.form__toggle-fake_dot
