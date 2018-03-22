@@ -7,8 +7,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    @include full__screen{
+        height: 70vh;
+    }
+    @include tablets{
+        height: 70vh;
+    }
 }
+
+
 .header__triangles {
     margin: 50px auto;
     background-color: crimson;
@@ -95,11 +102,14 @@
         padding: 0 40px;
         display: flex;
     }
+    @media screen and (max-width: 1190px) {
+        padding: 0 40px;
+    }
 }
 .about__right{
     width: 50%;
     background-color: #f4f5f0;
-    padding: 0 40px;
+    padding: 0 10px 0 40px;
 }
 .login__border-about{
     background-color: rgb(55, 62, 66);
@@ -140,8 +150,12 @@
 }
 .skills-row__item{
     width: 110px;
-    margin-right: 37px;
+    margin-right: 35px;
+    @media screen and (max-width: 1190px) {
+        margin-right: 10px;
+    }
 }
+
 .skill__circle{
     background-color: #454;
     border-radius: 50%;
@@ -153,6 +167,7 @@
 }
 .skills-row__list{
     display: flex;
+    flex-wrap: wrap;
 }
 .map{
     height: 960px;
@@ -164,6 +179,9 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    @include full__screen{
+        height: 120vh;
+    }
 }
 .map__contact{
     position: absolute;
@@ -200,6 +218,10 @@
     color: #fff; 
     background-color: rgba(55, 62, 66, .8);
     display: flex;
+    @include tablets{
+        flex-wrap: wrap;
+    }
+
 }
 
 .footer__row-min{
@@ -220,6 +242,10 @@
 .nav_footer{
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 1190px) {
+        flex-direction: column;
+    }
+    
 }
 .footer__socials{
     display: flex;

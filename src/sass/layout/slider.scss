@@ -1,4 +1,4 @@
-@mixin tablets() {
+@mixin tablet() {
     @media screen and (max-width: 768px) {
       @content;
     }
@@ -13,7 +13,7 @@
       "info display"
       "info btns";
   
-    @include tablets {
+    @include tablet {
       grid-template-columns: 100%;
       grid-template-rows: 400px 200px 300px;
       grid-template-areas: 
