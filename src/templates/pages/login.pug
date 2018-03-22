@@ -1,18 +1,20 @@
-<!--extends ../template
+extends ../template
 
 block variables
     - var title = 'Добро пожаловать'
 
-block contentt
+block content
     .forest
-      .authorization
-        a.authorization__link(href='#') Авторизоваться
-      .welcome
-        .welcome__content
-          .welcome__img
-          .welcome__text
-            h2.welcome__tilte Владимир Астахов
-            h3.welcome__about Личный сайт веб разработчика
+      .authorization-btn
+        button.authorization-btn__link(alt="Кнопка авторизоваться" ) Авторизоваться
+
+      main.main.welcome
+        .welcome__content.welcome__content-margin
+          .welcome__pic
+            img(src="assets/images/content/face.jpg", alt="Картинка автора").welcome__pic-img
+          .welcome__description.description-info
+            h2.description-info__name Владимир Астахов
+            h3.description-info__about Личный сайт веб разработчика
           ul.social
             li.social__item
               a.social__item-link(href='#')
@@ -34,5 +36,5 @@ block contentt
               a.menu__item-link(href='#') Обо мне
             li.menu__item
               a.menu__item-link(href='#') Блог
-      .copyrigh
-        .copyrigh__text   © Владимир Астахов | создано с любовью в LoftSchool | 2016
+      .footer-copyrigh
+        .footer-copyrigh__text   © Владимир Астахов | создано с любовью в LoftSchool | 2018

@@ -17,3 +17,86 @@
         fill: $green_low;
     }
 }
+.social__item-svg-header{
+    fill: aliceblue;
+    &:hover{
+        fill: $green_low;
+    }
+}
+/*
+.form__row-login{
+    width: 15px;
+    height: 17px;
+    fill: #c4cbcd;
+    margin: 0 auto;
+}*/
+.hamburger__link-svg{
+    width: 40px;
+    height: 35px;
+    fill: #fff;
+}
+
+.left{
+    fill: #ebefe2;
+    }
+    .right{
+    fill: #f4f5f0;
+    }
+.header__placeholder-title{
+    fill: #fff;
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+}
+.form__row-icon{
+    width: 15px;
+    height: 17px;
+    fill: #c4cbcd;
+    margin: 0 auto;
+}
+
+.form__toggle-fake_check {
+    width: 12px;
+    height: 9px;
+    stroke: #fff;
+}
+.arrow-down-svg{
+    width: 26px;
+    height: 16px;
+    fill: #fff;
+
+
+}
+.title-block-svg{
+    fill: #e2ebd0;  
+    width: 100%;
+}
+.contacts__item-icon{
+    width: 25px;
+    height: 25px;
+    fill: $green_low;
+    margin-right: 20px;
+}
+.intelligence__btn-svg{
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    margin-right: 10px;    
+}
+.right-white{
+    fill: #fff;
+}
+.left-white{
+    fill: #fff;
+}
+.arrow__left-up{
+    fill: #fff;
+    transform: rotate(180deg);
+    width: 43px;
+    height: 27px;
+}
+.arrow__left-down{
+    fill: #fff; 
+    width: 43px;
+    height: 27px;
+}

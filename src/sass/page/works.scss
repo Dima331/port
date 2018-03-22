@@ -1,0 +1,131 @@
+.myworks-title{
+    margin: 60px auto;
+    width: 50%;
+}
+.myworks__slider{
+    height: 750px;
+    //width: 1180px;  
+    margin: 0 auto;
+    background-color: rgb(197, 207, 218);
+}
+
+.about-me__reviews{
+    margin-top: 40px;
+}
+.title-block-pic{
+    position: absolute;
+    width: 100%;
+    top: -72px;
+}
+.title-block-pic-top{
+    top: 0px;
+}
+.myworks-title,.title-block{
+    position: relative;
+}
+.about-me{
+    position: relative;
+    background-color: rgba(181, 209, 158, 0.829);
+    background-image: url("/assets/images/content/bg-work.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.about-me__content{
+    width: 780px;
+    margin: 0 auto;
+}
+.reviews{
+    display: flex;
+    justify-content: space-between;
+}
+.reviews__item-pic {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+}
+.reviews__item-img{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+.block-title-about-me{
+    width: 50%;
+    margin: 0 auto;
+    line-height: 1;
+}
+.quot__who-name p, .quot__who-job p{
+    margin: 0;
+}
+.reviews__item{
+    width: 48%;
+}
+.reviews__item-description{
+    @extend .text-content;
+    margin: 0px;
+    margin-top: 20px;
+}
+.quot__who{
+    text-align: center;
+    display: block;
+}
+.quot__who-name{
+    color: $green_low;
+    font-weight: 900;
+}
+.about-me__relations{
+    width: 380px;
+    border-radius: 5px;
+    background-color: rgba(218, 219, 214,.6);
+    
+}
+.about-me__form{
+    padding: 45px 20px 20px 20px;
+}
+.block-subtitle-margin{
+    margin-bottom: 40px;
+}
+.about-me__relations-margin{
+   margin: 0 auto;
+   margin-top: 60px; 
+}
+.about-me__arrow{
+    display: flex;
+    justify-content: center;
+    margin-top: 115px;
+    transform: rotate(180deg);
+}
+textarea {
+    resize: none;
+    height: 110px;
+    width: 100%;
+    border-radius: 30px;
+}
+.about-me__form-label{
+    width: 100%;
+}
+.about-me__form-label .about-me__form-input{
+    width: 100%;
+    border-radius: 30px;
+}
+.slider__btns{
+    display: flex;
+}
+.slider__btns-left, .slider__btns-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider__display-img{
+    width: 500px;
+    height: 325px;
+}
+/*
+.reviews__item-description-text::before{
+    content: "❝";
+    font-size: 40px;
+}*/

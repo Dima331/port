@@ -1,6 +1,6 @@
 .forest {
     height: 100vh;
-    background-image: url("assets/images/content/forest.jpg");
+    background-image: url("/assets/images/content/forest.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -8,34 +8,14 @@
     justify-content: center;
     align-items: center;
 }
-.copyrigh {
-    position: absolute;
-    bottom: 5%;
-    color: #fff;
-}
-.welcome__tilte{
-    font-weight: 500;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-size: 28px;
-}
-.welcome__text{
-    margin-bottom: 29px;
-}
-  
-.welcome__about{
-    font-weight: 400;
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.8);
-}
-  
-.authorization {
+/* -- кнопка авторизации --*/
+.authorization-btn {
     position: absolute;
     top: 5%;
     right: 10%;
 }
 
-.authorization__link {
+.authorization-btn__link {
     border-width: 1px;
     border-color: rgb(255, 255, 255);
     border-style: solid;
@@ -43,179 +23,102 @@
     display: inline-block;
     border-radius: 30px;
     color: #fff;
-    //font-family: "Roboto";
     &:hover {
         border-color: $green_low;
         background-color: $green_middle;
     }
 }
+/* -- Коннец --*/
 
+/* -- Окно --*/
 .welcome {
     width: 380px;
     border-radius: 5px;
-    background-color: rgba($dark, 0.6);
+    background-color: rgba(18, 38, 32, 0.6);
     display: flex;
     flex-direction: column;
+    padding-top: 40px;
+    flex: none;
 }
-
-
-.welcome__img {
+.welcome__content {
+    text-align: center;
+    
+}
+.welcome__content-margin{
+    margin-bottom: 40px;
+}
+.welcome__pic{
     width: 140px;
     height: 140px;
     background-color: #fff;
-    border-radius: 50%;
     margin: 0 auto;
-    background-image: url("assets/images/content/face.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    border-radius: 50%;
 }
+.welcome__pic-img{
+    border-radius: 50%;
+}
+.welcome__description{
+    margin: 20px 0 40px 0;
+}
+.description-info__name{
+    color: #fff;
+    margin-bottom: 10px;
+}
+.description-info__about{
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+/* -- Окно  конец --*/
 
-.welcome__text {
+/*-- футер welcome -- */
+.footer-copyrigh{
+    position: absolute;
+    bottom: 5%;
     color: #fff;
 }
 
-.welcome__content {
-    padding: 40px 20px;
-    text-align: center;
-}
-.social{
-    display:flex;
+
+/* -- Социалки --*/
+.social {
+    display: flex;
     justify-content: space-evenly;
 }
-.social__item-link{
+
+.social__item-link {
     display: inline-block;
 }
 
-.social__item:last-child{
+.social__item:last-child {
     margin-left: 0px;
 }
-.menu__list{
+/* -- Социалки  конец --*/
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item-link {
+    background-color: $green_low;
+    width: 100%;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 45px;
-}
-.nav{
-    flex: 1;
-}/*
-.menu__item-link{
-    padding: 15px 30px;
-    background-color: $green_low;
-    
-}*/
-.menu__item-link{
-    background-color: $green_low;
-    width: 100%;
-    line-height: 2.7;
-    text-align: center;
-    &:hover{
+    padding: 10px 10px;
+    color: #fff;
+    &:hover {
         background-color: $green_middle;
-    }   
+    }
 }
-.menu__item{
-    height: 100%;
+
+.menu__item {
     border-left: 2px solid rgb(222, 227, 231);
     display: flex;
-    justify-content: center;
-    flex: 1;
+    flex: 1 1 100px;
 }
-.menu__item:first-child{
+
+.menu__item:first-child {
     border-left: 0px solid rgb(222, 227, 231);
 }
 
-
-/*------------------ логин-------------------------*/
-
-.login__title{
-        font-size: 35px;
-        color: rgb(255, 255, 255);
-        text-transform: uppercase; 
-        font-family: 'Sansus';
-}
-
-.login__border{
-    background-color: rgb(255, 255, 255);
-    width: 90px;
-    height: 3px;
-    margin: 30px auto;
-  }
-.login__form{
-    display: flex;
-    flex-direction: column;
-
-}
-input[type="text"], input[type="password"]{
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-    height: 45px;
-    border: 0;
-    width: 100%;
-  }
-  input[type="text"]:focus, input[type="password"]:focus{
-    outline: none;
-}
-
-input[type="checkbox"]{
-    @extend .visually-hidden;
-}
-input[type="radio"]{
-    @extend .visually-hidden;
-}
-input[type="radio"]+label:before {
-    content: "";
-    display: inline-block;
-    width: rem(15px);
-    height: rem(15px);
-    margin-right: rem(7px);
-    background-clip: content-box;
-    background-color: #fff;
-    border-radius: 50%;
-}
-
-input[type="radio"]:checked + label:before {
-   background-color: #e35028;
-   border: rem(4px) solid #FFF;
-}
-input[type="radio"]:focus + label:before {
-    box-shadow: 0 0 rem(15px) rgb(249, 180, 59);
-}
-
-
-input[type="checkbox"]+label:before {
-    content: "";
-    display: inline-block;
-    width: rem(15px);
-    height: rem(15px);
-    background-color: #fff;
-    margin-right: rem(7px);
-
-}
-input[type="checkbox"]:checked + label:before {
-    content: "\2714";
-    text-align: center;
-    line-height: 1.2;
-    color:#e35028;
-    font-weight: 900;
-    background-clip: content-box;
-    background: #ffffff; 
-}
-input[type="checkbox"]:focus + label:before{
-    box-shadow: 0 0 rem(30px) rgb(249, 180, 59);
-}
-.order-link-reset{
-    margin-left: rem(20px);
-    color: #fff;
-    font-weight: 500;
-    font-size: 0.8125rem;
-    vertical-align: middle;
-    text-transform: none;
-    text-transform: uppercase;
-}
-.form__row{
-    margin-bottom: 20px;
-}
-/*
-<div class="form__row checkbox">
-    <input type="checkbox" name="checkbox" id="checkbox-1">
-    <label for="checkbox-1" class="checkbox__label">Оплата по карте</label>
-</div>*/
