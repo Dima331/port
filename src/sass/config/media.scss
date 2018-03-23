@@ -8,6 +8,11 @@
         @content;
     }
 }
+@mixin phones_work {
+    @media screen and (max-width: $work) {
+        @content;
+    }
+}
 
 @mixin screen {
     @media screen and (max-width: $screen) {

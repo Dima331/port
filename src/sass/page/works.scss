@@ -35,15 +35,23 @@
 .about-me__content{
     width: 780px;
     margin: 0 auto;
+    @include screen{
+        width: 95%;
+    }
 }
 .reviews{
     display: flex;
     justify-content: space-between;
+    @include phones_work{
+       flex-direction: column;
+    }
 }
 .reviews__item-pic {
     margin: 0 auto;
     width: 80px;
+    
     height: 80px;
+    border-radius: 50%;
     background-color: #fff;
 }
 .reviews__item-img{
@@ -52,15 +60,25 @@
     height: 80px;
 }
 .block-title-about-me{
-    width: 50%;
+    width: 64%;
     margin: 0 auto;
     line-height: 1;
+    @include phones_work{
+        width: 100%;
+    }
 }
 .quot__who-name p, .quot__who-job p{
     margin: 0;
 }
 .reviews__item{
     width: 48%;
+    @include phones_work{
+        width: 100%;
+        margin-top: 40px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
 }
 .reviews__item-description{
     @extend .text-content;
@@ -79,7 +97,9 @@
     width: 380px;
     border-radius: 5px;
     background-color: rgba(218, 219, 214,.6);
-    
+    @include phones_work{
+        width: 300px;
+    }
 }
 .about-me__form{
     padding-top: 45px;
@@ -116,27 +136,6 @@ textarea {
 .about-me__form-label .about-me__form-input{
     width: 100%;
     border-radius: 30px;
-}
-.slider__btns{
-    display: flex;
-}
-
-.slider__btns-left, .slider__btns-right{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.slider__display-img{
-    max-height: 485px;
-}
-.slide-list{
-    position: relative;
-}
-.slide-list__item{
-    position: absolute;
-    height: 100%;
 }
 
 /*
