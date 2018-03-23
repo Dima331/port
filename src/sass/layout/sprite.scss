@@ -1,4 +1,4 @@
-.social__item-vk{
+/*.social__item-vk{
     width: 30px;
     height: 22px;
 }
@@ -9,20 +9,46 @@
 .social__item-in{
     width: 30px;
     height: 22px;
-}
+}*/
 .social__item-svg{
     fill: aliceblue;
     opacity: 0.7;
+    width: 30px;
+    height: 22px;
     &:hover{
         fill: $green_low;
-    }
+    }  
 }
+
+.social__item-link:focus{
+    .social__item-svg{
+        fill: $green_middle;
+    }
+
+}
+.social__item-link:active{
+    .social__item-svg{
+        fill: #2e9177;
+    }
+
+}
+/*
 .social__item-svg-header{
     fill: aliceblue;
-    &:hover{
+    width: 30px;
+    height: 22px;
+    /*&:hover{
         fill: $green_low;
     }
-}
+    &:active {
+        fill: #2e9177;
+    }
+    &:focus {
+        fill: $green_middle;
+    }*/
+    
+//}
+
 /*
 .form__row-login{
     width: 15px;
@@ -36,19 +62,23 @@
     fill: #fff;
 }
 
-.left{
+.traingle__pic-left{
     fill: #ebefe2;
     }
-    .right{
+    .traingle__pic-right{
     fill: #f4f5f0;
+    @include tablets{
+        fill: #ebefe2;
     }
+    }
+
 .header__placeholder-title{
     fill: #fff;
     opacity: 0.3;
     height: 100%;
     width: 100%;
 }
-.form__row-icon{
+.input-icon__icon{
     width: 15px;
     height: 17px;
     fill: #c4cbcd;
@@ -83,13 +113,13 @@
     fill: #fff;
     margin-right: 10px;    
 }
-.right-white{
+.traingle__pic-right_white{
     fill: #fff;
 }
-.left-white{
+.traingle__pic-left_white{
     fill: #fff;
 }
-.arrow__left-up{
+.arrow__right-up{
     fill: #fff;
     transform: rotate(180deg);
     width: 43px;

@@ -1,11 +1,3 @@
-html {
-    @include tablets {
-        font-size: 15px;
-    }
-    @include phones {
-        font-size: 14px;
-    }
-}
 
 body {
     margin: 0;
@@ -28,12 +20,20 @@ body {
     box-sizing: border-box;
 }
 
-body,
 html {
     font-family: 'Roboto';
     height: 100%;
     font-size: 16px;
 }
+html{
+    @include tablets{
+      font-size: 15px;
+    }
+  
+    @include phones{
+      font-size: 14px;
+    }
+  }
 
 ul {
     margin: 0;
@@ -45,15 +45,31 @@ li {
     list-style: none;
 }
 
-h3,
-h4 {
+h3{
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Roboto';
+}
+h4{
+    font-size: 23px;
+}
+h4,h1,h2,h3 {
     padding: 0;
     margin: 0;
+    
+}
+h1{
+    font-size: 63px;
+    color: #373e42;
+    font-family: 'Sansus';
+    font-weight: 500;
 }
 h2{
-    margin: 0;
     font-weight: 500;
-    line-height: 0.8;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1;
+    font-family: 'Sansus';
 }
 a{
     text-decoration: none;
@@ -66,7 +82,19 @@ video {
     max-width: 100%;
     height: auto;
 }
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -83,12 +111,14 @@ button {
     -moz-user-select: none;
     -ms-user-select: none;
 }
+
+/*
 button:focus{
     outline: 0;
 }
 button:active{
     outline: 0;
-}
+}*/
 p{
     margin-top: 0;
 }

@@ -5,52 +5,39 @@
     text-transform: uppercase;
     font-family: 'Sansus';
 }
-.login-margin{
+
+.form_margin{
     margin: 0 20px;
 }
+
 .login__border {
     background-color: rgb(255, 255, 255);
     width: 90px;
     height: 3px;
     margin: 30px auto;
 }
-
+.form__row-text p{
+    margin: 0;
+}
 .login__form {
     display: flex;
     flex-direction: column;
 }
 
-input[type="text"],
-input[type="password"], textarea {
-    background-color: #fff;
-    border-radius: 0 30px 30px 0;
-    padding: 15px 5px 15px 14px;
-    font-size: 16px;
-    font-weight: 600;
-    border: 0;
-    width: 85%;
-    position: relative;
-    font-family: 'Roboto';
-}
-textarea::-webkit-input-placeholder,
-input[type="text"]::-webkit-input-placeholder,
-input[type="password"]::-webkit-input-placeholder {
-    color: rgba(55, 62, 66, 0.4);
-    font-weight: 500;
-}
-
 .form__row {
     position: relative;
-    color:rgba(#fff ,0.8);
+    color: rgba(#fff, 0.8);
     margin-bottom: 20px;
     display: flex;
     justify-content: space-evenly;
 }
-.form__row-spacebetwin{
-    justify-content: space-between;
+
+
+.form__row-spacebetwin {
+    justify-content: flex-end;
 }
 
-.form__row-label {
+.input-icon__label {
     position: absolute;
     z-index: 1;
     left: 0;
@@ -61,22 +48,9 @@ input[type="password"]::-webkit-input-placeholder {
     width: 15%;
     align-items: center;
     background-color: #f0efe9;
-}
-textarea,
-input[type="text"]:focus,
-input[type="password"]:focus {
-    outline: none;
-}
-
-input[type="checkbox"] {
-   @extend .visually-hidden;
-}
-
-input[type="radio"] { 
-    @extend .visually-hidden;
-}
-textarea{
-    height: 140px;
+    @include phones {
+        width: 20%;
+    }
 }
 .form__toggle-fake_dot {
     width: 8px;
@@ -84,7 +58,8 @@ textarea{
     background-color: $green_low;
     border-radius: 50%;
 }
-.form__row-last{
+
+.form__row_last {
     margin: 0;
 }
 
@@ -94,6 +69,7 @@ textarea{
     cursor: pointer;
     justify-content: center;
 }
+
 .form__toggle-fake {
     width: rem(20px);
     height: rem(20px);
@@ -105,29 +81,41 @@ textarea{
     justify-content: center;
 }
 
-.form__toggle-input:checked + .form__toggle-fake{
+.form__toggle-input:checked+.form__toggle-fake {
     background-color: $green_low;
     transition: background-color 300ms;
 }
-.form__toggle-input:checked + .form__toggle-fake .form__toggle-fake_flag {
+
+.form__toggle-input:checked+
+.form__toggle-fake 
+.form__toggle-fake_flag {
     opacity: 1;
     fill: rgb(255, 255, 255);
 }
+
 .form__toggle-fake_flag {
     opacity: 0;
     transition: opacity 300ms;
     fill: #fff;
 }
-.form__row-title{
+
+.form__row-text {
     font-weight: 900;
     margin-bottom: 15px;
 }
+
 .form__toggle-fake_radio {
     border-radius: 50%;
 }
-.form__toggle-input:checked + .form__toggle-fake_radio {
+
+.form__toggle-input:checked+
+.form__toggle-fake_radio {
     border-radius: 50%;
     background-color: #fff;
 }
 
-
+@media screen and (max-height: 561px) {
+    .form__row {
+        margin-bottom: 10px;
+    }
+}

@@ -15,16 +15,16 @@
       <header class="header">
         <div class="header__social">
           <ul class="social">
-            <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                <svg class="social__item-vk social__item-svg-header">
+            <li class="social__item social__item_margin"><a class="social__item-link" href="#">
+                <svg class="social__item-svg">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
                 </svg></a></li>
-            <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                <svg class="social__item-git social__item-svg-header">
+            <li class="social__item social__item_margin"><a class="social__item-link" href="#">
+                <svg class="social__item-svg">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
                 </svg></a></li>
-            <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                <svg class="social__item-in social__item-svg-header">
+            <li class="social__item social__item_margin"><a class="social__item-link" href="#">
+                <svg class="social__item-svg">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
                 </svg></a></li>
           </ul>
@@ -42,7 +42,7 @@
           </svg>
         </div>
         <div class="header__content">
-          <div class="header__user user">
+          <div class="user">
             <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="W"></div>
             <div class="user__description">
               <div class="user__description-name">Владимир Астахов</div>
@@ -57,10 +57,10 @@
             </svg>
           </button>
         </div>
-        <div class="triangle tringle_fill_white about__left-triangle">
-          <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
-            <polygon class="left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
-            <polygon class="right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+        <div class="triangle tringle_fill_white">
+          <svg class="traingle__pic" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+            <polygon class="traingle__pic-left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+            <polygon class="traingle__pic-right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
           </svg>
         </div>
       </header>
@@ -74,21 +74,14 @@
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_header">       </use>
                   </svg>
                 </div>
-                <h2 class="block-title">Обо мне</h2>
-                <div class="title-block__border"></div>
+                <h1 class="block-title">Обо мне</h1>
+                <!--.title-block__border    -->
               </div>
             </div>
-            <!--.about__left-svg
-            svg.about__left-about
-                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_header")        
-            -->
             <div class="about__left-content">
               <div class="user-description__image"><img class="user-description__avatar" src="assets/images/content/face.jpg" alt="full phote"></div>
               <div class="user-description__title">
-                <div class="title-block">
-                  <div class="block-subtitle">Кто я</div>
-                  <div class="title-block__border"></div>
-                </div>
+                <h2 class="block-subtitle">Кто я</h2>
               </div>
               <div class="user-description__text text-content">
                 <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
@@ -98,103 +91,101 @@
           </div>
           <div class="about__right">
             <div class="about__right-title">
-              <div class="title-block">
-                <div class="block-subtitle block-subtitle-width">Чем я могу быть вам полезен</div>
-                <div class="title-block__border"></div>
-              </div>
+              <h2 class="block-subtitle block-subtitle_width">Чем я могу быть вам полезен</h2>
             </div>
             <div class="about__right-text text-content">
               <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
-              <ul class="skills-list skills-list-margin">
-                <li class="skills-list__item">
-                  <div class="skills-row">
-                    <h3 class="skills-row__title">Frontend</h3>
-                    <ul class="skills-row__list">
-                      <li class="skills-row__item">
-                        <svg class="circles" viewBox="0 0 110 110">
-                          <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
-                          <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
-                        </svg><span class="item__title">HTML &amp; CSS</span>
-                      </li>
-                      <li class="skills-row__item">
-                        <svg class="circles" viewBox="0 0 110 110">
-                          <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
-                          <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
-                        </svg><span class="item__title">HTML javaScript</span>
-                      </li>
-                      <li class="skills-row__item">
-                        <svg class="circles" viewBox="0 0 110 110">
-                          <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
-                          <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
-                        </svg><span class="item__title">Node.js</span>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="skills-list__item">
-                  <div class="skills-row">
-                    <h3 class="skills-row__title"> Backend
-                      <ul class="skills-row__list">
-                        <li class="skills-row__item">
-                          <svg class="circles" viewBox="0 0 110 110">
-                            <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
-                            <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
-                          </svg><span class="item__title">HTML &amp; CSS</span>
-                        </li>
-                        <li class="skills-row__item">
-                          <svg class="circles" viewBox="0 0 110 110">
-                            <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
-                            <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
-                          </svg><span class="item__title">HTML javaScript</span>
-                        </li>
-                        <li class="skills-row__item">
-                          <svg class="circles" viewBox="0 0 110 110">
-                            <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
-                            <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
-                          </svg><span class="item__title">Node.js</span>
-                        </li>
-                      </ul>
-                    </h3>
-                  </div>
-                </li>
-                <li class="skills-list__item">
-                  <div class="skills-row">
-                    <h3 class="skills-row__title"> Workflow
-                      <ul class="skills-row__list">
-                        <li class="skills-row__item">
-                          <svg class="circles" viewBox="0 0 110 110">
-                            <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
-                            <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
-                          </svg><span class="item__title">HTML &amp; CSS</span>
-                        </li>
-                        <li class="skills-row__item">
-                          <svg class="circles" viewBox="0 0 110 110">
-                            <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
-                            <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
-                          </svg><span class="item__title">HTML javaScript</span>
-                        </li>
-                        <li class="skills-row__item">
-                          <svg class="circles" viewBox="0 0 110 110">
-                            <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
-                            <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
-                          </svg><span class="item__title">Node.js</span>
-                        </li>
-                      </ul>
-                    </h3>
-                  </div>
-                </li>
-              </ul>
             </div>
+            <ul class="skills-list skills-list_margin">
+              <li class="skills-list__item">
+                <div class="skills-row">
+                  <h3 class="skills-row__title">Frontend</h3>
+                  <ul class="skills-row__list">
+                    <li class="skills-row__item skill-block">
+                      <svg class="skill-block__circles circles" viewBox="0 0 110 110">
+                        <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                        <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
+                      </svg><span class="skill-block__title">HTML &amp; CSS</span>
+                    </li>
+                    <li class="skills-row__item skill-block">
+                      <svg class="skill-block__circles circles" viewBox="0 0 110 110">
+                        <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                        <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
+                      </svg><span class="skill-block__title">HTML javaScript</span>
+                    </li>
+                    <li class="skills-row__item skill-block">
+                      <svg class="skill-block__circles circles" viewBox="0 0 110 110">
+                        <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                        <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
+                      </svg><span class="skill-block__title">Node.js</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="skills-list__item">
+                <div class="skills-row">
+                  <h3 class="skills-row__title"> Backend</h3>
+                  <ul class="skills-row__list">
+                    <li class="skills-row__item skill-block">
+                      <svg class="skill-block__circles circles" viewBox="0 0 110 110">
+                        <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                        <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
+                      </svg><span class="skill-block__title">HTML &amp; CSS</span>
+                    </li>
+                    <li class="skills-row__item skill-block">
+                      <svg class="skill-block__circles circles" viewBox="0 0 110 110">
+                        <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                        <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
+                      </svg><span class="skill-block__title">HTML javaScript</span>
+                    </li>
+                    <li class="skills-row__item skill-block">
+                      <svg class="skill-block__circles circles" viewBox="0 0 110 110">
+                        <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                        <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
+                      </svg><span class="skill-block__title">Node.js</span>
+                    </li>
+                    <li class="skills-row__item skill-block">
+                      <svg class="skill-block__circles circles" viewBox="0 0 110 110">
+                        <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                        <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
+                      </svg><span class="skill-block__title">Node.js</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="skills-list__item">
+                <div class="skills-row">
+                  <h3 class="skills-row__title"> Workflow</h3>
+                  <ul class="skills-row__list">
+                    <li class="skills-row__item skill-block">
+                      <svg class="skill-block__circles circles" viewBox="0 0 110 110">
+                        <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                        <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
+                      </svg><span class="skill-block__title">HTML &amp; CSS</span>
+                    </li>
+                    <li class="skills-row__item skill-block">
+                      <svg class="skill-block__circles circles" viewBox="0 0 110 110">
+                        <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                        <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
+                      </svg><span class="skill-block__title">HTML javaScript</span>
+                    </li>
+                    <li class="skills-row__item skill-block">
+                      <svg class="skill-block__circles circles" viewBox="0 0 110 110">
+                        <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                        <circle class="circle__second circle-25" r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)">   </circle>
+                      </svg><span class="skill-block__title">Node.js</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
         <section class="section map">
           <div class="google-map"></div>
           <div class="map__contact">
-            <div class="title-block">
-              <h3 class="block-subtitle">Контакты</h3>
-              <div class="title-block__border"></div>
-            </div>
-            <ul class="contacts__list contacts__list-margin">
+            <h2 class="block-subtitle">Контакты</h2>
+            <ul class="contacts__list contacts__list_margin">
               <li class="contacts__item">
                 <svg class="contacts__item-icon">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#skype"></use>
@@ -224,49 +215,43 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__row">
-          <div class="footer__row-up">
-            <ul class="footer__list">
-              <li class="footer__item">
-                <div class="footer__item-school">
-                  <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
-                </div>
-              </li>
-              <li class="footer__item">
-                <ul class="nav footer__nav">
-                  <li class="nav__item"><a href="#">Мои работы</a></li>
-                  <li class="nav__item"><a href="#">Обо мне</a></li>
-                  <li class="nav__item"><a href="#">Блог</a></li>
-                  <li class="nav__item"><a href="#">Авторизация  </a></li>
-                </ul>
-                <ul class="socials footer__socials">
-                  <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                      <svg class="social__item-vk social__item-svg-header">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
-                      </svg></a></li>
-                  <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                      <svg class="social__item-git social__item-svg-header">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
-                      </svg></a></li>
-                  <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                      <svg class="social__item-in social__item-svg-header">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
-                      </svg></a></li>
-                </ul>
-              </li>
-              <li class="footer__item">
-                <div class="footer__item-quote">
-                  <p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</p>
-                  <p>— Martin Golding</p>
-                </div>
-              </li>
+        <div class="footer__row footer__row_padding-weight">
+          <div class="footer__col"> 
+            <div class="footer-text">
+              <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
+            </div>
+          </div>
+          <div class="footer__col">
+            <ul class="nav nav_footer">
+              <li class="nav__item"><a class="nav__item-link" href="my-works.html">Мои работы</a></li>
+              <li class="nav__item"><a class="nav__item-link" href="about.html">Обо мне</a></li>
+              <li class="nav__item"><a class="nav__item-link" href="blog.html">Блог</a></li>
+              <li class="nav__item"><a class="nav__item-link" href="index.html">Авторизация  </a></li>
+            </ul>
+            <ul class="socials footer__socials">
+              <li class="social__item social__item_margin"><a class="social__item-link" href="#">
+                  <svg class="social__item-svg">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
+                  </svg></a></li>
+              <li class="social__item social__item_margin"><a class="social__item-link" href="#">
+                  <svg class="social__item-svg">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
+                  </svg></a></li>
+              <li class="social__item social__item_margin"><a class="social__item-link" href="#">
+                  <svg class="social__item-svg">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
+                  </svg></a></li>
             </ul>
           </div>
-        </div>
-        <div class="footer__row">
-          <div class="footer__row-down">
-            <p> © Владимир Астахов | создано с любовью в LoftSchool | 2016  </p>
+          <div class="footer__col">
+            <div class="footer-text footer-text_color">
+              <p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</p>
+              <p>— Martin Golding</p>
+            </div>
           </div>
+        </div>
+        <div class="footer__row footer__row-min">
+          <p> © Владимир Астахов | создано с любовью в LoftSchool | 2016   </p>
         </div>
       </footer>
     </div>

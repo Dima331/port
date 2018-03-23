@@ -17,7 +17,7 @@
     width: 100%;
     top: -72px;
 }
-.title-block-pic-top{
+.title-block-pic_top{
     top: 0px;
 }
 .myworks-title,.title-block{
@@ -26,11 +26,11 @@
 .about-me{
     position: relative;
     background-color: rgba(181, 209, 158, 0.829);
-    background-image: url("/assets/images/content/bg-work.jpg");
+    background-image: url("../../assets/images/content/bg-work.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 228px;
 }
 .about-me__content{
     width: 780px;
@@ -82,21 +82,28 @@
     
 }
 .about-me__form{
-    padding: 45px 20px 20px 20px;
+    padding-top: 45px;
 }
-.block-subtitle-margin{
-    margin-bottom: 40px;
+.form-inbut{
+    margin: 0 20px 20px 20px;
 }
-.about-me__relations-margin{
+
+.about-me__relations_margin{
    margin: 0 auto;
    margin-top: 60px; 
 }
 .about-me__arrow{
     display: flex;
     justify-content: center;
-    margin-top: 115px;
+    margin-top: 85px;
+    margin-bottom: 85px;
     transform: rotate(180deg);
+    &:hover{
+        transform: scale(1.5) rotate(180deg);
+        transition: all 0.2s linear;
+    }
 }
+
 textarea {
     resize: none;
     height: 110px;
@@ -113,6 +120,7 @@ textarea {
 .slider__btns{
     display: flex;
 }
+
 .slider__btns-left, .slider__btns-right{
     width: 50%;
     height: 100%;
@@ -121,9 +129,16 @@ textarea {
     align-items: center;
 }
 .slider__display-img{
-    width: 500px;
-    height: 325px;
+    max-height: 485px;
 }
+.slide-list{
+    position: relative;
+}
+.slide-list__item{
+    position: absolute;
+    height: 100%;
+}
+
 /*
 .reviews__item-description-text::before{
     content: "❝";

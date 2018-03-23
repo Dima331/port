@@ -7,14 +7,14 @@ block content
     .forest
       .authorization-btn
         button.authorization-btn__link(alt="Кнопка авторизоваться" ) Авторизоваться
-
       main.main.welcome
-        .welcome__content.welcome__content-margin
+        h1.visually-hidden Главная страница автора
+        .welcome__content.welcome__content_margin
           .welcome__pic
             img(src="assets/images/content/face.jpg", alt="Картинка автора").welcome__pic-img
           .welcome__description.description-info
-            h2.description-info__name Владимир Астахов
-            h3.description-info__about Личный сайт веб разработчика
+            .description-info__name Владимир Астахов
+            .description-info__about Личный сайт веб разработчика
           ul.social
             li.social__item
               a.social__item-link(href='#')
@@ -31,10 +31,10 @@ block content
         nav.nav
           ul.menu__list
             li.menu__item
-              a.menu__item-link(href='#') Мои работы
+              a.menu__item-link(href='my-works.html') Мои работы
             li.menu__item
-              a.menu__item-link(href='#') Обо мне
+              a.menu__item-link(href='about.html') Обо мне
             li.menu__item
-              a.menu__item-link(href='#') Блог
+              a.menu__item-link(href='blog.html') Блог
       .footer-copyrigh
         .footer-copyrigh__text   © Владимир Астахов | создано с любовью в LoftSchool | 2018

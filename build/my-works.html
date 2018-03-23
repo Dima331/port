@@ -11,20 +11,21 @@
     <script src="assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">   
+    <div class="wrapper"> 
+      <!--include ../common/header.pug  -->
       <header class="header">
         <div class="header__social">
           <ul class="social">
-            <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                <svg class="social__item-vk social__item-svg-header">
+            <li class="social__item social__item_margin"><a class="social__item-link" href="#">
+                <svg class="social__item-svg">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
                 </svg></a></li>
-            <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                <svg class="social__item-git social__item-svg-header">
+            <li class="social__item social__item_margin"><a class="social__item-link" href="#">
+                <svg class="social__item-svg">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
                 </svg></a></li>
-            <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                <svg class="social__item-in social__item-svg-header">
+            <li class="social__item social__item_margin"><a class="social__item-link" href="#">
+                <svg class="social__item-svg">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
                 </svg></a></li>
           </ul>
@@ -42,8 +43,8 @@
           </svg>
         </div>
         <div class="header__content">
-          <div class="header__user user">
-            <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="face"></div>
+          <div class="user">
+            <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="W"></div>
             <div class="user__description">
               <div class="user__description-name">Владимир Астахов</div>
               <div class="user__description-info">Личный сайт разработчика</div>
@@ -57,10 +58,10 @@
             </svg>
           </button>
         </div>
-        <div class="triangle tringle_fill_white about__left-triangle">
-          <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
-            <polygon class="left left-white" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
-            <polygon class="right right-white" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+        <div class="triangle tringle_fill_white">
+          <svg class="traingle__pic" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+            <polygon class="traingle__pic-left traingle__pic-left_white" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+            <polygon class="traingle__pic-right traingle__pic-right_white" points="1000,0   1000,86   500,86   500,75.5"></polygon>
           </svg>
         </div>
       </header>
@@ -73,18 +74,13 @@
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header">       </use>
                 </svg>
               </div>
-              <h2 class="block-title">Мои работы</h2>
-              <div class="title-block__border"></div>
+              <h1 class="block-title">Мои работы</h1>
             </div>
-          </div>
-          <div class="about__left-svg">
-            <!--svg.about__left-aboutuse(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header")
-            -->
           </div>
           <div class="slider">
             <div class="slider__info">
               <div class="intelligence">
-                <div class="block-subtitle block-subtitle-slider">Сайт школы онлайн образования</div>
+                <h2 class="block-subtitle block-subtitle-slider">Сайт школы онлайн образования</h2>
                 <div class="intelligence__text">HTML, CSS, JAVASCRIPT</div>
                 <div class="intelligence__btn"> <a class="intelligence__btn-link" href="#"> 
                     <svg class="intelligence__btn-svg">
@@ -94,19 +90,21 @@
             </div>
             <div class="slider__display"><img class="slider__display-img" src="assets/images/content/face.jpg" alt="face"></div>
             <div class="slider__btns">
-              <div class="slider__btns-left arrow">
+              <div class="slider__btns-left arrow slide-list">
                 <button class="arrow__left" href="#">
                   <svg class="arrow__left-down">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
                   </svg>
                 </button>
+                <div class="slide-list__item"><img class="slide-list-img" src="assets/images/content/face.jpg" alt="face"></div>
               </div>
-              <div class="slider__btns-right arrow">
+              <div class="slider__btns-right arrow slide-list">
                 <button class="arrow__right" href="#">
-                  <svg class="arrow__left-up">
+                  <svg class="arrow__right-up">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
                   </svg>
                 </button>
+                <div class="slide-list__item"><img class="slide-list-img" src="assets/images/content/face.jpg" alt="face"></div>
               </div>
             </div>
           </div>
@@ -132,15 +130,12 @@
         <section class="section about-me">
           <div class="about-me__content">
             <div class="title-block">
-              <div class="title-block-pic title-block-pic-top">
+              <div class="title-block-pic title-block-pic_top">
                 <svg class="title-block-svg">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_header">       </use>
                 </svg>
               </div>
               <h2 class="block-title block-title-about-me">Что обо мне говорят</h2>
-              <div class="title-block__border"></div>
-              <!--svg.about__left-aboutuse(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header")
-              -->
             </div>
             <ul class="about-me__reviews reviews">
               <li class="reviews__item">
@@ -173,29 +168,30 @@
                 </blockquote>
               </li>
             </ul>
-            <div class="about-me__relations about-me__relations-margin">
+            <div class="about-me__relations about-me__relations_margin">
               <form class="about-me__form" action="#">
-                <h2 class="block-subtitle block-subtitle-margin">Связаться со мной</h2>
-                <div class="form__row">
-                  <label class="about-me__form-label" for="name">
+                <h2 class="block-subtitle block-subtitle_margin">Связаться со мной</h2>
+                <div class="form-inbut">
+                  <div class="form__row">
+                    <label class="about-me__form-label visually-hidden" for="name">Имя</label>
                     <input class="about-me__form-input" type="text" name="login" placeholder="Имя" id="name">
-                  </label>
-                </div>
-                <div class="form__row">
-                  <label class="about-me__form-label" for="email">
+                  </div>
+                  <div class="form__row">
+                    <label class="about-me__form-label visually-hidden" for="email">Почта</label>
                     <input class="about-me__form-input" type="text" name="password" placeholder="Email" id="email">
-                  </label>
-                </div>
-                <div class="form__row form__row-last">
-                  <label class="about-me__form-label" for="message">
+                  </div>
+                  <div class="form__row form__row-last">
+                    <label class="about-me__form-label visually-hidden" for="message">Текст</label>
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
-                  </label>
+                  </div>
                 </div>
+                <ul class="menu__list">
+                  <li class="menu__item"><a class="menu__item-link" href="#">Отправить</a></li>
+                  <li class="menu__item">
+                    <button class="menu__item-link" href="#">Очистить</button>
+                  </li>
+                </ul>
               </form>
-              <ul class="menu__list">
-                <li class="menu__item"><a class="menu__item-link" href="#">Отправить</a></li>
-                <li class="menu__item"><a class="menu__item-link" href="#">Очистить</a></li>
-              </ul>
             </div>
             <div class="about-me__arrow arrow-down">
               <button class="about-me__arrow-link" href="#">
@@ -208,49 +204,43 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__row">
-          <div class="footer__row-up">
-            <ul class="footer__list">
-              <li class="footer__item">
-                <div class="footer__item-school">
-                  <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
-                </div>
-              </li>
-              <li class="footer__item">
-                <ul class="nav footer__nav">
-                  <li class="nav__item"><a href="#">Мои работы</a></li>
-                  <li class="nav__item"><a href="#">Обо мне</a></li>
-                  <li class="nav__item"><a href="#">Блог</a></li>
-                  <li class="nav__item"><a href="#">Авторизация  </a></li>
-                </ul>
-                <ul class="socials footer__socials">
-                  <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                      <svg class="social__item-vk social__item-svg-header">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
-                      </svg></a></li>
-                  <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                      <svg class="social__item-git social__item-svg-header">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
-                      </svg></a></li>
-                  <li class="social__item social__item-header"><a class="social__item-link" href="#">
-                      <svg class="social__item-in social__item-svg-header">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
-                      </svg></a></li>
-                </ul>
-              </li>
-              <li class="footer__item">
-                <div class="footer__item-quote">
-                  <p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</p>
-                  <p>— Martin Golding</p>
-                </div>
-              </li>
+        <div class="footer__row footer__row_padding-weight">
+          <div class="footer__col"> 
+            <div class="footer-text">
+              <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
+            </div>
+          </div>
+          <div class="footer__col">
+            <ul class="nav nav_footer">
+              <li class="nav__item"><a class="nav__item-link" href="my-works.html">Мои работы</a></li>
+              <li class="nav__item"><a class="nav__item-link" href="about.html">Обо мне</a></li>
+              <li class="nav__item"><a class="nav__item-link" href="blog.html">Блог</a></li>
+              <li class="nav__item"><a class="nav__item-link" href="index.html">Авторизация  </a></li>
+            </ul>
+            <ul class="socials footer__socials">
+              <li class="social__item social__item_margin"><a class="social__item-link" href="#">
+                  <svg class="social__item-svg">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
+                  </svg></a></li>
+              <li class="social__item social__item_margin"><a class="social__item-link" href="#">
+                  <svg class="social__item-svg">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
+                  </svg></a></li>
+              <li class="social__item social__item_margin"><a class="social__item-link" href="#">
+                  <svg class="social__item-svg">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
+                  </svg></a></li>
             </ul>
           </div>
-        </div>
-        <div class="footer__row">
-          <div class="footer__row-down">
-            <p> © Владимир Астахов | создано с любовью в LoftSchool | 2016   </p>
+          <div class="footer__col">
+            <div class="footer-text footer-text_color">
+              <p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</p>
+              <p>— Martin Golding</p>
+            </div>
           </div>
+        </div>
+        <div class="footer__row footer__row-min">
+          <p> © Владимир Астахов | создано с любовью в LoftSchool | 2016   </p>
         </div>
       </footer>
     </div>

@@ -1,0 +1,41 @@
+
+/* -- Социалки --*/
+.social {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social__item-link {
+    display: inline-block;
+}
+
+.social__item:last-child {
+    margin-left: 0px;
+}
+/* -- Социалки  конец --*/
+
+.menu__list {
+    display: flex;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}
+
+.menu__item-link {
+    background-color: $green_low;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    color: #fff;
+    &:hover {
+        background-color: $green_middle;
+    }
+    &:focus {
+        background-color: $green_middle;
+    }
+    &:active {
+        background-color: #2e9177;
+    }
+}
