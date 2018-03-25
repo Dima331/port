@@ -1,5 +1,7 @@
 .header_blog{
  height: 50vh;
+ min-height: 500px;
+ background-position: center;
 }
 .block-title_blog{
     font-size: 63px;
@@ -145,6 +147,7 @@ background: #6c9c5a;
     margin-top: 70px;
     @include tablets{
         width: 100%;
+        margin-top: 20px;
     }
 }
 .blog-descripshion:last-child{

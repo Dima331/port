@@ -1,6 +1,6 @@
 .header{
     height: 100vh;
-    background-image: url("../../assets/images/content/forest.jpg");
+    background-image: url("../../assets/images/content/forest_full-screen.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -8,9 +8,15 @@
     justify-content: center;
     align-items: center;
     min-height: 650px;
-    @include full__screen{
-        height: 70vh;
+    @include screen {
+        background-image: url("../../assets/images/content/forest_screen.jpg");
     }
+    @include tablet {
+        background-image: url("../../assets/images/content/forest_ipad.jpg");
+    }
+    /*@include full__screen{
+        height: 70vh;
+    }*/
    /* @include tablets{
         height: 70vh;
     }*/
@@ -29,6 +35,10 @@
     position: absolute;
     top: 20px;
     left: 20px;
+    @include phones{
+        left: 10px;
+    }
+    
 }
 .social__item-header{
     margin-right: 20px;
@@ -40,14 +50,20 @@
     display: inline-block;
 }
 .header__hamburger{
+    z-index: 5;
     position: absolute;
-    top: 35px;
+    top: 20px;
     right: 20px;
+    @include phones{
+        right: 10px;
+        top: 10px;
+    }
+
 }
 .header__placeholder{
     position: absolute;
-    width: 84%;
-    height: 30%;
+    width: 92%;
+    height: 40%;
 }
 .arrow-down{
     height: 100%;
@@ -79,15 +95,21 @@
     color: #fff;
     text-align: center;
     margin: 10px 0;
+    @include phones{
+        font-size: 25px;
+    }
 }
 .user__description-info{
     font-size: 16px;
     color: #fff;
     text-align: center;
+    /*@include phones{
+        font-size: 14px; 
+    }*/
 }
 .header__arrow{
    position: absolute;
-   bottom: 55px;
+   bottom: 11%;
    z-index: 1;
 
 }
@@ -157,6 +179,7 @@
 }
 .about__left-content{
     margin: 20px 0;
+    z-index: 2;
     @include full__screen{
         margin: 0;
          flex: 1;
@@ -167,7 +190,7 @@
 }
 
 .skills-list_margin{
-    margin-top: 60px;
+    margin-top: 55px;
     font-style: normal;
     @include tablets{
         margin-top: 40px;
@@ -215,7 +238,7 @@
         margin-right: 10px;
     }
     @include tablets{
-        margin-right: 35px;
+        margin-right: 10px;
     }
     @media screen and (max-width: 750px){
         margin-right: 0;
@@ -236,11 +259,11 @@
     margin-right: 0px;
 }
 .skills-row__list{
-    margin-top: 10px;
+    //margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     @include tablets{
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
     
 }
@@ -253,6 +276,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 968px;
     @include full__screen{
         height: 120vh;
     }
@@ -272,7 +296,7 @@
     }
 
     @include phones{
-        width: 320px;
+        width: 100%;
         top:0;
     }
 }
@@ -432,13 +456,13 @@
 
 .circles {
     fill: none;
-    stroke-width: 15;
+    stroke-width: 20;
   }
   .circle__first {
     stroke: #dfdcd5;
   }
   .circle__second {
-    stroke: $green_low;
+    stroke: #628853;
     stroke-dasharray: .0010 282.6;
     transition: all 1s;
   }
@@ -446,8 +470,9 @@
   .skill-block {
     position: relative;
     display: inline-block;
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
   }
 
   

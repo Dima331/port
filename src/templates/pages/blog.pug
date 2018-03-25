@@ -4,29 +4,40 @@ block variables
     - var title = 'Блог'
 
 block content
-    .wrapper    
+    .wrapper
+        .menu
+            ul.nav.nav_header
+                li.nav__item.nav__item_header
+                    a(href='my-works.html').nav__item-link.nav__item-link_header.block-title Мои работы
+                li.nav__item.nav__item_header
+                    a(href='about.html').nav__item-link.nav__item-link_header.block-title Обо мне
+                li.nav__item.nav__item_header
+                    a(href='blog.html').nav__item-link.nav__item-link_header.block-title Блог
+                li.nav__item.nav__item_header
+                    a(href='index.html').nav__item-link.nav__item-link_header.block-title Авторизация     
         header.header.header_blog 
             .header__social
                 ul.social
                     li.social__item.social__item_margin
                         a.social__item-link(href='#')
-                            svg.social__item-svg
+                            svg.social__item-svg.social__item-svg_header
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk") 
                     li.social__item.social__item_margin
                         a.social__item-link(href='#')
-                            svg.social__item-svg
+                            svg.social__item-svg.social__item-svg_header
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github") 
                     li.social__item.social__item_margin
                         a.social__item-link(href='#')
-                            svg.social__item-svg
+                            svg.social__item-svg.social__item-svg_header
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in") 
             .header__hamburger.hamburger
-                button.hamburger__link
-                    svg.hamburger__link-svg
-                        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#hamburger") 
+                button.cmn-toggle-switch.cmn-toggle-switch__htx
+                    span toggle menu
+            
             .header__placeholder.header__placeholder_blog 
                 svg.header__placeholder-title
                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#blog_header")
+            
             .header__content
                 .user
                     .user__pic
@@ -35,11 +46,12 @@ block content
 
                         .block-title.block-title_blog.block-subtitle_white Блог
 
-                        .user__description-info.user__description-info_margin Статья, которые я написал
+                        .user__description-info.user__description-info_margin Статьи, которые я написал
             .triangle.tringle_fill_white
                 svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle__pic
                     polygon(points="0,0   0,86   500.8,86   500.8,75.5").traingle__pic-left.traingle__pic-left_white
                     polygon(points="1000,0   1000,86   500,86   500,75.5").traingle__pic-right.traingle__pic-right_white
+        
         main.main
             section.section.blog
                 aside.blog__left

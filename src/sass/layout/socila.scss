@@ -4,7 +4,11 @@
     display: flex;
     justify-content: space-evenly;
 }
-
+.social_margin{
+    justify-content: space-between;
+    width: 40%;
+    margin: 0 auto;
+}
 .social__item-link {
     display: inline-block;
 }
@@ -12,7 +16,6 @@
 .social__item:last-child {
     margin-left: 0px;
 }
-/* -- Социалки  конец --*/
 
 .menu__list {
     display: flex;

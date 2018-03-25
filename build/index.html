@@ -12,73 +12,109 @@
   </head>
   <body>
     <div class="forest">
-      <main class="main welcome">
-        <div class="welcome__content welcome__content_margin">
-          <form class="form form_margin" action="#">
-            <div class="form__row">
-              <h2 class="block-subtitle block-subtitle_white">Авторизуйтесь</h2>
+      <div class="authorization-btn">
+        <button class="authorization-btn__link" alt="Кнопка авторизоваться">Авторизоваться</button>
+      </div>
+      <main class="main flipper"> 
+        <div class="welcome front">
+          <h1 class="visually-hidden">Главная страница автора</h1>
+          <div class="welcome__content welcome__content_margin">
+            <div class="welcome__pic"><img class="welcome__pic-img" src="assets/images/content/face.jpg" alt="Картинка автора"></div>
+            <div class="welcome__description description-info">
+              <div class="description-info__name">Владимир Астахов</div>
+              <div class="description-info__about">Личный сайт веб разработчика</div>
             </div>
-            <div class="form__row form__row-spacebetwin input-icon">
-              <div class="input-icon__label">
-                <svg class="input-icon__icon">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#login"> </use>
-                </svg>
+            <ul class="social social_margin">
+              <li class="social__item"><a class="social__item-link" href="#">
+                  <svg class="social__item-vk social__item-svg">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__item-link" href="#">
+                  <svg class="social__item-git social__item-svg">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__item-link" href="#">
+                  <svg class="social__item-in social__item-svg">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <nav class="nav">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__item-link" href="my-works.html">Мои работы</a></li>
+              <li class="menu__item"><a class="menu__item-link" href="about.html">Обо мне</a></li>
+              <li class="menu__item"><a class="menu__item-link" href="blog.html">Блог</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="welcome back">
+          <div class="welcome__content welcome__content_margin">
+            <form class="form form_margin" action="#">
+              <div class="form__row form__row_margin-title">
+                <h2 class="block-subtitle block-subtitle_white">Авторизуйтесь</h2>
               </div>
-              <label class="visually-hidden" for="login">Логин</label>
-              <input class="input-icon__login" type="text" name="login" placeholder="Логин" id="login">
-            </div>
-            <div class="form__row form__row-spacebetwin input-icon">
-              <div class="input-icon__label">
-                <svg class="input-icon__icon">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#password"> </use>
-                </svg>
-              </div>
-              <label class="visually-hidden" for="password">Пароль</label>
-              <input class="input-icon__password" type="password" name="password" placeholder="Пароль" id="password">
-            </div>
-            <div class="form__row">  
-              <label class="form__row-torggle" for="checkbox"> 
-                <div class="visually-hidden">Я человек</div>
-                <input class="form__toggle-input" type="checkbox" name="checkbox" value="Я человек" id="checkbox">
-                <div class="form__toggle-fake">
-                  <svg class="form__toggle-fake_flag form__toggle-fake_check">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#check"></use>
+              <div class="form__row form__row-spacebetwin input-icon">
+                <div class="input-icon__label">
+                  <svg class="input-icon__icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#login"> </use>
                   </svg>
                 </div>
-                <div class="form__title">Я человек</div>
-              </label>
-            </div>
-            <div class="form__row form__row-text">
-              <p>Вы точно не робот?</p>
-            </div>
-            <div class="form__row form__row_last">
-              <label class="form__row-torggle" for="radio"> 
-                <div class="visually-hidden">Да</div>
-                <input class="form__toggle-input" type="radio" name="radio" value="Да" id="radio" checked>
-                <div class="form__toggle-fake form__toggle-fake_radio">
-                  <div class="form__toggle-fake_flag form__toggle-fake_dot"></div>
+                <label class="visually-hidden" for="login">Логин</label>
+                <input class="input-icon__login" type="text" name="login" placeholder="Логин" id="login">
+              </div>
+              <div class="form__row form__row-spacebetwin input-icon">
+                <div class="input-icon__label">
+                  <svg class="input-icon__icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#password"> </use>
+                  </svg>
                 </div>
-                <div class="form__title">Да  </div>
-              </label>
-              <label class="form__row-torggle" for="radio_2"> 
-                <div class="visually-hidden">Не уверен</div>
-                <input class="form__toggle-input" type="radio" name="radio" id="radio_2" value="Нет">
-                <div class="form__toggle-fake form__toggle-fake_radio">
-                  <div class="form__toggle-fake_flag form__toggle-fake_dot"></div>
-                </div>
-                <div class="form__title">Не уверен       </div>
-              </label>
-            </div>
-          </form>
+                <label class="visually-hidden" for="password">Пароль</label>
+                <input class="input-icon__password" type="password" name="password" placeholder="Пароль" id="password">
+              </div>
+              <div class="form__row">  
+                <label class="form__row-torggle" for="checkbox"> 
+                  <div class="visually-hidden">Я человек</div>
+                  <input class="form__toggle-input" type="checkbox" name="checkbox" value="Я человек" id="checkbox">
+                  <div class="form__toggle-fake">
+                    <svg class="form__toggle-fake_flag form__toggle-fake_check">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#check"></use>
+                    </svg>
+                  </div>
+                  <div class="form__title">Я человек</div>
+                </label>
+              </div>
+              <div class="form__row form__row-text">
+                <p>Вы точно не робот?</p>
+              </div>
+              <div class="form__row form__row_last">
+                <label class="form__row-torggle" for="radio"> 
+                  <div class="visually-hidden">Да</div>
+                  <input class="form__toggle-input" type="radio" name="radio" value="Да" id="radio" checked>
+                  <div class="form__toggle-fake form__toggle-fake_radio">
+                    <div class="form__toggle-fake_flag form__toggle-fake_dot"></div>
+                  </div>
+                  <div class="form__title">Да  </div>
+                </label>
+                <label class="form__row-torggle" for="radio_2"> 
+                  <div class="visually-hidden">Не уверен</div>
+                  <input class="form__toggle-input" type="radio" name="radio" id="radio_2" value="Нет">
+                  <div class="form__toggle-fake form__toggle-fake_radio">
+                    <div class="form__toggle-fake_flag form__toggle-fake_dot"></div>
+                  </div>
+                  <div class="form__title">Не уверен       </div>
+                </label>
+              </div>
+            </form>
+          </div>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <button class="menu__item-link" id="main">На главную</button>
+            </li>
+            <li class="menu__item">
+              <button class="menu__item-link">Войти</button>
+            </li>
+          </ul>
         </div>
-        <ul class="menu__list">
-          <li class="menu__item">
-            <button class="menu__item-link">На главную</button>
-          </li>
-          <li class="menu__item">
-            <button class="menu__item-link">Войти</button>
-          </li>
-        </ul>
       </main>
       <div class="footer-copyrigh">
         <div class="footer-copyrigh__text">  © Владимир Астахов | создано с любовью в LoftSchool | 2018</div>
