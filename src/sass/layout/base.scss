@@ -70,6 +70,10 @@ h2{
     font-weight: 500;
     line-height: 1;
     font-family: 'Sansus';
+    @include phones{
+        font-size: 30px;
+      }
+    
 }
 a{
     text-decoration: none;

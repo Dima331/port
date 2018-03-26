@@ -15,10 +15,17 @@
     color: rgb(55, 62, 66);
     text-transform: uppercase;
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     position: relative;
     z-index: 2;
     line-height: 0.8;
+    @include phones{
+        padding-bottom: 20px;
+        font-size: 49px;
+      }
+    
+    
+    
 }
 .block-title::after{
     content: '';
@@ -53,6 +60,9 @@
     font-weight: 500;
     line-height: 1;
     color: rgb(86, 99, 88);
+    @include phones{
+        font-size: 30px;
+      }
 }
 .block-subtitle::after{
     content: '';

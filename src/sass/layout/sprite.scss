@@ -1,15 +1,3 @@
-/*.social__item-vk{
-    width: 30px;
-    height: 22px;
-}
-.social__item-git{
-    width: 30px;
-    height: 22px;
-}
-.social__item-in{
-    width: 30px;
-    height: 22px;
-}*/
 .social__item-svg{
     fill: aliceblue;
     opacity: 0.7;
@@ -18,6 +6,9 @@
     &:hover{
         fill: $green_low;
     }  
+}
+.social__item-svg_header{
+    opacity: 1;
 }
 
 .social__item-link:focus{
@@ -32,30 +23,7 @@
     }
 
 }
-/*
-.social__item-svg-header{
-    fill: aliceblue;
-    width: 30px;
-    height: 22px;
-    /*&:hover{
-        fill: $green_low;
-    }
-    &:active {
-        fill: #2e9177;
-    }
-    &:focus {
-        fill: $green_middle;
-    }*/
-    
-//}
 
-/*
-.form__row-login{
-    width: 15px;
-    height: 17px;
-    fill: #c4cbcd;
-    margin: 0 auto;
-}*/
 .hamburger__link-svg{
     width: 40px;
     height: 35px;
@@ -74,9 +42,13 @@
 
 .header__placeholder-title{
     fill: #fff;
-    opacity: 0.3;
+    opacity: 0.2;
     height: 100%;
     width: 100%;
+    margin-top: -15px;
+    @include phones{
+        display: none;
+    }
 }
 .input-icon__icon{
     width: 15px;
@@ -94,12 +66,30 @@
     width: 26px;
     height: 16px;
     fill: #fff;
-
+    opacity: 0.7;
 
 }
 .title-block-svg{
     fill: #e2ebd0;  
+    //width: 100%;
+    //width: 60%;
+    opacity: 0.4;
+    width: 350px;
+    margin: 0 auto;
+    @include tablets{
+        width: 300px;
+    }
+    @include phones{
+        width: 250px;
+    }
+
+}
+.title-block-svg_width{
     width: 100%;
+    @include phones{
+        width: 80%;
+    }
+    
 }
 .contacts__item-icon{
     width: 25px;

@@ -30,8 +30,11 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: space-evenly;
+    z-index: 2;
 }
-
+.form__row_margin-title{
+    margin-bottom: 30px;
+}
 
 .form__row-spacebetwin {
     justify-content: flex-end;
