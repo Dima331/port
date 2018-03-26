@@ -73,6 +73,7 @@
     fill: #e2ebd0;  
     //width: 100%;
     //width: 60%;
+    opacity: 0.4;
     width: 350px;
     margin: 0 auto;
     @include tablets{
@@ -82,6 +83,13 @@
         width: 250px;
     }
 
+}
+.title-block-svg_width{
+    width: 100%;
+    @include phones{
+        width: 80%;
+    }
+    
 }
 .contacts__item-icon{
     width: 25px;

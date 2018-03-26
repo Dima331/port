@@ -1,6 +1,21 @@
 .myworks-title{
     margin: 60px auto;
-    width: 50%;
+    //width: 50%;
+}
+.about-me{
+    padding-top: 50px;
+    padding-bottom: 250px;
+    min-height: 1400px;
+    @include tablets{
+        min-height: 1600px;
+     }
+    @include phones_work{
+        min-height: 1800px;
+     }
+    @include phones{
+        min-height: 1700px;
+     }
+   
 }
 .myworks__slider{
     height: 750px;
@@ -19,13 +34,14 @@
     top: -59px;
 }
 .title-block-pic_top{
-    top: 0px;
+    top: -25px;
 }
 .myworks-title,.title-block{
     position: relative;
 }
 .about-me{
     position: relative;
+    overflow: hidden; 
     //background-color: rgba(181, 209, 158, 0.829);
     //background-image: url("../../assets/images/content/bg-work.jpg");
     //background-repeat: no-repeat;
@@ -36,6 +52,7 @@
 .about-me__content{
     width: 780px;
     margin: 0 auto;
+    //margin-top: 50px;
     @include screen{
         width: 95%;
     }
@@ -64,8 +81,11 @@
     width: 64%;
     margin: 0 auto;
     line-height: 1;
+    
     @include phones_work{
         width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
 .quot__who-name p, .quot__who-job p{
@@ -84,9 +104,24 @@
 }
 .reviews__item-description{
     @extend .text-content;
+    position: relative;
     margin: 0px;
     margin-top: 20px;
 }
+.reviews__item-description:before{
+content: '';
+display: block;
+position: absolute;
+z-index: -1;
+top: -24px;
+left: 0;
+width: 100px;
+height: 65px;
+background: url("../../assets/images/content/quotes.svg") left top no-repeat;
+background-size: contain;
+ opacity: .1; 
+}
+
 .quot__who{
     text-align: center;
     display: block;
@@ -176,7 +211,7 @@
 
 
 
-.about-me__form{
+.communications{
     padding-top: 45px;
 }
 .form-inbut{
@@ -196,8 +231,8 @@
 .about-me__arrow{
     display: flex;
     justify-content: center;
-    margin-top: 85px;
-    margin-bottom: 85px;
+    margin-top: 45px;
+    margin-bottom: 35px;
     transform: rotate(180deg);
     
     &:hover{
@@ -212,10 +247,10 @@ textarea {
     width: 100%;
     border-radius: 30px;
 }
-.about-me__form-label{
+.communications__form-label{
     width: 100%;
 }
-.about-me__form-label .about-me__form-input{
+.communications__form-label .communications__form-label{
     width: 100%;
     border-radius: 30px;
 }
@@ -231,21 +266,21 @@ textarea {
     position: relative;
     overflow: hidden; }
   
-  .blur__background {
+    .about-me__background {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    min-width: 1800px; }
+    min-width: 2200px; }
   
-  .blur__img {
+    .about-me__background-img {
     display: block;
     max-width: 100%; }
   
-  .blur__form {
+    .blur-wrapper__form  {
     width: 100%;
     height: 100%;
-    background: url("/assets/images/content/bg-work2.jpg") center no-repeat;
+    background: url("../../assets/images/content/bg-work2.jpg") center no-repeat;
     filter: blur(10px); 
     position: absolute;
     z-index: 1;
@@ -253,13 +288,13 @@ textarea {
     background-position: -336px -143px;
     background-size: 1800px 
    }
-   .tetxt{
+   /*.tetxt{
        position: absolute;
        top: 0;
    }
    p{
     z-index: 1111111;
-   }
+   }*/
     /*.blur__form:before{
         content: ' ';
         width: 100%;
@@ -270,8 +305,9 @@ textarea {
         background-position: -336px -143px;
         background-size: 1800px 
     }*/
-  .blur__form-wrapper {
+    .blur-wrapper {
     position: absolute;
+    background-color: #c9c4cadb;
     /* top: 50%; */
     /* left: 50%; */
     width: 380px;
@@ -282,7 +318,9 @@ textarea {
     position: relative;
     margin: 0 auto;
     margin-top: 55px;
-   
+    @include phones{
+        width: 320px;
+    }
     }
 
 

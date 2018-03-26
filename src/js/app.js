@@ -36,11 +36,11 @@ $(document).ready(function () {
 
 /*--- блур ---*/
 var blur = (function () {
-	var wrapper = document.querySelector('.blur__form-wrapper'),
-		form = document.querySelector('.blur__form');
+	var wrapper = document.querySelector('.blur-wrapper'),
+		form = document.querySelector('.blur-wrapper__form');
 	return {
 		set: function () {
-			var imgWidth = document.querySelector('.blur__background').offsetWidth,
+			var imgWidth = document.querySelector('.about-me__background').offsetWidth,
 				posLeft = -wrapper.offsetLeft,
 				posTop = -wrapper.offsetTop,
 				blurCSS = form.style;
