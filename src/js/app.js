@@ -16,6 +16,13 @@ $(document).ready(function () {
 		$('.menu').slideToggle("slow");
 		$('body').toggleClass('stop-scrolling');
 	});
+
+	$('.blog__left-button').on("click", function (e) {
+		//$('.blog__left').css('width', '50%');
+		$('.blog__left').toggleClass('blog__left_width');
+	});
+
+	$()
 });
 
 /*--- Крестик ---*/
@@ -38,6 +45,10 @@ $(document).ready(function () {
 var blur = (function () {
 	var wrapper = document.querySelector('.blur-wrapper'),
 		form = document.querySelector('.blur-wrapper__form');
+
+	//const wrapper = $('.blur-wrapper');
+	//const form = $('.blur-wrapper__form');
+		
 	return {
 		set: function () {
 			var imgWidth = document.querySelector('.about-me__background').offsetWidth,
@@ -53,3 +64,5 @@ blur.set();
 window.onresize = function () {
 	blur.set();
 };
+
+

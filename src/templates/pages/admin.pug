@@ -1,0 +1,76 @@
+extends ../template
+
+block variables
+    - var title = 'Страница админа'
+
+block content
+    .admin-panel
+        .admin-panel__header
+            h2.admin-panel__header-title Панель администрирования
+            a(href="index.html").admin-panel__header-back   Вернуться на сайт
+        ul.tabs
+            li.tabs__item 
+                button.tabs__item-lint tab 1
+            li.tabs__item 
+                button.tabs__item-lint tab 2
+            li.tabs__item 
+                button.tabs__item-lint tab 3
+            li.tabs__item 
+                button.tabs__item-lint tab 4
+        .admin-panel__content.page-about
+            .page-about-title Страница "Обо мне"
+            ul.full-skills
+                li.full-skills__item
+                    .full-skills__item-title Frontend
+                    ul.one-skill
+                        li.one-skill__item
+                            label(for="1").one-skill__item-title HTML
+                                input(type="text" maxlength="2").one-skill__item-input 
+                            .one-skill__item-percentages %
+                        li.one-skill__item
+                            label(for="1").one-skill__item-title CSS
+                                input(type="text" maxlength="2").one-skill__item-input 
+                            .one-skill__item-percentages %
+                        li.one-skill__item
+                            label(for="1").one-skill__item-title JavaScript
+                                input(type="text" maxlength="2").one-skill__item-input 
+                            .one-skill__item-percentages %
+                li.full-skills__item
+                    .full-skills__item-title Workflow
+                    ul.one-skill
+                        li.one-skill__item
+                            label(for="1").one-skill__item-title Git
+                                input(type="text" maxlength="2").one-skill__item-input 
+                            .one-skill__item-percentages %
+                        li.one-skill__item
+                            label(for="1").one-skill__item-title Gulp
+                                input(type="text" maxlength="2").one-skill__item-input 
+                            .one-skill__item-percentages %
+                        li.one-skill__item
+                            label(for="1").one-skill__item-title Bower
+                                input(type="text" maxlength="2").one-skill__item-input 
+                            .one-skill__item-percentages %
+                li.full-skills__item
+                    .full-skills__item-title Backend
+                    ul.one-skill
+                        li.one-skill__item
+                            label(for="1").one-skill__item-title PHP
+                                input(type="text" maxlength="2").one-skill__item-input 
+                            .one-skill__item-percentages %
+                        li.one-skill__item
+                            label(for="1").one-skill__item-title Node.js
+                                input(type="text" maxlength="2").one-skill__item-input 
+                            .one-skill__item-percentages %
+                        li.one-skill__item
+                            label(for="1").one-skill__item-title Mongo.db
+                                input(type="text" maxlength="2").one-skill__item-input 
+                            .one-skill__item-percentages %
+            button.page-about-btn  Сохранить       
+    .admin-panel__message
+        .message
+            .message__title Сообщение отправле 
+            button.message__button Закрыть
+
+            
+
+

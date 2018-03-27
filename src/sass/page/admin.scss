@@ -1,0 +1,118 @@
+.admin-panel{
+    height: 100vh;
+    //background-image: url("../../assets/images/content/forest_full-screen.jpg");
+    background-color: rgb(171, 228, 199);
+    background-repeat: no-repeat;
+    //opacity: 0.3;
+    background-size: cover;
+    position: relative;
+    @include screen {
+        //background-image: url("../../assets/images/content/forest_screen.jpg");
+    }
+    @include tablet {
+        //background-image: url("../../assets/images/content/forest_ipad.jpg");
+    }
+}
+
+.admin-panel__header{
+    background-color: #53658d;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;  
+}
+.admin-panel__header-title{
+    color: #fff;
+}
+.admin-panel__header-back{
+    margin: auto 0;
+    text-decoration: underline;
+    opacity: 0.5;
+}
+.tabs{
+    display: flex;
+    background-color: #c7b620;
+}
+.tabs__item{
+    border-right: 2px solid #fff;
+}
+.tabs__item-lint{
+    padding: 20px 50px;
+    text-transform: uppercase;
+    background-color: #c7b620;
+    &:hover{
+        background-color: #2395c2;
+    }
+}
+.admin-panel__content{
+    padding: 40px 20px;
+}
+.page-about-title{
+    font-size: 25px;
+}
+.full-skills{
+    margin-top: 40px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.full-skills__item{
+    width: 40%;
+    margin-top: 30px;
+}
+.full-skills__item-title{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.one-skill__item{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    padding-left: 30px;
+}
+input[type="text"].one-skill__item-input{
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 50px;
+    margin-right: 10px;
+}
+.one-skill__item-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.page-about-btn{
+    padding: 10px 30px;
+    background-color: #978;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 20px;
+}
+.admin-panel__message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.message__button{
+    padding: 10px 30px;
+    background-color: #546;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 20px;
+
+}
+.message__title{
+    font-size: 20px;
+}
+.message{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}

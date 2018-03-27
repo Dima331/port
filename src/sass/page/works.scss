@@ -1,189 +1,200 @@
-.myworks-title{
-    margin: 60px auto;
-    //width: 50%;
+.myworks-title {
+    margin: 60px auto; //width: 50%;
 }
-.about-me{
+
+.about-me {
     padding-top: 50px;
     padding-bottom: 250px;
     min-height: 1400px;
-    @include tablets{
+    @include tablets {
         min-height: 1600px;
-     }
-    @include phones_work{
+    }
+    @include phones_work {
         min-height: 1800px;
-     }
-    @include phones{
+    }
+    @include phones {
         min-height: 1700px;
-     }
-   
+    }
 }
-.myworks__slider{
-    height: 750px;
-    //width: 1180px;  
+
+.myworks__slider {
+    height: 750px; //width: 1180px;  
     margin: 0 auto;
     background-color: rgb(197, 207, 218);
 }
 
-.about-me__reviews{
+.about-me__reviews {
     margin-top: 40px;
 }
-.title-block-pic{
+
+.title-block-pic {
     position: absolute;
     width: 100%;
     top: -72px;
     top: -59px;
 }
-.title-block-pic_top{
+
+.title-block-pic_top {
     top: -25px;
 }
-.myworks-title,.title-block{
+
+.myworks-title,
+.title-block {
     position: relative;
 }
-.about-me{
+
+.about-me {
     position: relative;
     overflow: hidden; 
-    //background-color: rgba(181, 209, 158, 0.829);
-    //background-image: url("../../assets/images/content/bg-work.jpg");
-    //background-repeat: no-repeat;
-    //background-size: cover;
-    //padding-top: 50px;
-    //padding-bottom: 228px;
 }
-.about-me__content{
+
+.about-me__content {
     width: 780px;
-    margin: 0 auto;
-    //margin-top: 50px;
-    @include screen{
+    margin: 0 auto; //margin-top: 50px;
+    @include screen {
         width: 95%;
     }
 }
-.reviews{
+
+.reviews {
     display: flex;
     justify-content: space-between;
-    @include phones_work{
-       flex-direction: column;
+    @include phones_work {
+        flex-direction: column;
     }
 }
+
 .reviews__item-pic {
     margin: 0 auto;
     width: 80px;
-    
     height: 80px;
     border-radius: 50%;
     background-color: #fff;
 }
-.reviews__item-img{
+
+.reviews__item-img {
     border-radius: 50%;
     width: 80px;
     height: 80px;
 }
-.block-title-about-me{
+
+.block-title-about-me {
     width: 64%;
     margin: 0 auto;
     line-height: 1;
-    
-    @include phones_work{
+    @include phones_work {
         width: 100%;
         padding-left: 16px;
         padding-right: 16px;
     }
 }
-.quot__who-name p, .quot__who-job p{
+
+.quot__who-name p,
+.quot__who-job p {
     margin: 0;
 }
-.reviews__item{
+
+.reviews__item {
     width: 48%;
     z-index: 2;
-    @include phones_work{
+    @include phones_work {
         width: 100%;
         margin-top: 40px;
-        &:first-child{
+        &:first-child {
             margin-top: 0;
         }
     }
 }
-.reviews__item-description{
+
+.reviews__item-description {
     @extend .text-content;
     position: relative;
     margin: 0px;
     margin-top: 20px;
 }
-.reviews__item-description:before{
-content: '';
-display: block;
-position: absolute;
-z-index: -1;
-top: -24px;
-left: 0;
-width: 100px;
-height: 65px;
-background: url("../../assets/images/content/quotes.svg") left top no-repeat;
-background-size: contain;
- opacity: .1; 
+
+.reviews__item-description:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: -24px;
+    left: 0;
+    width: 100px;
+    height: 65px;
+    background: url("../../assets/images/content/quotes.svg") left top no-repeat;
+    background-size: contain;
+    opacity: .1;
 }
 
-.quot__who{
+.quot__who {
     text-align: center;
     display: block;
 }
-.quot__who-name{
+
+.quot__who-name {
     color: $green_low;
     font-weight: 900;
 }
-.about-me__relations{
+
+.about-me__relations {
     width: 380px;
     border-radius: 5px;
-    background-color: rgba(218, 219, 214,.6);
-    height: 100%;
-    //filter: blur(20px);
-    @include phones_work{
+    background-color: rgba(218, 219, 214, .6);
+    height: 100%; //filter: blur(20px);
+    @include phones_work {
         width: 300px;
     }
 }
-.about-me--bg{
+
+.about-me--bg {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     min-width: 900px;
-
 }
-.stop-scrolling{
+
+.stop-scrolling {
     overflow: hidden;
     height: 100%;
 }
-.menu{
+
+.menu {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: rgba(218, 219, 214,.6);
+    background-color: rgba(218, 219, 214, .6);
     z-index: 3;
-    background: rgba(108,156,90,.87);
+    background: rgba(108, 156, 90, .87);
     display: none;
 }
-.nav_header{
+
+.nav_header {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     height: 100%;
 }
-.nav__item_header{
+
+.nav__item_header {
     margin-top: 90px;
-    @include phones{
+    @include phones {
         margin-top: 50px;
     }
 }
-.nav__item_header:first-child{
+
+.nav__item_header:first-child {
     margin-top: 0px;
 }
-.nav__item-link_header{
+
+.nav__item-link_header {
     color: #fff;
     &:hover {
         color: #fff;
-    
     }
-     &:active {
+    &:active {
         color: #fff;
     }
     &:focus {
@@ -191,7 +202,7 @@ background-size: contain;
     }
 }
 
-.nav__item-link_header::after{
+.nav__item-link_header::after {
     content: '';
     display: block;
     position: absolute;
@@ -204,38 +215,33 @@ background-size: contain;
     background: currentColor;
     opacity: 0;
 }
-.nav__item-link_header:hover:after{
+
+.nav__item-link_header:hover:after {
     opacity: 1;
-}   
+}
 
-
-
-
-.communications{
+.communications {
     padding-top: 45px;
 }
-.form-inbut{
+
+.form-inbut {
     margin: 0 20px 20px 20px;
 }
 
-.about-me__relations_margin{
-   margin: 0 auto;
-   //margin-top: 60px; 
-   //filter: blur(20px);
-   //background: url("../../assets/images/content/bg-work.jpg") center no-repeat;
-   overflow: hidden;
+.about-me__relations_margin {
+    margin: 0 auto; //margin-top: 60px; 
+    //filter: blur(20px);
+    //background: url("../../assets/images/content/bg-work.jpg") center no-repeat;
+    overflow: hidden;
 }
-.about-me--bg{
 
-}
-.about-me__arrow{
+.about-me__arrow {
     display: flex;
     justify-content: center;
     margin-top: 45px;
     margin-bottom: 35px;
     transform: rotate(180deg);
-    
-    &:hover{
+    &:hover {
         transform: scale(1.5) rotate(180deg);
         transition: all 0.2s linear;
     }
@@ -247,65 +253,50 @@ textarea {
     width: 100%;
     border-radius: 30px;
 }
-.communications__form-label{
+
+.communications__form-label {
     width: 100%;
 }
-.communications__form-label .communications__form-label{
+
+.communications__form-label .communications__form-label {
     width: 100%;
     border-radius: 30px;
 }
 
-/*
-.reviews__item-description-text::before{
-    content: "❝";
-    font-size: 40px;
-}*/
 
 .blur {
-   // height: 100vh;
+    // height: 100vh;
     position: relative;
-    overflow: hidden; }
-  
-    .about-me__background {
+    overflow: hidden;
+}
+
+.about-me__background {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    min-width: 2200px; }
-  
-    .about-me__background-img {
+    min-width: 2200px;
+}
+
+.about-me__background-img {
     display: block;
-    max-width: 100%; }
-  
-    .blur-wrapper__form  {
+    max-width: 100%;
+}
+
+.blur-wrapper__form {
     width: 100%;
     height: 100%;
     background: url("../../assets/images/content/bg-work2.jpg") center no-repeat;
-    filter: blur(10px); 
+    filter: blur(10px);
     position: absolute;
     z-index: 1;
     top: 0;
     background-position: -336px -143px;
-    background-size: 1800px 
-   }
-   /*.tetxt{
-       position: absolute;
-       top: 0;
-   }
-   p{
-    z-index: 1111111;
-   }*/
-    /*.blur__form:before{
-        content: ' ';
-        width: 100%;
-        position: absolute;
-        height: 100%;
-        background: url("/assets/images/content/bg-work2.jpg") center no-repeat;
-        filter: blur(20px); 
-        background-position: -336px -143px;
-        background-size: 1800px 
-    }*/
-    .blur-wrapper {
+    background-size: 1800px
+}
+
+
+.blur-wrapper {
     position: absolute;
     /* top: 50%; */
     /* left: 50%; */
@@ -317,48 +308,10 @@ textarea {
     position: relative;
     margin: 0 auto;
     margin-top: 55px;
-    @include phones{
+    @include phones {
         width: 320px;
     }
-    }
-
-
-
-/*
-.blur {
-  height: 100vh;
-  position: relative;
-  overflow: hidden; }
-
-.blur__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  min-width: 900px; }
-
-.blur__img {
-  display: block;
-  max-width: 100%; }
-
-.blur__form {
-  width: 100%;
-  height: 100%;
-  background: url("/img/bg/water.jpg") center no-repeat;
-  filter: blur(20px); }
-
-.blur__form-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 400px;
-  margin-left: -150px;
-  margin-top: -200px;
-  overflow: hidden;
-  border-radius: 10px;
-  position: relative; }
-*/
+}
 
 .cmn-toggle-switch {
     display: block;
@@ -375,14 +328,14 @@ textarea {
     border-radius: none;
     border: none;
     cursor: pointer;
-            transition: background 0.3s;
-  }
-  
-  .cmn-toggle-switch:focus {
+    transition: background 0.3s;
+}
+
+.cmn-toggle-switch:focus {
     outline: none;
-  }
-  
-  .cmn-toggle-switch span {
+}
+
+.cmn-toggle-switch span {
     display: block;
     position: absolute;
     top: 16px;
@@ -391,10 +344,10 @@ textarea {
     height: 5px;
     background: white;
     border-radius: 10px;
-  }
-  
-  .cmn-toggle-switch span::before,
-  .cmn-toggle-switch span::after {
+}
+
+.cmn-toggle-switch span::before,
+.cmn-toggle-switch span::after {
     position: absolute;
     display: block;
     left: 0;
@@ -403,53 +356,49 @@ textarea {
     border-radius: 10px;
     background-color: #fff;
     content: "";
-  }
-  
-  .cmn-toggle-switch span::before {
+}
+
+.cmn-toggle-switch span::before {
     top: -14px;
-  }
-  
-  .cmn-toggle-switch span::after {
+}
+
+.cmn-toggle-switch span::after {
     bottom: -14px;
-  }
-  
+}
 
-  .cmn-toggle-switch__htx span {
-            transition: background 0s 0.3s;
-  }
-  
-  .cmn-toggle-switch__htx span::before,
-  .cmn-toggle-switch__htx span::after {
-            transition-duration: 0.3s, 0.3s;
-            transition-delay: 0.3s, 0s;
-  }
-  
-  .cmn-toggle-switch__htx span::before {
-            transition-property: top, transform;
-  }
-  
-  .cmn-toggle-switch__htx span::after {
-            transition-property: bottom, transform;
-  }
-  
-  .cmn-toggle-switch__htx.active span {
+.cmn-toggle-switch__htx span {
+    transition: background 0s 0.3s;
+}
+
+.cmn-toggle-switch__htx span::before,
+.cmn-toggle-switch__htx span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+
+.cmn-toggle-switch__htx span::before {
+    transition-property: top, transform;
+}
+
+.cmn-toggle-switch__htx span::after {
+    transition-property: bottom, transform;
+}
+
+.cmn-toggle-switch__htx.active span {
     background: none;
-  }
-  
-  .cmn-toggle-switch__htx.active span::before {
-    top: 0;
-            transform: rotate(45deg);
-  }
-  
-  .cmn-toggle-switch__htx.active span::after {
-    bottom: 0;
-            transform: rotate(-45deg);
-  }
-  
-  .cmn-toggle-switch__htx.active span::before,
-  .cmn-toggle-switch__htx.active span::after {
-            transition-delay: 0s, 0.3s;
-  }
-  
+}
 
-  
+.cmn-toggle-switch__htx.active span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.cmn-toggle-switch__htx.active span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.cmn-toggle-switch__htx.active span::before,
+.cmn-toggle-switch__htx.active span::after {
+    transition-delay: 0s, 0.3s;
+}
