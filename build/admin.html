@@ -29,87 +29,96 @@
           <button class="tabs__item-lint">tab 4</button>
         </li>
       </ul>
-      <div class="admin-panel__content page-about">
-        <div class="page-about-title">Страница "Обо мне"</div>
-        <ul class="full-skills">
-          <li class="full-skills__item">
-            <div class="full-skills__item-title">Frontend</div>
-            <ul class="one-skill">
-              <li class="one-skill__item">
-                <label class="one-skill__item-title" for="1">HTML
-                  <input class="one-skill__item-input" type="text" maxlength="2">
-                </label>
-                <div class="one-skill__item-percentages">%</div>
-              </li>
-              <li class="one-skill__item">
-                <label class="one-skill__item-title" for="1">CSS
-                  <input class="one-skill__item-input" type="text" maxlength="2">
-                </label>
-                <div class="one-skill__item-percentages">%</div>
-              </li>
-              <li class="one-skill__item">
-                <label class="one-skill__item-title" for="1">JavaScript
-                  <input class="one-skill__item-input" type="text" maxlength="2">
-                </label>
-                <div class="one-skill__item-percentages">%</div>
-              </li>
-            </ul>
-          </li>
-          <li class="full-skills__item">
-            <div class="full-skills__item-title">Workflow</div>
-            <ul class="one-skill">
-              <li class="one-skill__item">
-                <label class="one-skill__item-title" for="1">Git
-                  <input class="one-skill__item-input" type="text" maxlength="2">
-                </label>
-                <div class="one-skill__item-percentages">%</div>
-              </li>
-              <li class="one-skill__item">
-                <label class="one-skill__item-title" for="1">Gulp
-                  <input class="one-skill__item-input" type="text" maxlength="2">
-                </label>
-                <div class="one-skill__item-percentages">%</div>
-              </li>
-              <li class="one-skill__item">
-                <label class="one-skill__item-title" for="1">Bower
-                  <input class="one-skill__item-input" type="text" maxlength="2">
-                </label>
-                <div class="one-skill__item-percentages">%</div>
-              </li>
-            </ul>
-          </li>
-          <li class="full-skills__item">
-            <div class="full-skills__item-title">Backend</div>
-            <ul class="one-skill">
-              <li class="one-skill__item">
-                <label class="one-skill__item-title" for="1">PHP
-                  <input class="one-skill__item-input" type="text" maxlength="2">
-                </label>
-                <div class="one-skill__item-percentages">%</div>
-              </li>
-              <li class="one-skill__item">
-                <label class="one-skill__item-title" for="1">Node.js
-                  <input class="one-skill__item-input" type="text" maxlength="2">
-                </label>
-                <div class="one-skill__item-percentages">%</div>
-              </li>
-              <li class="one-skill__item">
-                <label class="one-skill__item-title" for="1">Mongo.db
-                  <input class="one-skill__item-input" type="text" maxlength="2">
-                </label>
-                <div class="one-skill__item-percentages">%</div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <button class="page-about-btn"> Сохранить       </button>
+      <!--.admin-panel__content.page-about
+      .page-about-title Страница "Обо мне"
+      ul.full-skills
+          li.full-skills__item
+              .full-skills__item-title Frontend
+              ul.one-skill
+                  li.one-skill__item
+                      label(for="1").one-skill__item-title HTML
+                          input(type="text" maxlength="2").one-skill__item-input 
+                      .one-skill__item-percentages %
+                  li.one-skill__item
+                      label(for="1").one-skill__item-title CSS
+                          input(type="text" maxlength="2").one-skill__item-input 
+                      .one-skill__item-percentages %
+                  li.one-skill__item
+                      label(for="1").one-skill__item-title JavaScript
+                          input(type="text" maxlength="2").one-skill__item-input 
+                      .one-skill__item-percentages %
+          li.full-skills__item
+              .full-skills__item-title Workflow
+              ul.one-skill
+                  li.one-skill__item
+                      label(for="1").one-skill__item-title Git
+                          input(type="text" maxlength="2").one-skill__item-input 
+                      .one-skill__item-percentages %
+                  li.one-skill__item
+                      label(for="1").one-skill__item-title Gulp
+                          input(type="text" maxlength="2").one-skill__item-input 
+                      .one-skill__item-percentages %
+                  li.one-skill__item
+                      label(for="1").one-skill__item-title Bower
+                          input(type="text" maxlength="2").one-skill__item-input 
+                      .one-skill__item-percentages %
+          li.full-skills__item
+              .full-skills__item-title Backend
+              ul.one-skill
+                  li.one-skill__item
+                      label(for="1").one-skill__item-title PHP
+                          input(type="text" maxlength="2").one-skill__item-input 
+                      .one-skill__item-percentages %
+                  li.one-skill__item
+                      label(for="1").one-skill__item-title Node.js
+                          input(type="text" maxlength="2").one-skill__item-input 
+                      .one-skill__item-percentages %
+                  li.one-skill__item
+                      label(for="1").one-skill__item-title Mongo.db
+                          input(type="text" maxlength="2").one-skill__item-input 
+                      .one-skill__item-percentages %
+      button.page-about-btn  Сохранить
+      -->
+      <!--.admin-panel__content.page-blog
+      .page-blog-title Стрница "Блог"    
+      .new-entry
+          .new-entry__title Добавить запись
+          .new-entry__name
+              label(for="1").new-entry__name-label.visually-hidden Имя
+              input(type="text"  placeholder="Название").new-entry__name-input 
+          .new-entry__date
+              label(for="1").new-entry__name-label.visually-hidden Дата
+              input(type="text"  placeholder="Дата").new-entry__date-input
+          .new-entry__text
+              label(for="1").new-entry__name-label.visually-hidden Содержание
+              textarea(type="text"  placeholder="Содержание").new-entry__name-textarea
+          button.new-entry__btn Добавить
+      -->
+      <div class="admin-panel__content page-work">
+        <div class="page-work-title">Стрница "Мои работы"</div>
+        <div class="new-work">
+          <div class="new-work__title">Добавить работу</div>
+          <div class="new-work__name">
+            <label class="new-work__name-label visually-hidden" for="1">Имя</label>
+            <input class="new-work__name-input" type="text" placeholder="Название проекта">
+          </div>
+          <div class="new-work__technology">
+            <label class="new-work__technology-label visually-hidden" for="1">Имя</label>
+            <input class="new-work__technology-input" type="text" placeholder="Технологии">
+          </div>
+          <div class="new-work__add-pic"><img class="new-work__add-img" src="assets/images/content/add-pic.png" alt="">
+            <button class="new-work__add-btn">Загрузить картинку</button>
+          </div>
+          <button class="new-work__btn">Добавить</button>
+        </div>
       </div>
     </div>
-    <div class="admin-panel__message">
-      <div class="message">
-        <div class="message__title">Сообщение отправле </div>
-        <button class="message__button">Закрыть</button>
-      </div>
-    </div>
+    <!--.admin-panel__message
+    .message
+        .message__title Сообщение отправле 
+        button.message__button Закрыть
+    
+        
+    -->
   </body>
 </html>

@@ -7,9 +7,11 @@
     background-size: cover;
     position: relative;
     @include screen {
+        
         //background-image: url("../../assets/images/content/forest_screen.jpg");
     }
     @include tablet {
+        height: 100%;
         //background-image: url("../../assets/images/content/forest_ipad.jpg");
     }
 }
@@ -18,7 +20,13 @@
     background-color: #53658d;
     display: flex;
     justify-content: space-between;
-    padding: 40px;  
+    padding: 40px; 
+    @include phones {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 10px;
+    } 
+    
 }
 .admin-panel__header-title{
     color: #fff;
@@ -27,38 +35,91 @@
     margin: auto 0;
     text-decoration: underline;
     opacity: 0.5;
+    @include phones {
+      margin-bottom: 20px;
+    }
 }
+
 .tabs{
     display: flex;
     background-color: #c7b620;
+    @include phones {
+        flex-direction: column;
+    }
+    
 }
 .tabs__item{
     border-right: 2px solid #fff;
+
+    @include tablets {
+       flex: 1;
+    }
+    @include phones {
+        border-right: 0;
+        border-bottom: 2px solid #fff;
+    }
+  
 }
+.tabs__item:last-child{
+    @include tablets {
+        border-right: 0;
+     }
+
+}
+
 .tabs__item-lint{
-    padding: 20px 50px;
+    padding: 20px 70px;
     text-transform: uppercase;
     background-color: #c7b620;
+    @include tablets {
+        padding: 20px 0;
+        width: 100%;
+     }
+    
     &:hover{
         background-color: #2395c2;
     }
 }
 .admin-panel__content{
     padding: 40px 20px;
+    padding-bottom:0px;
+    @include tablets {
+        padding-bottom:20px;
+     }
 }
 .page-about-title{
     font-size: 25px;
 }
 .full-skills{
     margin-top: 40px;
-    width: 50%;
+    width: 700px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include tablets {
+        width: 400px;
+        flex-direction: column;
+    }
+    @include phones {
+        margin-top: 0px;
+        width: 280px;
+        flex-direction: column;
+    }
+   
+  /*  @include phones_work {
+        min-height: 1800px;
+    }
+    @include phones {
+        min-height: 1700px;
+    }
+    flex-direction: column;*/
 }
 .full-skills__item{
     width: 40%;
     margin-top: 30px;
+    @include tablets {
+        width: 100%;
+    }
 }
 .full-skills__item-title{
     font-size: 20px;
@@ -92,8 +153,12 @@ input[type="text"].one-skill__item-input{
 }
 .admin-panel__message{
     position: absolute;
-    top: 50%;
     left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    @include tablets {
+        top: 90%;
+    }
 }
 .message__button{
     padding: 10px 30px;
@@ -115,4 +180,114 @@ input[type="text"].one-skill__item-input{
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
+    @include phones {
+        width: 280px;
+    }
+}
+
+/*----- tab 2--- */
+/*.page-blog{
+    @media screen and (max-width: 1000px) {
+        height: 100vh;
+    }
+}*/
+.page-blog, .page-work-title{
+    @extend .page-about-title;
+}
+.new-entry__title{
+    @extend .full-skills__item-title;
+}
+
+.new-entry{
+    @extend .full-skills;
+    flex-direction: column;
+    width: 540px;
+    justify-content: flex-start;
+    
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        
+    }
+}
+
+.new-entry__name,
+.new-entry__date,
+.new-entry__text{
+    margin-bottom: 20px;
+}
+
+.new-entry__btn{
+    @extend .page-about-btn;
+}
+input[type="text"].new-entry__name-input,
+input[type="text"].new-entry__date-input,
+textarea.new-entry__name-textarea{
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+input[type="text"].new-entry__name-input,
+input[type="text"].new-entry__date-input{
+    width: 50%;
+    @include phones {
+        width: 100%;
+    }
+}
+
+textarea.new-entry__name-textarea{
+    height: 200px;
+    @include tablets {
+        height: 300px;
+    }
+    @include phones {
+        height: 300px;
+    }
+}
+.new-entry__btn{
+    align-self: right;
+}
+
+
+/*----- tab 3-- */
+
+.new-work__title  {
+    @extend .page-about-title;
+}
+.new-work__title {
+    @extend .new-entry__title;
+}
+.new-work{
+    width: 300px;
+    @include phones {
+        width: 100%;
+        padding: 0;
+    }
+}
+.new-work__name,.new-work__technology {
+    width: 100%;
+}
+input[type="text"].new-work__name-input , 
+input[type="text"].new-work__technology-input  {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.new-work{
+    margin-top: 20px;
+}
+.new-work__add-btn{
+    color: #2395c2;
+}
+.new-work__add-pic{
+    display: flex;
+}
+.new-work__add-img{
+    margin-right: 30px;
+}
+.new-work__btn{
+    @extend .new-entry__btn;
+    margin-top: 200px;
+    @include tablets {
+        margin-top: 20px;
+    }
 }
