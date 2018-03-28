@@ -5,7 +5,6 @@ block variables
 
 block content
     .wrapper  
-        //include ../common/header.pug  
         header.header
             .header__social
                 ul.social
@@ -22,9 +21,9 @@ block content
                             svg.social__item-svg.social__item-svg_header
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in") 
             .header__hamburger.hamburger
-                button.cmn-toggle-switch.cmn-toggle-switch__htx
+                button.hamburger__switch.hamburger__switch_htx
                     span toggle menu
-            .menu
+            .full-menu
                 ul.nav.nav_header
                     li.nav__item.nav__item_header
                         a(href='my-works.html').nav__item-link.nav__item-link_header.block-title Мои работы
@@ -103,12 +102,6 @@ block content
                                             span Посмотреть сайт
                 //.myworks__slider-left
                 //.myworks__slider-right
-
-            
-                
-
-            
-                //.blur 
             section.section.about-me
                 .about-me__background
                     img(src="assets/images/content/bg-work2.jpg", alt="#").about-me__background-img
