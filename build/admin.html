@@ -79,39 +79,41 @@
                       .one-skill__item-percentages %
       button.page-about-btn  Сохранить
       -->
-      <!--.admin-panel__content.page-blog
-      .page-blog-title Стрница "Блог"    
-      .new-entry
-          .new-entry__title Добавить запись
-          .new-entry__name
-              label(for="1").new-entry__name-label.visually-hidden Имя
-              input(type="text"  placeholder="Название").new-entry__name-input 
-          .new-entry__date
-              label(for="1").new-entry__name-label.visually-hidden Дата
-              input(type="text"  placeholder="Дата").new-entry__date-input
-          .new-entry__text
-              label(for="1").new-entry__name-label.visually-hidden Содержание
-              textarea(type="text"  placeholder="Содержание").new-entry__name-textarea
-          button.new-entry__btn Добавить
-      -->
-      <div class="admin-panel__content page-work">
-        <div class="page-work-title">Стрница "Мои работы"</div>
-        <div class="new-work">
-          <div class="new-work__title">Добавить работу</div>
-          <div class="new-work__name">
-            <label class="new-work__name-label visually-hidden" for="1">Имя</label>
-            <input class="new-work__name-input" type="text" placeholder="Название проекта">
+      <div class="admin-panel__content page-blog">
+        <div class="page-blog-title">Стрница "Блог"    </div>
+        <div class="new-entry">
+          <div class="new-entry__title">Добавить запись</div>
+          <div class="new-entry__name">
+            <label class="new-entry__name-label visually-hidden" for="1">Имя</label>
+            <input class="new-entry__name-input" type="text" placeholder="Название">
           </div>
-          <div class="new-work__technology">
-            <label class="new-work__technology-label visually-hidden" for="1">Имя</label>
-            <input class="new-work__technology-input" type="text" placeholder="Технологии">
+          <div class="new-entry__date">
+            <label class="new-entry__name-label visually-hidden" for="1">Дата</label>
+            <input class="new-entry__date-input" type="text" placeholder="Дата">
           </div>
-          <div class="new-work__add-pic"><img class="new-work__add-img" src="assets/images/content/add-pic.png" alt="">
-            <button class="new-work__add-btn">Загрузить картинку</button>
+          <div class="new-entry__text">
+            <label class="new-entry__name-label visually-hidden" for="1">Содержание</label>
+            <textarea class="new-entry__name-textarea" type="text" placeholder="Содержание"></textarea>
           </div>
-          <button class="new-work__btn">Добавить</button>
+          <button class="new-entry__btn">Добавить</button>
         </div>
       </div>
+      <!--.admin-panel__content.page-work
+      .page-work-title Стрница "Мои работы"
+      .new-work
+          .new-work__title Добавить работу
+          .new-work__name
+              label(for="1").new-work__name-label.visually-hidden Имя
+              input(type="text"  placeholder="Название проекта").new-work__name-input 
+          .new-work__technology
+              label(for="1").new-work__technology-label.visually-hidden Имя
+              input(type="text"  placeholder="Технологии").new-work__technology-input 
+          .new-work__add-pic
+                  img(src="assets/images/content/add-pic.png", alt="").new-work__add-img
+                  button.new-work__add-btn Загрузить картинку
+          button.new-work__btn Добавить
+      
+      -->
     </div>
     <!--.admin-panel__message
     .message

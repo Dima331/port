@@ -4,6 +4,7 @@
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-family: 'Sansus';
+
 }
 
 .form_margin{
@@ -31,6 +32,9 @@
     display: flex;
     justify-content: space-evenly;
     z-index: 2;
+    @include tablets {
+        margin-bottom: 50px;
+    }
 }
 .form__row_margin-title{
     margin-bottom: 30px;
@@ -62,9 +66,9 @@
     border-radius: 50%;
 }
 
-.form__row_last {
+/*.form__row_last {
     margin: 0;
-}
+}*/
 
 .form__row-torggle {
     display: flex;
@@ -116,9 +120,84 @@
     border-radius: 50%;
     background-color: #fff;
 }
-
+/*
 @media screen and (max-height: 561px) {
     .form__row {
         margin-bottom: 10px;
     }
+}*/
+
+/*--- стили ошибок -- */
+.input-icon_error{
+    border: 2px solid red;
+    border-radius: 30px;
+
+}
+.input-icon__error {
+    position: absolute;
+    text-align: center;
+    min-width: 59%;
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    background-color: red;
+    @include tablets {
+        //z-index: 1;
+        //bottom: -8px;
+        min-width: 63%;
+        left: 50%;
+        -webkit-transform: translate(-50%,100%);
+        transform: translate(-50%,100%);
+        //opacity: 0;
+        //visibility: hidden;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+}
+.input-icon__error_top{
+    @include tablets {
+        top: -7px;
+    }
+  
+}
+.input-icon__error_textarea{
+    @include tablets {
+        top: 75%;
+    }
+  
+}
+.input-icon__error-text{
+    color: #fff;
+    padding: 16px;
+    @include tablets {
+        padding: 8px;  
+    }
+}
+.input-icon__error::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-right: 8px solid red;
+    @include tablets {
+        bottom: 100%;
+        left: 50%;
+        top: auto;
+        right: auto;
+        transform: translateX(-50%);
+        border-bottom: 8px solid red;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+    }
+    
+}
+.form__row_error{
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: red;
 }

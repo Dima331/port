@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 750px;
     @include screen {
         background-image: url("../../assets/images/content/forest_screen.jpg");
     }

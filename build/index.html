@@ -53,7 +53,7 @@
               <div class="form__row form__row_margin-title">
                 <h2 class="block-subtitle block-subtitle_white">Авторизуйтесь</h2>
               </div>
-              <div class="form__row form__row-spacebetwin input-icon">
+              <div class="form__row form__row-spacebetwin input-icon input-icon_error">
                 <div class="input-icon__label">
                   <svg class="input-icon__icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#login"> </use>
@@ -61,8 +61,11 @@
                 </div>
                 <label class="visually-hidden" for="login">Логин</label>
                 <input class="input-icon__login" type="text" name="login" placeholder="Логин" id="login">
+                <div class="input-icon__error"> 
+                  <div class="input-icon__error-text">Вы не ввели логин</div>
+                </div>
               </div>
-              <div class="form__row form__row-spacebetwin input-icon">
+              <div class="form__row form__row-spacebetwin input-icon input-icon_error">
                 <div class="input-icon__label">
                   <svg class="input-icon__icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#password"> </use>
@@ -70,6 +73,9 @@
                 </div>
                 <label class="visually-hidden" for="password">Пароль</label>
                 <input class="input-icon__password" type="password" name="password" placeholder="Пароль" id="password">
+                <div class="input-icon__error"> 
+                  <div class="input-icon__error-text">Вы не ввели пароль</div>
+                </div>
               </div>
               <div class="form__row">  
                 <label class="form__row-torggle" for="checkbox"> 
@@ -81,6 +87,9 @@
                     </svg>
                   </div>
                   <div class="form__title">Я человек</div>
+                  <div class="input-icon__error input-icon__error_top"> 
+                    <div class="input-icon__error-text">Только для людей</div>
+                  </div>
                 </label>
               </div>
               <div class="form__row form__row-text">
@@ -101,9 +110,13 @@
                   <div class="form__toggle-fake form__toggle-fake_radio">
                     <div class="form__toggle-fake_flag form__toggle-fake_dot"></div>
                   </div>
-                  <div class="form__title">Не уверен       </div>
+                  <div class="form__title">Не уверен  </div>
                 </label>
+                <div class="input-icon__error input-icon__error_top"> 
+                  <div class="input-icon__error-text">Только для людей   </div>
+                </div>
               </div>
+              <div class="form__row form__row_error">Неправельно введен логин или пароль</div>
             </form>
           </div>
           <ul class="menu__list">

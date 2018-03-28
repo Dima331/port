@@ -43,18 +43,23 @@ block content
             form.form.form_margin(action="#")
               .form__row.form__row_margin-title
                   h2.block-subtitle.block-subtitle_white Авторизуйтесь
-              .form__row.form__row-spacebetwin.input-icon
+              .form__row.form__row-spacebetwin.input-icon.input-icon_error
                 .input-icon__label
                   svg.input-icon__icon
                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#login") 
                 label(for="login").visually-hidden Логин
                 input(type="text", name="login" placeholder="Логин" id="login").input-icon__login
-              .form__row.form__row-spacebetwin.input-icon
+                .input-icon__error  
+                  .input-icon__error-text Вы не ввели логин
+
+              .form__row.form__row-spacebetwin.input-icon.input-icon_error
                 .input-icon__label
                   svg.input-icon__icon
                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#password")  
                 label(for="password").visually-hidden Пароль
                 input(type="password", name="password" placeholder="Пароль" id="password").input-icon__password
+                .input-icon__error  
+                  .input-icon__error-text Вы не ввели пароль
               .form__row   
                 label(for="checkbox").form__row-torggle 
                   .visually-hidden Я человек
@@ -63,6 +68,8 @@ block content
                     svg.form__toggle-fake_flag.form__toggle-fake_check
                       use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#check")
                   .form__title Я человек
+                  .input-icon__error.input-icon__error_top  
+                    .input-icon__error-text Только для людей
               .form__row.form__row-text
                 p Вы точно не робот?
               .form__row.form__row_last
@@ -77,7 +84,11 @@ block content
                   input(type="radio", name="radio" id="radio_2" value="Нет").form__toggle-input
                   .form__toggle-fake.form__toggle-fake_radio
                     .form__toggle-fake_flag.form__toggle-fake_dot
-                  .form__title Не уверен       
+                  .form__title Не уверен  
+                .input-icon__error.input-icon__error_top  
+                  .input-icon__error-text Только для людей   
+              .form__row.form__row_error Неправельно введен логин или пароль
+                
           ul.menu__list
             li.menu__item
               button.menu__item-link#main На главную
