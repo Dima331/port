@@ -244,7 +244,7 @@ const map = (function () {
                     map: map,
                     //icon: iconBase + '../../assets/images/content/map_marker.svg'
                     icon: {
-                        url: "../assets/images/content/map_marker.svg",
+                        url: "../images/content/map_marker.svg",
                         scaledSize: new google.maps.Size(64, 64)
                     }
                 });
