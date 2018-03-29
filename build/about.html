@@ -9,6 +9,7 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/styles/app.min.css">
     <script src="assets/scripts/bundle.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmnaTdGVTLnA_l2QJ245FHR8TA6KuIqTg&amp;callback=initMap" async defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -47,7 +48,7 @@
         </div>
         <div class="header__content">
           <div class="user">
-            <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="W"></div>
+            <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="Face"></div>
             <div class="user__description">
               <div class="user__description-name">Владимир Астахов</div>
               <div class="user__description-info">Личный сайт разработчика</div>
@@ -186,7 +187,7 @@
           </div>
         </section>
         <section class="section map">
-          <div class="google-map"></div>
+          <div class="yandex-map" id="map"></div>
           <div class="map__contact">
             <h2 class="block-subtitle">Контакты</h2>
             <ul class="contacts__list contacts__list_margin">

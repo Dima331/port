@@ -9,11 +9,17 @@
     @include tablets {
         min-height: 1600px;
     }
+    @media screen and (max-width: 650px) {
+        min-height: 1634px;
+    }
     @include phones_work {
-        min-height: 1800px;
+        min-height: 1862px;
     }
     @include phones {
-        min-height: 1700px;
+        min-height: 1800px;
+    }
+    @media screen and (max-width: 328px) {
+        min-height: 1850px;
     }
 }
 
@@ -298,19 +304,17 @@ textarea {
 
 .blur-wrapper {
     position: absolute;
-    /* top: 50%; */
-    /* left: 50%; */
     width: 380px;
-    /* margin-left: -150px; */
-    /* margin-top: -200px; */
-    //overflow: hidden;
     border-radius: 10px;
     position: relative;
-    margin: 0 auto;
-    margin-top: 55px;
     @include phones {
-        width: 320px;
+        width: 300px;
     }
+}
+.about-me__blur{
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
 }
 
 .hamburger__switch {

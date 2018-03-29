@@ -3,7 +3,7 @@ const $ = require('jquery');
 const welcomeButton = require('./common/welcomeButton.js');
 const blur = require('./common/blur.js');
 const hamburger = require('./common/hamburger.js');
-
+const map = require('./common/map.js');
 
 
 if($('.blur-wrapper').length){
@@ -17,6 +17,9 @@ if($('.authorization-btn__link').length){
 
 if($('.hamburger').length){
 	hamburger.init();
+}
+if($('#map').length){
+	map.init();
 }
 
 //module.exports = jq;
