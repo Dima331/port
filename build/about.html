@@ -9,15 +9,16 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/styles/app.min.css">
     <script src="assets/scripts/bundle.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmnaTdGVTLnA_l2QJ245FHR8TA6KuIqTg&amp;callback=initMap" async defer></script>
   </head>
   <body>
     <div class="wrapper">
-      <div class="menu">
+      <div class="full-menu">
         <ul class="nav nav_header">
-          <li class="nav__item nav__item_header"><a class="nav__item-link nav__item-link_header block-title" href="my-works.html">Мои работы</a></li>
-          <li class="nav__item nav__item_header"><a class="nav__item-link nav__item-link_header block-title" href="about.html">Обо мне</a></li>
-          <li class="nav__item nav__item_header"><a class="nav__item-link nav__item-link_header block-title" href="blog.html">Блог</a></li>
-          <li class="nav__item nav__item_header"><a class="nav__item-link nav__item-link_header block-title" href="index.html">Авторизация       </a></li>
+          <li class="nav__item"><a class="nav__item-link block-title" href="my-works.html">Мои работы</a></li>
+          <li class="nav__item"><a class="nav__item-link block-title" href="about.html">Обо мне</a></li>
+          <li class="nav__item"><a class="nav__item-link block-title" href="blog.html">Блог</a></li>
+          <li class="nav__item"><a class="nav__item-link block-title" href="index.html">Авторизация       </a></li>
         </ul>
       </div>
       <header class="header">
@@ -38,15 +39,8 @@
           </ul>
         </div>
         <div class="header__hamburger hamburger">
-          <button class="cmn-toggle-switch cmn-toggle-switch__htx"><span>toggle menu</span></button>
+          <button class="hamburger__switch hamburger__switch_htx"><span>hamburger</span></button>
         </div>
-        <!--.header__hamburger.hamburger
-        .hamburger-box
-            .hamburger-inner
-        //button.hamburger__link
-            svg.hamburger__link-svg
-                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#hamburger") 
-        -->
         <div class="header__placeholder"> 
           <svg class="header__placeholder-title">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#portfolio_header"></use>
@@ -54,7 +48,7 @@
         </div>
         <div class="header__content">
           <div class="user">
-            <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="W"></div>
+            <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="Face"></div>
             <div class="user__description">
               <div class="user__description-name">Владимир Астахов</div>
               <div class="user__description-info">Личный сайт разработчика</div>
@@ -89,7 +83,7 @@
                 <!--.title-block__border    -->
               </div>
             </div>
-            <div class="about__left-content">
+            <div class="about__left-content user-description">
               <div class="user-description__image"><img class="user-description__avatar" src="assets/images/content/face.jpg" alt="full phote"></div>
               <div class="user-description__title">
                 <h2 class="block-subtitle">Кто я</h2>
@@ -102,7 +96,7 @@
           </div>
           <div class="about__right">
             <div class="about__right-title">
-              <h2 class="block-subtitle block-subtitle_width">Чем я могу быть вам полезен</h2>
+              <h2 class="block-subtitle block-subtitle_width">Чем я могу быть вам полезен  </h2>
             </div>
             <div class="about__right-text text-content">
               <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
@@ -193,7 +187,7 @@
           </div>
         </section>
         <section class="section map">
-          <div class="google-map"></div>
+          <div class="yandex-map" id="map"></div>
           <div class="map__contact">
             <h2 class="block-subtitle">Контакты</h2>
             <ul class="contacts__list contacts__list_margin">

@@ -9,6 +9,7 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/styles/app.min.css">
     <script src="assets/scripts/bundle.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmnaTdGVTLnA_l2QJ245FHR8TA6KuIqTg&amp;callback=initMap" async defer></script>
   </head>
   <body>
     <div class="forest">
@@ -19,7 +20,7 @@
         <div class="welcome front">
           <h1 class="visually-hidden">Главная страница автора</h1>
           <div class="welcome__content welcome__content_margin">
-            <div class="welcome__pic"><img class="welcome__pic-img" src="assets/images/content/face.jpg" alt="Картинка автора"></div>
+            <div class="welcome__pic"><img class="welcome__pic-img" src="assets/images/content/face.jpg" alt="face"></div>
             <div class="welcome__description description-info">
               <div class="description-info__name">Владимир Астахов</div>
               <div class="description-info__about">Личный сайт веб разработчика</div>
@@ -39,7 +40,7 @@
                   </svg></a></li>
             </ul>
           </div>
-          <nav class="nav">
+          <nav class="nav menu">
             <ul class="menu__list">
               <li class="menu__item"><a class="menu__item-link" href="my-works.html">Мои работы</a></li>
               <li class="menu__item"><a class="menu__item-link" href="about.html">Обо мне</a></li>
@@ -53,7 +54,7 @@
               <div class="form__row form__row_margin-title">
                 <h2 class="block-subtitle block-subtitle_white">Авторизуйтесь</h2>
               </div>
-              <div class="form__row form__row-spacebetwin input-icon input-icon_error">
+              <div class="form__row form__row_spacebetwin input-icon input-icon_error">
                 <div class="input-icon__label">
                   <svg class="input-icon__icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#login"> </use>
@@ -65,7 +66,7 @@
                   <div class="input-icon__error-text">Вы не ввели логин</div>
                 </div>
               </div>
-              <div class="form__row form__row-spacebetwin input-icon input-icon_error">
+              <div class="form__row form__row_spacebetwin input-icon input-icon_error">
                 <div class="input-icon__label">
                   <svg class="input-icon__icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#password"> </use>
@@ -78,8 +79,7 @@
                 </div>
               </div>
               <div class="form__row">  
-                <label class="form__row-torggle" for="checkbox"> 
-                  <div class="visually-hidden">Я человек</div>
+                <label class="form__row-torggle" for="checkbox"> <span class="visually-hidden">Я человек</span>
                   <input class="form__toggle-input" type="checkbox" name="checkbox" value="Я человек" id="checkbox">
                   <div class="form__toggle-fake">
                     <svg class="form__toggle-fake_flag form__toggle-fake_check">
@@ -96,16 +96,14 @@
                 <p>Вы точно не робот?</p>
               </div>
               <div class="form__row form__row_last">
-                <label class="form__row-torggle" for="radio"> 
-                  <div class="visually-hidden">Да</div>
+                <label class="form__row-torggle" for="radio"> <span class="visually-hidden">Да</span>
                   <input class="form__toggle-input" type="radio" name="radio" value="Да" id="radio" checked>
                   <div class="form__toggle-fake form__toggle-fake_radio">
                     <div class="form__toggle-fake_flag form__toggle-fake_dot"></div>
                   </div>
                   <div class="form__title">Да  </div>
                 </label>
-                <label class="form__row-torggle" for="radio_2"> 
-                  <div class="visually-hidden">Не уверен</div>
+                <label class="form__row-torggle" for="radio_2"> <span class="visually-hidden">Не уверен</span>
                   <input class="form__toggle-input" type="radio" name="radio" id="radio_2" value="Нет">
                   <div class="form__toggle-fake form__toggle-fake_radio">
                     <div class="form__toggle-fake_flag form__toggle-fake_dot"></div>

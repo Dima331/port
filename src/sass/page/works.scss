@@ -9,11 +9,17 @@
     @include tablets {
         min-height: 1600px;
     }
+    @media screen and (max-width: 650px) {
+        min-height: 1634px;
+    }
     @include phones_work {
-        min-height: 1800px;
+        min-height: 1862px;
     }
     @include phones {
-        min-height: 1700px;
+        min-height: 1800px;
+    }
+    @media screen and (max-width: 328px) {
+        min-height: 1850px;
     }
 }
 
@@ -160,7 +166,7 @@
     height: 100%;
 }
 
-.menu {
+.full-menu {
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -178,18 +184,18 @@
     height: 100%;
 }
 
-.nav__item_header {
+.nav_header > .nav__item {
     margin-top: 90px;
     @include phones {
         margin-top: 50px;
     }
 }
 
-.nav__item_header:first-child {
+.nav_header > .nav__item:first-child {
     margin-top: 0px;
 }
 
-.nav__item-link_header {
+.nav_header > .nav__item > .nav__item-link {
     color: #fff;
     &:hover {
         color: #fff;
@@ -298,22 +304,20 @@ textarea {
 
 .blur-wrapper {
     position: absolute;
-    /* top: 50%; */
-    /* left: 50%; */
     width: 380px;
-    /* margin-left: -150px; */
-    /* margin-top: -200px; */
-    //overflow: hidden;
     border-radius: 10px;
     position: relative;
-    margin: 0 auto;
-    margin-top: 55px;
     @include phones {
-        width: 320px;
+        width: 300px;
     }
 }
+.about-me__blur{
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+}
 
-.cmn-toggle-switch {
+.hamburger__switch {
     display: block;
     position: relative;
     overflow: hidden;
@@ -331,11 +335,11 @@ textarea {
     transition: background 0.3s;
 }
 
-.cmn-toggle-switch:focus {
+.hamburger__switch:focus {
     outline: none;
 }
 
-.cmn-toggle-switch span {
+.hamburger__switch span {
     display: block;
     position: absolute;
     top: 16px;
@@ -346,8 +350,8 @@ textarea {
     border-radius: 10px;
 }
 
-.cmn-toggle-switch span::before,
-.cmn-toggle-switch span::after {
+.hamburger__switch span::before,
+.hamburger__switch span::after {
     position: absolute;
     display: block;
     left: 0;
@@ -358,47 +362,47 @@ textarea {
     content: "";
 }
 
-.cmn-toggle-switch span::before {
+.hamburger__switch span::before {
     top: -14px;
 }
 
-.cmn-toggle-switch span::after {
+.hamburger__switch span::after {
     bottom: -14px;
 }
 
-.cmn-toggle-switch__htx span {
+.hamburger__switch_htx span {
     transition: background 0s 0.3s;
 }
 
-.cmn-toggle-switch__htx span::before,
-.cmn-toggle-switch__htx span::after {
+.hamburger__switch_htx span::before,
+.hamburger__switch_htx span::after {
     transition-duration: 0.3s, 0.3s;
     transition-delay: 0.3s, 0s;
 }
 
-.cmn-toggle-switch__htx span::before {
+.hamburger__switch_htx span::before {
     transition-property: top, transform;
 }
 
-.cmn-toggle-switch__htx span::after {
+.hamburger__switch_htx span::after {
     transition-property: bottom, transform;
 }
 
-.cmn-toggle-switch__htx.active span {
+.hamburger__switch_htx.active span {
     background: none;
 }
 
-.cmn-toggle-switch__htx.active span::before {
+.hamburger__switch_htx.active span::before {
     top: 0;
     transform: rotate(45deg);
 }
 
-.cmn-toggle-switch__htx.active span::after {
+.hamburger__switch_htx.active span::after {
     bottom: 0;
     transform: rotate(-45deg);
 }
 
-.cmn-toggle-switch__htx.active span::before,
-.cmn-toggle-switch__htx.active span::after {
+.hamburger__switch_htx.active span::before,
+.hamburger__switch_htx.active span::after {
     transition-delay: 0s, 0.3s;
 }
