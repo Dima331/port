@@ -4,7 +4,7 @@ const welcomeButton = require('./common/welcomeButton.js');
 const blur = require('./common/blur.js');
 const hamburger = require('./common/hamburger.js');
 const map = require('./common/map.js');
-
+const formWelcome = require('./common/formWelcome.js');
 
 if($('.blur-wrapper').length){
 	blur.init();
@@ -21,5 +21,7 @@ if($('.hamburger').length){
 if($('#map').length){
 	map.init();
 }
-
+/*if($('#map').length){
+	formWelcome.init();
+}*/
 //module.exports = jq;
