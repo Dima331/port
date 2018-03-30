@@ -99,7 +99,7 @@
         color: #fff;
     }
 }
-.blog-menu__item-active{
+.blog-menu__item_active{
     .blog-menu__item-link{
     color: $green_low;
     @include tablets{
