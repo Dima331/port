@@ -9,33 +9,40 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/styles/app.min.css">
     <script src="assets/scripts/bundle.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmnaTdGVTLnA_l2QJ245FHR8TA6KuIqTg&amp;callback=initMap" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
   </head>
   <body>
     <div class="wrapper"> 
-      <!--include ../common/header.pug  -->
+      <div class="full-menu">
+        <ul class="nav nav_header">
+          <li class="nav__item"><a class="nav__item-link block-title" href="my-works.html">Мои работы</a></li>
+          <li class="nav__item"><a class="nav__item-link block-title" href="about.html">Обо мне</a></li>
+          <li class="nav__item"><a class="nav__item-link block-title" href="blog.html">Блог</a></li>
+          <li class="nav__item"><a class="nav__item-link block-title" href="index.html">Авторизация   </a></li>
+        </ul>
+      </div>
       <header class="header">
         <div class="header__social">
           <ul class="social">
             <li class="social__item social__item_margin"><a class="social__item-link" href="#">
-                <svg class="social__item-svg">
+                <svg class="social__item-svg social__item-svg_header">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk"> </use>
                 </svg></a></li>
             <li class="social__item social__item_margin"><a class="social__item-link" href="#">
-                <svg class="social__item-svg">
+                <svg class="social__item-svg social__item-svg_header">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github"> </use>
                 </svg></a></li>
             <li class="social__item social__item_margin"><a class="social__item-link" href="#">
-                <svg class="social__item-svg">
+                <svg class="social__item-svg social__item-svg_header">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in"> </use>
                 </svg></a></li>
           </ul>
         </div>
         <div class="header__hamburger hamburger">
-          <button class="hamburger__link">
-            <svg class="hamburger__link-svg">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#hamburger"> </use>
-            </svg>
-          </button>
+          <button class="hamburger__switch hamburger__switch_htx"><span>toggle menu</span></button>
         </div>
         <div class="header__placeholder"> 
           <svg class="header__placeholder-title">
@@ -44,7 +51,7 @@
         </div>
         <div class="header__content">
           <div class="user">
-            <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="W"></div>
+            <div class="user__pic"><img class="user__pic-img" src="assets/images/content/face.jpg" alt="face"></div>
             <div class="user__description">
               <div class="user__description-name">Владимир Астахов</div>
               <div class="user__description-info">Личный сайт разработчика</div>
@@ -70,7 +77,7 @@
           <div class="myworks-title">
             <div class="title-block">
               <div class="title-block-pic">
-                <svg class="title-block-svg">
+                <svg class="title-block-svg title-block-svg_width">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header">       </use>
                 </svg>
               </div>
@@ -108,6 +115,7 @@
               </div>
             </div>
           </div>
+          <!--изи слайдер-->
           <!--.myworks__slider
           ul.slider
               li.slider__item
@@ -128,10 +136,11 @@
           <!--.myworks__slider-right-->
         </section>
         <section class="section about-me">
+          <div class="about-me__background"><img class="about-me__background-img" src="assets/images/content/bg-work2.jpg" alt="#"></div>
           <div class="about-me__content">
             <div class="title-block">
               <div class="title-block-pic title-block-pic_top">
-                <svg class="title-block-svg">
+                <svg class="title-block-svg title-block-svg_width">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_header">       </use>
                 </svg>
               </div>
@@ -139,8 +148,8 @@
             </div>
             <ul class="about-me__reviews reviews">
               <li class="reviews__item">
-                <div class="reviews__item-pic"> <img class="reviews__item-img" src="assets/images/content/face_teacher.jpg" alt="#"></div>
-                <blockquote class="reviews__item-description quot">
+                <div class="reviews__item-pic"> <img class="reviews__item-img" src="assets/images/content/face_teacher.jpg" alt="teacher"></div>
+                <blockquote class="reviews__item-description quot"> 
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, ea earum provident laboriosam exercitationem mollitia asperiores velit quasi sequi suscipit vero harum, recusandae ullam voluptate, vitae molestiae ipsum consequatur eos!</p>
                   <cite class="quot__who">
                     <div class="quot__who-name">
@@ -151,10 +160,9 @@
                     </div>
                   </cite>
                 </blockquote>
-                <!--.reviews__item-quot-->
               </li>
               <li class="reviews__item">
-                <div class="reviews__item-pic"> <img class="reviews__item-img" src="assets/images/content/face_teacher_2.jpg" alt="#"></div>
+                <div class="reviews__item-pic"> <img class="reviews__item-img" src="assets/images/content/face_teacher_2.jpg" alt="teacher"></div>
                 <blockquote class="reviews__item-description quot">
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, ea earum provident laboriosam exercitationem mollitia asperiores velit quasi sequi suscipit vero harum, recusandae ullam voluptate, vitae molestiae ipsum consequatur eos!</p>
                   <cite class="quot__who">
@@ -168,38 +176,50 @@
                 </blockquote>
               </li>
             </ul>
-            <div class="about-me__relations about-me__relations_margin">
-              <form class="about-me__form" action="#">
+          </div>
+          <div class="about-me__blur">
+            <div class="blur-wrapper">
+              <form class="form communications" action="#">
                 <h2 class="block-subtitle block-subtitle_margin">Связаться со мной</h2>
                 <div class="form-inbut">
-                  <div class="form__row">
-                    <label class="about-me__form-label visually-hidden" for="name">Имя</label>
-                    <input class="about-me__form-input" type="text" name="login" placeholder="Имя" id="name">
+                  <div class="form__row input-icon input-icon_error">
+                    <label class="communications__form-label visually-hidden" for="name">Имя</label>
+                    <input class="communications__form-input" type="text" name="login" placeholder="Имя" id="name">
+                    <div class="input-icon__error"> 
+                      <div class="input-icon__error-text">Вы не ввели Имя</div>
+                    </div>
                   </div>
-                  <div class="form__row">
-                    <label class="about-me__form-label visually-hidden" for="email">Почта</label>
-                    <input class="about-me__form-input" type="text" name="password" placeholder="Email" id="email">
+                  <div class="form__row input-icon input-icon_error">
+                    <label class="communications__form-label visually-hidden" for="email">Почта</label>
+                    <input class="communications__form-input" type="text" name="password" placeholder="Email" id="email">
+                    <div class="input-icon__error"> 
+                      <div class="input-icon__error-text">Вы не ввели почту</div>
+                    </div>
                   </div>
-                  <div class="form__row form__row-last">
-                    <label class="about-me__form-label visually-hidden" for="message">Текст</label>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+                  <div class="form__row form__row-last input-icon input-icon_error input-icon__error_textarea">
+                    <label class="communications__form-label visually-hidden" for="message">Текст</label>
+                    <textarea class="communications__form-textarea" name="message" id="message" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+                    <div class="input-icon__error input-icon__error_textarea"> 
+                      <div class="input-icon__error-text">Вы не ввели сообщение</div>
+                    </div>
                   </div>
                 </div>
                 <ul class="menu__list">
                   <li class="menu__item"><a class="menu__item-link" href="#">Отправить</a></li>
                   <li class="menu__item">
-                    <button class="menu__item-link" href="#">Очистить</button>
+                    <button class="menu__item-link" href="#">Очистить  </button>
                   </li>
                 </ul>
               </form>
+              <div class="blur-wrapper__form"> </div>
             </div>
-            <div class="about-me__arrow arrow-down">
-              <button class="about-me__arrow-link" href="#">
-                <svg class="arrow-down-svg">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
-                </svg>
-              </button>
-            </div>
+          </div>
+          <div class="about-me__arrow arrow-down">
+            <button class="about-me__arrow-link" href="#">
+              <svg class="arrow-down-svg">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
+              </svg>
+            </button>
           </div>
         </section>
       </main>

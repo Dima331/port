@@ -174,10 +174,10 @@ gulp.task('default', gulp.series(
     //clean,
     gulp.parallel(
         styles, 
-        templates 
+        templates,
         //fonts, 
         //images, 
-        //scripts
+    scripts
     ),
     gulp.parallel(watch, server)
 ));

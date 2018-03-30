@@ -1,7 +1,29 @@
-const slider = require('./common/test.js');
-const jquery = require('../libs/jquery/dist/jquery.min.js');
+//const jquery = require('../libs/jquery/dist/jquery.min.js');
 const $ = require('jquery');
-const ddsfn = "dsfsdf";
+const welcomeButton = require('./common/welcomeButton.js');
+const blur = require('./common/blur.js');
+const hamburger = require('./common/hamburger.js');
+const map = require('./common/map.js');
+const formWelcome = require('./common/formWelcome.js');
+
+if($('.blur-wrapper').length){
+	blur.init();
+}
+
+if($('.authorization-btn__link').length){
+	welcomeButton.init();
+}
 
 
-const sdjk =346;
+if($('.hamburger').length){
+	hamburger.init();
+}
+if($('#map').length){
+	map.init();
+}
+
+if($('.authorization-btn__link').length){
+	formWelcome.init();
+}
+
+//module.exports = jq;

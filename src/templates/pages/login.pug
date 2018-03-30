@@ -5,36 +5,50 @@ block variables
 
 block content
     .forest
-      .authorization-btn
-        button.authorization-btn__link(alt="Кнопка авторизоваться" ) Авторизоваться
       main.main.welcome
-        h1.visually-hidden Главная страница автора
         .welcome__content.welcome__content_margin
-          .welcome__pic
-            img(src="assets/images/content/face.jpg", alt="Картинка автора").welcome__pic-img
-          .welcome__description.description-info
-            .description-info__name Владимир Астахов
-            .description-info__about Личный сайт веб разработчика
-          ul.social
-            li.social__item
-              a.social__item-link(href='#')
-                svg.social__item-vk.social__item-svg
-                  use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk") 
-            li.social__item
-              a.social__item-link(href='#')
-                svg.social__item-git.social__item-svg
-                  use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github") 
-            li.social__item
-              a.social__item-link(href='#')
-                svg.social__item-in.social__item-svg
-                  use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in") 
-        nav.nav
-          ul.menu__list
-            li.menu__item
-              a.menu__item-link(href='my-works.html') Мои работы
-            li.menu__item
-              a.menu__item-link(href='about.html') Обо мне
-            li.menu__item
-              a.menu__item-link(href='blog.html') Блог
+            form.form.form_margin(action="#")
+              .form__row
+                  h2.block-subtitle.block-subtitle_white Авторизуйтесь
+              .form__row.form__row_spacebetwin.input-icon
+                .input-icon__label
+                  svg.input-icon__icon
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#login") 
+                label(for="login").visually-hidden Логин
+                input(type="text", name="login" placeholder="Логин" id="login").input-icon__login
+              .form__row.form__row_spacebetwin.input-icon
+                .input-icon__label
+                  svg.input-icon__icon
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#password")  
+                label(for="password").visually-hidden Пароль
+                input(type="password", name="password" placeholder="Пароль" id="password").input-icon__password
+              .form__row   
+                label(for="checkbox").form__row-torggle 
+                  .visually-hidden Я человек
+                  input(type="checkbox", name="checkbox" value="Я человек" id="checkbox").form__toggle-input
+                  .form__toggle-fake
+                    svg.form__toggle-fake_flag.form__toggle-fake_check
+                      use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#check")
+                  .form__title Я человек
+              .form__row.form__row-text
+                p Вы точно не робот?
+              .form__row.form__row_last
+                label(for="radio" ).form__row-torggle 
+                  .visually-hidden Да
+                  input(type="radio", name="radio" value="Да" id="radio" checked).form__toggle-input
+                  .form__toggle-fake.form__toggle-fake_radio
+                    .form__toggle-fake_flag.form__toggle-fake_dot
+                  .form__title Да  
+                label(for="radio_2").form__row-torggle 
+                  .visually-hidden Не уверен
+                  input(type="radio", name="radio" id="radio_2" value="Нет").form__toggle-input
+                  .form__toggle-fake.form__toggle-fake_radio
+                    .form__toggle-fake_flag.form__toggle-fake_dot
+                  .form__title Не уверен       
+        ul.menu__list
+          li.menu__item
+            button.menu__item-link На главную
+          li.menu__item
+            button.menu__item-link Войти
       .footer-copyrigh
         .footer-copyrigh__text   © Владимир Астахов | создано с любовью в LoftSchool | 2018

@@ -1,17 +1,22 @@
 .forest {
     height: 100vh;
-    background-image: url("../../assets/images/content/forest.jpg");
+    background-image: url("../../assets/images/content/forest_full-screen.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 750px;
+    @include screen {
+        background-image: url("../../assets/images/content/forest_screen.jpg");
+    }
+    @include tablet {
+        background-image: url("../../assets/images/content/forest_ipad.jpg");
+    }
+  
 }
-
-
 /* -- кнопка авторизации --*/
-
 .authorization-btn {
     position: absolute;
     top: 3%;
@@ -20,8 +25,8 @@
         right: auto;
     }
 }
-
 .authorization-btn__link {
+    font-size: 16px;
     border-width: 1px;
     border-color: rgb(255, 255, 255);
     border-style: solid;
@@ -30,6 +35,9 @@
     border-radius: 30px;
     font-weight: 500;
     color: #fff;
+    @include phones {
+        font-size: 14px;
+    }
     &:hover {
         border-color: $green_low;
         background-color: $green_middle;
@@ -91,6 +99,9 @@
     color: #fff;
     margin-bottom: 10px;
     font-size: 28px;
+    @include phones {
+        font-size: 21px;
+    }
 }
  
 
@@ -98,10 +109,10 @@
     font-weight: 400;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
+    @include phones {
+        font-size: 14px;
+    }
 }
-
-
-/* -- Окно  конец --*/
 
 
 /*-- футер welcome -- */
@@ -118,15 +129,19 @@
     }
 }
 
+
 .menu__item {
     border-left: 2px solid rgb(222, 227, 231);
     display: flex;
     flex: 1 1 100px;
+    z-index: 2;
 }
 
 .menu__item:first-child {
     border-left: 0px solid rgb(222, 227, 231);
+    
 }
+
 
 @media screen and (max-height: 561px) {
     .welcome {
@@ -139,3 +154,31 @@
         margin-bottom: 10px;
     }
 }
+
+.flipper{
+    position: relative;
+    width: 380px;
+    transform-style: preserve-3d;
+    transition: .7s linear;
+    display: flex;
+    align-items: center;
+    @include tablet {
+        width: 350px;
+    }
+    @include phones {
+        width: 300px;
+    }
+}
+.front, .back {
+    box-sizing: border-box;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  .back {
+    transform: rotateY(-180deg);
+  }
