@@ -21,7 +21,9 @@ if($('.hamburger').length){
 if($('#map').length){
 	map.init();
 }
-/*if($('#map').length){
+
+if($('.authorization-btn__link').length){
 	formWelcome.init();
-}*/
+}
+
 //module.exports = jq;

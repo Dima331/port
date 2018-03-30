@@ -66,9 +66,9 @@
     border-radius: 50%;
 }
 
-/*.form__row_last {
+.form__row_last {
     margin: 0;
-}*/
+}
 
 .form__row-torggle {
     display: flex;
@@ -104,6 +104,7 @@
     opacity: 0;
     transition: opacity 300ms;
     fill: #fff;
+    
 }
 
 .form__row-text {
@@ -128,8 +129,8 @@
 }*/
 
 /*--- стили ошибок -- */
-.input-icon_error{
-    border: 2px solid red;
+.error {
+    border: 0px solid red;
     border-radius: 30px;
 
 }
@@ -139,6 +140,7 @@
     min-width: 59%;
     left: calc(100% + 10px);
     top: 50%;
+    opacity: 0;
     transform: translateY(-50%);
     border-radius: 10px;
     background-color: red;
@@ -155,6 +157,10 @@
         -ms-user-select: none;
     }
 
+}
+
+.input-icon__error_opacity{
+    opacity: 1;
 }
 .input-icon__error_top{
     @include tablets {
@@ -200,4 +206,5 @@
     margin-top: 20px;
     margin-bottom: 0;
     color: red;
+    display: none;
 }
