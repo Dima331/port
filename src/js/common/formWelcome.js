@@ -18,9 +18,13 @@ const formWelcome = (function () {
                     },
                 },
                 //Добавить код для появление блоков, если нет переменной.
-                //
+                //Добавление паддингов к строкам формы.
+                //Блок распознание ширины страницы. И разветвление условий.
+                //я смогу реализовать это сегодня.
+                
                 methods: {
                     come: function (name, password, checked, picked) {
+
                         if (!name) {
                             alert("Нет логина");
                             this.error.border = '2px solid red';
