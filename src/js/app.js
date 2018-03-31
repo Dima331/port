@@ -5,6 +5,8 @@ const blur = require('./common/blur.js');
 const hamburger = require('./common/hamburger.js');
 const map = require('./common/map.js');
 const formWelcome = require('./common/formWelcome.js');
+const formWork = require('./common/formWork.js');
+const blogMenu = require('./common/blogMenu.js');
 
 if($('.blur-wrapper').length){
 	blur.init();
@@ -24,6 +26,13 @@ if($('#map').length){
 
 if($('.authorization-btn__link').length){
 	formWelcome.init();
+}
+if($('.communications').length){
+	formWork.init();
+}
+
+if($('.blog-menu').length){
+	blogMenu.init();
 }
 
 //module.exports = jq;

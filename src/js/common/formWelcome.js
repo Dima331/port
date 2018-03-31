@@ -5,58 +5,93 @@ const formWelcome = (function () {
             new Vue({
                 el: '.back',
                 data: {
-                    message: 'Привет, Vue!',
                     name: '',
                     password: '',
                     picked: 'Нет',
                     checked: true,
+                    w: window.innerWidth,
+                    Error: {
+                        IsLogin: false,
+                        IsPassword: false,
+                        IsChecked: false,
+                        IsPicked: false
+                    },
+                    FormMargin: {
+                        FormLogin: false,
+                        FormPassword: false,
+                        FormChecked: false,
+                        FormPicked: false
+                    },
                     display: {
                         display: 'none'
-                    },
-                    error: {
-                        border: '0px solid red'
-                    },
+                    }
                 },
-                //Добавить код для появление блоков, если нет переменной.
-                //Добавление паддингов к строкам формы.
-                //Блок распознание ширины страницы. И разветвление условий.
-                //я смогу реализовать это сегодня.
-                
                 methods: {
                     come: function (name, password, checked, picked) {
+                        console.log(window.innerWidth);
+                        this.display.display = 'none';
+                        this.Error.IsLogin = false;
+                        this.Error.IsPassword = false;
+                        this.Error.IsChecked = false;
+                        this.Error.IsPicked = false;
+                        this.FormMargin.FormLogin = false;
+                        this.FormMargin.FormPassword = false;
+                        this.FormMargin.FormChecked = false;
+                        this.FormMargin.FormPicked = false;
 
-                        if (!name) {
-                            alert("Нет логина");
-                            this.error.border = '2px solid red';
-                            
-                        }
-                        if (!password) {
-                            alert("Нет пароля");
-                            this.error.border = '2px solid red';
-                        }
-                        if (!checked) {
-                            alert("Нет чека");
+                        if (this.w > 851) {
+                            if (!name) {
+                                this.Error.IsLogin = true;
+                            }
+                            if (!password) {
+                                this.Error.IsPassword = true;
+                            }
+                            if (!checked) {
+                                this.Error.IsChecked = true;
+                                alert(IsChecked);
+                            }
+                            if (picked == "Нет") {
+                                this.Error.IsPicked = true;
+                            }
+                            if (name && password) {
+                                if (name == "111" && password == "111") {
+                                    //преход в админку
+                                    console.log("Hellow)");
+                                } else {
+                                    this.display.display = 'block';
+                                }
+                            }
+                        } if(this.w < 851) {
 
-                        }
-                        if (picked == "Нет") {
-                            alert("Нет радио");
-                        }
-
-                        
-                        if (name && password) {
-                            if (name == "111" && password == "111") {
-                                //Сдесь код перехода страницы
-                            } else {
-                                this.display.display = 'block';
+                            console.log(window.innerWidth);
+                            if (!name) {
+                                this.Error.IsLogin = true;
+                                this.FormMargin.FormLogin = true;
+                            }
+                            if (!password) {
+                                this.Error.IsPassword = true;
+                                this.FormMargin.FormPassword = true;
+                            }
+                            if (!checked) {
+                                this.Error.IsChecked = true;
+                                this.FormMargin.FormChecked = true;
+                            }
+                            if (picked == "Нет") {
+                                this.Error.IsPicked = true;
+                                this.FormMargin.FormPicked = true;
+                            }
+                            if (name && password) {
+                                if (name == "111" && password == "111") {
+                                    //преход в админку
+                                    console.log("Hellow)");
+                                } else {
+                                    this.display.display = 'block';
+                                }
                             }
                         }
-
-
                     }
                 }
             });
-
-
         },
     };
 }());

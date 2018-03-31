@@ -43,24 +43,32 @@ block content
             form.form.form_margin(action="#")
               .form__row.form__row_margin-title
                   h2.block-subtitle.block-subtitle_white Авторизуйтесь
-              .form__row.form__row_spacebetwin.input-icon.error(v-bind:style="error")
+              
+              
+              .form__row.form__row_spacebetwin.input-icon(v-bind:class="{ error : Error.IsLogin, formMargin : FormMargin.FormLogin } ")
                 .input-icon__label
-                  svg.input-icon__icon
+                  svg.input-icon__icon(v-bind:class="{ iconRed : Error.IsLogin }")
                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#login") 
                 label(for="login").visually-hidden Логин
                 input(type="text", name="login" placeholder="Логин" id="login" v-model="name").input-icon__login
-                .input-icon__error  
+                .input-icon__error(v-bind:class="{ errorOpacity : Error.IsLogin }")
                   .input-icon__error-text Вы не ввели логин
 
-              .form__row.form__row_spacebetwin.input-icon.error(v-bind:style="error")
+
+
+
+              .form__row.form__row_spacebetwin.input-icon(v-bind:class="{ error : Error.IsPassword, formMargin : FormMargin.FormPassword }")
                 .input-icon__label
-                  svg.input-icon__icon
+                  svg.input-icon__icon(v-bind:class="{ iconRed : Error.IsPassword }")
                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#password")  
                 label(for="password").visually-hidden Пароль
                 input(type="password", name="password" placeholder="Пароль" id="password" v-model="password").input-icon__password
-                .input-icon__error  
+                .input-icon__error(v-bind:class="{ errorOpacity : Error.IsPassword }")  
                   .input-icon__error-text Вы не ввели пароль
-              .form__row   
+             
+             
+             
+              .form__row(v-bind:class="{formMargin : FormMargin.FormChecked }")   
                 label(for="checkbox").form__row-torggle 
                   span.visually-hidden Я человек
                   input(type="checkbox", name="checkbox" value="Я человек" id="checkbox" v-model="checked").form__toggle-input
@@ -68,11 +76,14 @@ block content
                     svg.form__toggle-fake_flag.form__toggle-fake_check
                       use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#check")
                   .form__title Я человек
-                  .input-icon__error.input-icon__error_top  
+                  .input-icon__error.input-icon__error_top(v-bind:class="{ errorOpacity : Error.IsChecked }")  
                     .input-icon__error-text Только для людей
+             
+             
+             
               .form__row.form__row-text
                 p Вы точно не робот?
-              .form__row.form__row_last
+              .form__row.form__row_last(v-bind:class="{formMargin : FormMargin.FormPicked }")
                 label(for="radio" ).form__row-torggle 
                   span.visually-hidden Да
                   input(type="radio", name="radio" value="Да" id="radio" v-model="picked").form__toggle-input
@@ -85,8 +96,10 @@ block content
                   .form__toggle-fake.form__toggle-fake_radio
                     .form__toggle-fake_flag.form__toggle-fake_dot
                   .form__title Не уверен  
-                .input-icon__error.input-icon__error_top  
+                .input-icon__error.input-icon__error_top(v-bind:class="{ errorOpacity : Error.IsPicked }")  
                   .input-icon__error-text Только для людей   
+           
+           
               .form__row.form__row_error(v-bind:style="display") Неправельно введен логин или пароль
                 
           ul.menu__list

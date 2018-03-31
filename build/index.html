@@ -57,31 +57,31 @@
               <div class="form__row form__row_margin-title">
                 <h2 class="block-subtitle block-subtitle_white">Авторизуйтесь</h2>
               </div>
-              <div class="form__row form__row_spacebetwin input-icon error" v-bind:style="error">
+              <div class="form__row form__row_spacebetwin input-icon" v-bind:class="{ error : Error.IsLogin, formMargin : FormMargin.FormLogin } ">
                 <div class="input-icon__label">
-                  <svg class="input-icon__icon">
+                  <svg class="input-icon__icon" v-bind:class="{ iconRed : Error.IsLogin }">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#login"> </use>
                   </svg>
                 </div>
                 <label class="visually-hidden" for="login">Логин</label>
                 <input class="input-icon__login" type="text" name="login" placeholder="Логин" id="login" v-model="name">
-                <div class="input-icon__error"> 
+                <div class="input-icon__error" v-bind:class="{ errorOpacity : Error.IsLogin }">
                   <div class="input-icon__error-text">Вы не ввели логин</div>
                 </div>
               </div>
-              <div class="form__row form__row_spacebetwin input-icon error" v-bind:style="error">
+              <div class="form__row form__row_spacebetwin input-icon" v-bind:class="{ error : Error.IsPassword, formMargin : FormMargin.FormPassword }">
                 <div class="input-icon__label">
-                  <svg class="input-icon__icon">
+                  <svg class="input-icon__icon" v-bind:class="{ iconRed : Error.IsPassword }">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#password"> </use>
                   </svg>
                 </div>
                 <label class="visually-hidden" for="password">Пароль</label>
                 <input class="input-icon__password" type="password" name="password" placeholder="Пароль" id="password" v-model="password">
-                <div class="input-icon__error"> 
+                <div class="input-icon__error" v-bind:class="{ errorOpacity : Error.IsPassword }"> 
                   <div class="input-icon__error-text">Вы не ввели пароль</div>
                 </div>
               </div>
-              <div class="form__row">  
+              <div class="form__row" v-bind:class="{formMargin : FormMargin.FormChecked }">  
                 <label class="form__row-torggle" for="checkbox"> <span class="visually-hidden">Я человек</span>
                   <input class="form__toggle-input" type="checkbox" name="checkbox" value="Я человек" id="checkbox" v-model="checked">
                   <div class="form__toggle-fake">
@@ -90,7 +90,7 @@
                     </svg>
                   </div>
                   <div class="form__title">Я человек</div>
-                  <div class="input-icon__error input-icon__error_top"> 
+                  <div class="input-icon__error input-icon__error_top" v-bind:class="{ errorOpacity : Error.IsChecked }"> 
                     <div class="input-icon__error-text">Только для людей</div>
                   </div>
                 </label>
@@ -98,7 +98,7 @@
               <div class="form__row form__row-text">
                 <p>Вы точно не робот?</p>
               </div>
-              <div class="form__row form__row_last">
+              <div class="form__row form__row_last" v-bind:class="{formMargin : FormMargin.FormPicked }">
                 <label class="form__row-torggle" for="radio"> <span class="visually-hidden">Да</span>
                   <input class="form__toggle-input" type="radio" name="radio" value="Да" id="radio" v-model="picked">
                   <div class="form__toggle-fake form__toggle-fake_radio">
@@ -113,7 +113,7 @@
                   </div>
                   <div class="form__title">Не уверен  </div>
                 </label>
-                <div class="input-icon__error input-icon__error_top"> 
+                <div class="input-icon__error input-icon__error_top" v-bind:class="{ errorOpacity : Error.IsPicked }"> 
                   <div class="input-icon__error-text">Только для людей   </div>
                 </div>
               </div>
