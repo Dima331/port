@@ -19,10 +19,6 @@ const formWork = (function () {
                         FormEmail: false,
                         FormMessage: false
                     }
-                    /*,
-                    display: {
-                        display: 'none'
-                    }*/
                 },
                 methods: {
                     send: function (name, email, message,event) {
@@ -46,15 +42,6 @@ const formWork = (function () {
                             if (!message) {
                                 this.Error.IsMessage = true;
                             }
-
-                           /* if (name && password) {
-                                if (name == "111" && password == "111") {
-                                    //преход в админку
-                                    console.log("Hellow)");
-                                } else {
-                                    this.display.display = 'block';
-                                }
-                            }*/
                         } if(this.w < 851) {
                             
                             console.log('ksdjkjksd');
@@ -71,16 +58,14 @@ const formWork = (function () {
                                 this.Error.IsMessage = true;
                                 this.FormMargin.FormMessage = true;
                             }
-
-                            /*if (name && password) {
-                                if (name == "111" && password == "111") {
-                                    //преход в админку
-                                    console.log("Hellow)");
-                                } else {
-                                    this.display.display = 'block';
-                                }
-                            }*/
                         }
+                    },
+                    clear: function(name,email, message, event){
+                        event.preventDefault();
+                        this.name = '';
+                        this.email = '';
+                        this.message = '';
+                        
                     }
                 }
             });

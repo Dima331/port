@@ -86,8 +86,14 @@
     padding: 40px 20px;
     background-color: #abe4c7;
     padding-bottom:20px;
+    height: 82vh;
     @include tablets {
         padding-bottom:20px;
+     }
+}
+.page-about{
+    @include tablets {
+        height: 100%;
      }
 }
 .page-about-title{
@@ -153,6 +159,7 @@ input[type="text"].one-skill__item-input{
     border-radius: 10px;
     color: #fff;
     margin-top: 20px;
+    font-size: 16px;
 }
 .admin-panel__message{
     position: absolute;
@@ -291,4 +298,7 @@ input[type="text"].new-work__technology-input  {
     @include tablets {
         margin-top: 20px;
     }
+}
+.page_hidden{
+    display: none;
 }

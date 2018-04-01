@@ -86,32 +86,75 @@
           </div>
           <div class="slider">
             <div class="slider__info">
-              <div class="intelligence">
-                <h2 class="block-subtitle block-subtitle-slider">Сайт школы онлайн образования</h2>
-                <div class="intelligence__text">HTML, CSS, JAVASCRIPT</div>
-                <div class="intelligence__btn"> <a class="intelligence__btn-link" href="#"> 
-                    <svg class="intelligence__btn-svg">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link"></use>
-                    </svg><span>Посмотреть сайт</span></a></div>
-              </div>
+              <ul class="intelligence">
+                <li class="intelligence__item">
+                  <h2 class="block-subtitle block-subtitle-slider">Сайт школы онлайн образования</h2>
+                  <div class="intelligence__text">HTML, CSS, JAVASCRIPT</div>
+                  <div class="intelligence__btn"> <a class="intelligence__btn-link" href="#"> 
+                      <svg class="intelligence__btn-svg">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link"></use>
+                      </svg><span>Посмотреть сайт</span></a></div>
+                </li>
+                <li class="intelligence__item">
+                  <h2 class="block-subtitle block-subtitle-slider">Сайт школы онлайн образования</h2>
+                  <div class="intelligence__text">HTML, CSS, JAVASCRIPT</div>
+                  <div class="intelligence__btn"> <a class="intelligence__btn-link" href="#"> 
+                      <svg class="intelligence__btn-svg">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link"></use>
+                      </svg><span>Посмотреть сайт</span></a></div>
+                </li>
+                <li class="intelligence__item">
+                  <h2 class="block-subtitle block-subtitle-slider">Сайт школы онлайн образования</h2>
+                  <div class="intelligence__text">HTML, CSS, JAVASCRIPT</div>
+                  <div class="intelligence__btn"> <a class="intelligence__btn-link" href="#"> 
+                      <svg class="intelligence__btn-svg">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link"></use>
+                      </svg><span>Посмотреть сайт</span></a></div>
+                </li>
+                <li class="intelligence__item">
+                  <h2 class="block-subtitle block-subtitle-slider">Сайт школы онлайн образования</h2>
+                  <div class="intelligence__text">HTML, CSS, JAVASCRIPT</div>
+                  <div class="intelligence__btn"> <a class="intelligence__btn-link" href="#"> 
+                      <svg class="intelligence__btn-svg">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link"></use>
+                      </svg><span>Посмотреть сайт</span></a></div>
+                </li>
+              </ul>
             </div>
-            <div class="slider__display"><img class="slider__display-img" src="assets/images/content/face.jpg" alt="face"></div>
+            <div class="slider__display">
+              <ul class="full-pic">
+                <li class="full-pic__list"><img class="full-pic__list-img" src="assets/images/content/face.jpg" alt="face"></li>
+                <li class="full-pic__list"><img class="full-pic__list-img" src="assets/images/content/face.jpg" alt="face"></li>
+                <li class="full-pic__list"><img class="full-pic__list-img" src="assets/images/content/face.jpg" alt="face"></li>
+                <li class="full-pic__list"><img class="full-pic__list-img" src="assets/images/content/face.jpg" alt="face"></li>
+              </ul>
+            </div>
             <div class="slider__btns">
-              <div class="slider__btns-left arrow slide-list">
+              <div class="slider__btns-left arrow">
                 <button class="arrow__left" href="#">
                   <svg class="arrow__left-down">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
                   </svg>
                 </button>
-                <div class="slide-list__item"><img class="slide-list-img" src="assets/images/content/face.jpg" alt="face"></div>
+                <ul class="slide-list">
+                  <li class="slide-list__item"><img class="slide-list__item-img" src="assets/images/content/face.jpg" alt="face"></li>
+                  <li class="slide-list__item"><img class="slide-list__item-img" src="assets/images/content/face.jpg" alt="face"></li>
+                  <li class="slide-list__item"><img class="slide-list__item-img" src="assets/images/content/face.jpg" alt="face"></li>
+                  <li class="slide-list__item"><img class="slide-list__item-img" src="assets/images/content/face.jpg" alt="face"></li>
+                </ul>
               </div>
-              <div class="slider__btns-right arrow slide-list">
+              <div class="slider__btns-right arrow">
                 <button class="arrow__right" href="#">
                   <svg class="arrow__right-up">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down"></use>
                   </svg>
                 </button>
-                <div class="slide-list__item"><img class="slide-list-img" src="assets/images/content/face.jpg" alt="face"></div>
+                <ul class="slide-list">
+                  <li class="slide-list__item"><img class="slide-list__item-img" src="assets/images/content/face.jpg" alt="face"></li>
+                  <li class="slide-list__item"><img class="slide-list__item-img" src="assets/images/content/face.jpg" alt="face"></li>
+                  <li class="slide-list__item"><img class="slide-list__item-img" src="assets/images/content/face.jpg" alt="face"></li>
+                  <li class="slide-list__item"><img class="slide-list__item-img" src="assets/images/content/face.jpg" alt="face"></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -209,7 +252,7 @@
                     <button class="menu__item-link" v-on:click="send(name,email,message, $event)">Отправить</button>
                   </li>
                   <li class="menu__item">
-                    <button class="menu__item-link" type="reset" form="message">Очистить  </button>
+                    <button class="menu__item-link" form="message" v-on:click="clear(name,email,message, $event)">Очистить  </button>
                   </li>
                 </ul>
               </form>

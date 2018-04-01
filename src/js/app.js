@@ -7,6 +7,9 @@ const map = require('./common/map.js');
 const formWelcome = require('./common/formWelcome.js');
 const formWork = require('./common/formWork.js');
 const blogMenu = require('./common/blogMenu.js');
+const adminTabs = require('./common/adminTabs.js');
+const preloader = require('./common/preloader.js');
+const slider = require('./common/slider.js');
 
 if($('.blur-wrapper').length){
 	blur.init();
@@ -15,7 +18,6 @@ if($('.blur-wrapper').length){
 if($('.authorization-btn__link').length){
 	welcomeButton.init();
 }
-
 
 if($('.hamburger').length){
 	hamburger.init();
@@ -34,5 +36,20 @@ if($('.communications').length){
 if($('.blog-menu').length){
 	blogMenu.init();
 }
+if($('.admin-panel').length){
+	adminTabs.init();
+}
 
-//module.exports = jq;
+
+if($('#forest').length){
+	preloader.init();
+}
+if($('.slider').length){
+	slider.init();
+}
+/*
+import preloader from './common/preloader';
+
+$(document).ready(() => {
+  preloader();
+})*/

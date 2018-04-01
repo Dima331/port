@@ -59,31 +59,90 @@ block content
                             svg.title-block-svg.title-block-svg_width
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header")        
                         h1.block-title Мои работы
+
+
+
+
+
                 .slider
                     .slider__info
-                        .intelligence
-                            h2.block-subtitle.block-subtitle-slider Сайт школы онлайн образования
-                            .intelligence__text HTML, CSS, JAVASCRIPT
-                            .intelligence__btn 
-                                a(href="#").intelligence__btn-link 
-                                    svg.intelligence__btn-svg
-                                        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
-                                    span Посмотреть сайт
+                        ul.intelligence
+                            li.intelligence__item
+                                h2.block-subtitle.block-subtitle-slider Сайт школы онлайн образования
+                                .intelligence__text HTML, CSS, JAVASCRIPT
+                                .intelligence__btn 
+                                    a(href="#").intelligence__btn-link 
+                                        svg.intelligence__btn-svg
+                                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
+                                        span Посмотреть сайт
+                            li.intelligence__item
+                                h2.block-subtitle.block-subtitle-slider Сайт школы онлайн образования
+                                .intelligence__text HTML, CSS, JAVASCRIPT
+                                .intelligence__btn 
+                                    a(href="#").intelligence__btn-link 
+                                        svg.intelligence__btn-svg
+                                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
+                                        span Посмотреть сайт
+                            li.intelligence__item
+                                h2.block-subtitle.block-subtitle-slider Сайт школы онлайн образования
+                                .intelligence__text HTML, CSS, JAVASCRIPT
+                                .intelligence__btn 
+                                    a(href="#").intelligence__btn-link 
+                                        svg.intelligence__btn-svg
+                                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
+                                        span Посмотреть сайт
+                            li.intelligence__item
+                                h2.block-subtitle.block-subtitle-slider Сайт школы онлайн образования
+                                .intelligence__text HTML, CSS, JAVASCRIPT
+                                .intelligence__btn 
+                                    a(href="#").intelligence__btn-link 
+                                        svg.intelligence__btn-svg
+                                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
+                                        span Посмотреть сайт
                     .slider__display
-                        img(src="assets/images/content/face.jpg", alt="face").slider__display-img
+                        ul.full-pic
+                            li.full-pic__list
+                                img(src="assets/images/content/face.jpg", alt="face").full-pic__list-img
+                            li.full-pic__list
+                                img(src="assets/images/content/face.jpg", alt="face").full-pic__list-img
+                            li.full-pic__list
+                                img(src="assets/images/content/face.jpg", alt="face").full-pic__list-img
+                            li.full-pic__list
+                                img(src="assets/images/content/face.jpg", alt="face").full-pic__list-img
                     .slider__btns
-                        .slider__btns-left.arrow.slide-list
+                        .slider__btns-left.arrow
                             button(href="#").arrow__left
                                 svg.arrow__left-down
                                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
-                            .slide-list__item
-                                img(src="assets/images/content/face.jpg", alt="face").slide-list-img
-                        .slider__btns-right.arrow.slide-list
+                            ul.slide-list
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                        .slider__btns-right.arrow
                             button(href="#").arrow__right
                                 svg.arrow__right-up
                                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
-                            .slide-list__item
-                                img(src="assets/images/content/face.jpg", alt="face").slide-list-img
+                            ul.slide-list
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+    
+                                
+
+
+
+
+
                 //изи слайдер
                 //.myworks__slider
                     ul.slider
@@ -147,7 +206,7 @@ block content
 
                                 .form__row.input-icon(v-bind:class="{ error : Error.IsEmail, formMargin : FormMargin.FormEmail }")
                                     label(for="email").communications__form-label.visually-hidden Почта
-                                    input(type="text", name="password" placeholder="Email" id="email" v-model="email").communications__form-input
+                                    input(type="text", name="password" placeholder="Email" id="email" v-model="email" ).communications__form-input
                                     .input-icon__error(v-bind:class="{ errorOpacity : Error.IsEmail }")    
                                         .input-icon__error-text Вы не ввели почту
 
@@ -162,7 +221,7 @@ block content
                                 li.menu__item
                                     button.menu__item-link(v-on:click="send(name,email,message, $event)") Отправить
                                 li.menu__item
-                                    button.menu__item-link(type = "reset" form="message") Очистить  
+                                    button.menu__item-link(form="message" v-on:click="clear(name,email,message, $event)") Очистить  
                         .blur-wrapper__form 
                                     
                 .about-me__arrow.arrow-down
