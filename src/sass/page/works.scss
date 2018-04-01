@@ -197,6 +197,7 @@
 
 .nav_header > .nav__item > .nav__item-link {
     color: #fff;
+    
     &:hover {
         color: #fff;
     }
@@ -208,7 +209,7 @@
     }
 }
 
-.nav__item-link_header::after {
+.nav_header > .nav__item > .nav__item-link::after {
     content: '';
     display: block;
     position: absolute;
@@ -222,7 +223,7 @@
     opacity: 0;
 }
 
-.nav__item-link_header:hover:after {
+.nav_header > .nav__item > .nav__item-link:hover:after {
     opacity: 1;
 }
 

@@ -33,9 +33,10 @@
     justify-content: space-evenly;
     z-index: 2;
     @include tablets {
-        margin-bottom: 50px;
+        //margin-bottom: 50px;
     }
 }
+
 .form__row_margin-title{
     margin-bottom: 30px;
 }
@@ -66,10 +67,12 @@
     border-radius: 50%;
 }
 
-/*.form__row_last {
+.form__row_last {
     margin: 0;
-}*/
-
+}
+.formMargin{
+    margin-bottom: 50px;
+}
 .form__row-torggle {
     display: flex;
     align-items: center;
@@ -104,6 +107,7 @@
     opacity: 0;
     transition: opacity 300ms;
     fill: #fff;
+    
 }
 
 .form__row-text {
@@ -128,22 +132,24 @@
 }*/
 
 /*--- стили ошибок -- */
-.input-icon_error{
+.error {
     border: 2px solid red;
     border-radius: 30px;
 
 }
+
 .input-icon__error {
     position: absolute;
     text-align: center;
     min-width: 59%;
     left: calc(100% + 10px);
     top: 50%;
+    opacity: 0;
     transform: translateY(-50%);
     border-radius: 10px;
     background-color: red;
     @include tablets {
-        //z-index: 1;
+        //z-index: 1ж
         //bottom: -8px;
         min-width: 70%;
         left: 50%;
@@ -156,6 +162,10 @@
     }
 
 }
+.errorOpacity{
+    opacity: 1;
+}
+
 .input-icon__error_top{
     @include tablets {
         top: -7px;
@@ -196,8 +206,11 @@
     }
     
 }
+
+
 .form__row_error{
     margin-top: 20px;
     margin-bottom: 0;
     color: red;
+    display: none;
 }

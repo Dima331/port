@@ -10,14 +10,14 @@ block content
             a(href="index.html").admin-panel__header-back   Вернуться на сайт
         ul.tabs
             li.tabs__item 
-                button.tabs__item-lint tab 1
+                button.tabs__item-lint#tab1 tab 1
             li.tabs__item 
-                button.tabs__item-lint tab 2
+                button.tabs__item-lint#tab2 tab 2
             li.tabs__item 
-                button.tabs__item-lint tab 3
+                button.tabs__item-lint#tab3 tab 3
             li.tabs__item 
                 button.tabs__item-lint tab 4
-        //.admin-panel__content.page-about
+        .admin-panel__content.page-about
             .page-about-title Страница "Обо мне"
             ul.full-skills
                 li.full-skills__item
@@ -66,7 +66,7 @@ block content
                                 input(type="text" maxlength="2").one-skill__item-input 
                             .one-skill__item-percentages %
             button.page-about-btn  Сохранить
-        .admin-panel__content.page-blog
+        .admin-panel__content.page-blog.page_hidden
             .page-blog-title Стрница "Блог"    
             .new-entry
                 .new-entry__title Добавить запись
@@ -80,7 +80,7 @@ block content
                     label(for="1").new-entry__name-label.visually-hidden Содержание
                     textarea(type="text"  placeholder="Содержание").new-entry__name-textarea
                 button.new-entry__btn Добавить
-        //.admin-panel__content.page-work
+        .admin-panel__content.page-work.page_hidden
             .page-work-title Стрница "Мои работы"
             .new-work
                 .new-work__title Добавить работу

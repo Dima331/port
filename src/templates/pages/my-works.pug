@@ -5,6 +5,16 @@ block variables
 
 block content
     .wrapper  
+        .full-menu
+            ul.nav.nav_header
+                li.nav__item
+                    a(href='my-works.html').nav__item-link.block-title Мои работы
+                li.nav__item
+                    a(href='about.html').nav__item-link.block-title Обо мне
+                li.nav__item
+                    a(href='blog.html').nav__item-link.block-title Блог
+                li.nav__item
+                    a(href='index.html').nav__item-link.block-title Авторизация   
         header.header
             .header__social
                 ul.social
@@ -23,16 +33,6 @@ block content
             .header__hamburger.hamburger
                 button.hamburger__switch.hamburger__switch_htx
                     span toggle menu
-            .full-menu
-                ul.nav.nav_header
-                    li.nav__item.nav__item_header
-                        a(href='my-works.html').nav__item-link.nav__item-link_header.block-title Мои работы
-                    li.nav__item.nav__item_header
-                        a(href='about.html').nav__item-link.nav__item-link_header.block-title Обо мне
-                    li.nav__item.nav__item_header
-                        a(href='blog.html').nav__item-link.nav__item-link_header.block-title Блог
-                    li.nav__item.nav__item_header
-                        a(href='index.html').nav__item-link.nav__item-link_header.block-title Авторизация  
             .header__placeholder 
                 svg.header__placeholder-title
                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#portfolio_header")
@@ -59,31 +59,90 @@ block content
                             svg.title-block-svg.title-block-svg_width
                                 use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header")        
                         h1.block-title Мои работы
+
+
+
+
+
                 .slider
                     .slider__info
-                        .intelligence
-                            h2.block-subtitle.block-subtitle-slider Сайт школы онлайн образования
-                            .intelligence__text HTML, CSS, JAVASCRIPT
-                            .intelligence__btn 
-                                a(href="#").intelligence__btn-link 
-                                    svg.intelligence__btn-svg
-                                        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
-                                    span Посмотреть сайт
+                        ul.intelligence
+                            li.intelligence__item
+                                h2.block-subtitle.block-subtitle-slider Сайт школы онлайн образования
+                                .intelligence__text HTML, CSS, JAVASCRIPT
+                                .intelligence__btn 
+                                    a(href="#").intelligence__btn-link 
+                                        svg.intelligence__btn-svg
+                                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
+                                        span Посмотреть сайт
+                            li.intelligence__item
+                                h2.block-subtitle.block-subtitle-slider Сайт школы онлайн образования
+                                .intelligence__text HTML, CSS, JAVASCRIPT
+                                .intelligence__btn 
+                                    a(href="#").intelligence__btn-link 
+                                        svg.intelligence__btn-svg
+                                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
+                                        span Посмотреть сайт
+                            li.intelligence__item
+                                h2.block-subtitle.block-subtitle-slider Сайт школы онлайн образования
+                                .intelligence__text HTML, CSS, JAVASCRIPT
+                                .intelligence__btn 
+                                    a(href="#").intelligence__btn-link 
+                                        svg.intelligence__btn-svg
+                                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
+                                        span Посмотреть сайт
+                            li.intelligence__item
+                                h2.block-subtitle.block-subtitle-slider Сайт школы онлайн образования
+                                .intelligence__text HTML, CSS, JAVASCRIPT
+                                .intelligence__btn 
+                                    a(href="#").intelligence__btn-link 
+                                        svg.intelligence__btn-svg
+                                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
+                                        span Посмотреть сайт
                     .slider__display
-                        img(src="assets/images/content/face.jpg", alt="face").slider__display-img
+                        ul.full-pic
+                            li.full-pic__list
+                                img(src="assets/images/content/face.jpg", alt="face").full-pic__list-img
+                            li.full-pic__list
+                                img(src="assets/images/content/face.jpg", alt="face").full-pic__list-img
+                            li.full-pic__list
+                                img(src="assets/images/content/face.jpg", alt="face").full-pic__list-img
+                            li.full-pic__list
+                                img(src="assets/images/content/face.jpg", alt="face").full-pic__list-img
                     .slider__btns
-                        .slider__btns-left.arrow.slide-list
+                        .slider__btns-left.arrow
                             button(href="#").arrow__left
                                 svg.arrow__left-down
                                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
-                            .slide-list__item
-                                img(src="assets/images/content/face.jpg", alt="face").slide-list-img
-                        .slider__btns-right.arrow.slide-list
+                            ul.slide-list
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                        .slider__btns-right.arrow
                             button(href="#").arrow__right
                                 svg.arrow__right-up
                                     use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
-                            .slide-list__item
-                                img(src="assets/images/content/face.jpg", alt="face").slide-list-img
+                            ul.slide-list
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+                                li.slide-list__item
+                                    img(src="assets/images/content/face.jpg", alt="face").slide-list__item-img
+    
+                                
+
+
+
+
+
                 //изи слайдер
                 //.myworks__slider
                     ul.slider
@@ -134,29 +193,35 @@ block content
                                         p Lorem ipsum
                 .about-me__blur
                     .blur-wrapper
-                        form(action="#").form.communications
+                        form(action="#" id="message").form.communications
                             h2.block-subtitle.block-subtitle_margin Связаться со мной
                             .form-inbut
-                                .form__row.input-icon.input-icon_error
+                                .form__row.input-icon(v-bind:class="{ error : Error.IsName, formMargin : FormMargin.FormName }")
                                     label(for="name").communications__form-label.visually-hidden Имя
-                                    input(type="text", name="login" placeholder="Имя" id="name").communications__form-input
-                                    .input-icon__error  
+                                    input(type="text", name="login" placeholder="Имя" id="name" v-model="name").communications__form-input
+                                    .input-icon__error(v-bind:class="{ errorOpacity : Error.IsName }")    
                                         .input-icon__error-text Вы не ввели Имя
-                                .form__row.input-icon.input-icon_error
+
+
+
+                                .form__row.input-icon(v-bind:class="{ error : Error.IsEmail, formMargin : FormMargin.FormEmail }")
                                     label(for="email").communications__form-label.visually-hidden Почта
-                                    input(type="text", name="password" placeholder="Email" id="email").communications__form-input
-                                    .input-icon__error  
+                                    input(type="text", name="password" placeholder="Email" id="email" v-model="email" ).communications__form-input
+                                    .input-icon__error(v-bind:class="{ errorOpacity : Error.IsEmail }")    
                                         .input-icon__error-text Вы не ввели почту
-                                .form__row.form__row-last.input-icon.input-icon_error.input-icon__error_textarea
+
+
+
+                                .form__row.form__row-last.input-icon.input-icon__error_textarea(v-bind:class="{ error : Error.IsMessage, formMargin : FormMargin.FormMessage }")
                                     label(for="message").communications__form-label.visually-hidden Текст
-                                    textarea(name="message",id="message" cols="30", rows="10" placeholder="Ваше сообщение").communications__form-textarea
-                                    .input-icon__error.input-icon__error_textarea  
+                                    textarea(name="message",id="message" cols="30", rows="10" placeholder="Ваше сообщение" v-model="message").communications__form-textarea
+                                    .input-icon__error.input-icon__error_textarea(v-bind:class="{ errorOpacity : Error.IsMessage }")    
                                         .input-icon__error-text Вы не ввели сообщение
                             ul.menu__list
                                 li.menu__item
-                                    a.menu__item-link(href='#') Отправить
+                                    button.menu__item-link(v-on:click="send(name,email,message, $event)") Отправить
                                 li.menu__item
-                                    button.menu__item-link(href='#') Очистить  
+                                    button.menu__item-link(form="message" v-on:click="clear(name,email,message, $event)") Очистить  
                         .blur-wrapper__form 
                                     
                 .about-me__arrow.arrow-down

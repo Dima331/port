@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="assets/styles/app.min.css">
     <script src="assets/scripts/bundle.js" defer></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmnaTdGVTLnA_l2QJ245FHR8TA6KuIqTg&amp;callback=initMap" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -66,27 +69,27 @@
         <section class="section blog">
           <aside class="blog__left">
             <ul class="blog-menu">
-              <li class="blog-menu__item blog-menu__item_active">
-                <button class="blog-menu__item-link" href="#">Самое важное в SASS</button>
+              <li class="blog-menu__item">
+                <button class="blog-menu__item-link" href="#ex1">Самое важное в SASS</button>
               </li>
               <li class="blog-menu__item"> 
-                <button class="blog-menu__item-link" href="#">Самое важное в SASS</button>
+                <button class="blog-menu__item-link" href="#ex2">Самое важное в SASS</button>
               </li>
-              <li class="blog-menu__item blog-menu__item_active">
-                <button class="blog-menu__item-link" href="#">Самое важное в SASS Самое важное в SASS Самое важное в SASS</button>
-              </li>
-              <li class="blog-menu__item"> 
-                <button class="blog-menu__item-link" href="#">Самое важное в SASS</button>
+              <li class="blog-menu__item">
+                <button class="blog-menu__item-link" href="#ex3">Самое важное в SASS Самое важное в SASS Самое важное в SASS</button>
               </li>
               <li class="blog-menu__item"> 
-                <button class="blog-menu__item-link" href="#">Самое важное в SASS</button>
+                <button class="blog-menu__item-link" href="#ex4">Самое важное в SASS</button>
+              </li>
+              <li class="blog-menu__item"> 
+                <button class="blog-menu__item-link" href="#ex5">Самое важное в SASS</button>
               </li>
             </ul>
             <button class="blog__left-button"></button>
           </aside>
           <div class="blog__right">
             <h1 class="visually-hidden">Блог</h1>
-            <article class="blog-descripshion">
+            <article class="blog-descripshion" id="ex1">
               <h2 class="blog-descripshion-title">Блог</h2>
               <div class="blog-descripshion-date">
                 <time class="time" datetime="2018-03-22">22 марта 2018</time>
@@ -113,7 +116,7 @@
                 adipisci veritatis dolorum a nihil voluptate numquam.
               </div>
             </article>
-            <article class="blog-descripshion">
+            <article class="blog-descripshion" id="ex2">
               <h2 class="blog-descripshion-title">Блог</h2>
               <div class="blog-descripshion-date">
                 <time class="time" datetime="2018-03-22">22 марта 2018</time>
@@ -140,7 +143,61 @@
                 adipisci veritatis dolorum a nihil voluptate numquam.
               </div>
             </article>
-            <article class="blog-descripshion">
+            <article class="blog-descripshion" id="ex3">
+              <h2 class="blog-descripshion-title">Блог</h2>
+              <div class="blog-descripshion-date">
+                <time class="time" datetime="2018-03-22">22 марта 2018</time>
+              </div>
+              <div class="blog-descripshion-text text-content">
+                <p>Lorem ipsum, dolor sit amet consectetur eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,adipisicing elit. Eaque quidem aut sequi eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus</p>repellat nobis voluptas ab impedit autem eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                eos quibusdam consectetur blanditiis minus, eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                adipisci veritatis dolorum a nihil voluptate numquam.eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+              </div>
+            </article>
+            <article class="blog-descripshion" id="ex4">
+              <h2 class="blog-descripshion-title">Блог</h2>
+              <div class="blog-descripshion-date">
+                <time class="time" datetime="2018-03-22">22 марта 2018</time>
+              </div>
+              <div class="blog-descripshion-text text-content">
+                <p>Lorem ipsum, dolor sit amet consectetur eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,adipisicing elit. Eaque quidem aut sequi eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus</p>repellat nobis voluptas ab impedit autem eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                eos quibusdam consectetur blanditiis minus, eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                adipisci veritatis dolorum a nihil voluptate numquam.eos quibusdam consectetur blanditiis minus,eos quibusdam consectetur blanditiis minus,
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+                <p>Lorem ipsum, dolor sit amet consectetur </p>adipisicing elit. Eaque quidem aut sequi 
+                repellat nobis voluptas ab impedit autem 
+                eos quibusdam consectetur blanditiis minus, 
+                adipisci veritatis dolorum a nihil voluptate numquam.
+              </div>
+            </article>
+            <article class="blog-descripshion" id="ex5">
               <h2 class="blog-descripshion-title">Блог</h2>
               <div class="blog-descripshion-date">
                 <time class="time" datetime="2018-03-22">22 марта 2018</time>
