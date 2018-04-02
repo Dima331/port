@@ -44,7 +44,6 @@ const formWork = (function () {
                             }
                         } if(this.w < 851) {
                             
-                            console.log('ksdjkjksd');
                             console.log(window.innerWidth);
                             if (!name) {
                                 this.Error.IsName = true;

@@ -48,7 +48,6 @@ const formWelcome = (function () {
                             }
                             if (!checked) {
                                 this.Error.IsChecked = true;
-                                alert(IsChecked);
                             }
                             if (picked == "Нет") {
                                 this.Error.IsPicked = true;
