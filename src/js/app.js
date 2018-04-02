@@ -44,6 +44,7 @@ if($('.admin-panel').length){
 if($('#forest').length){
 	preloader.init();
 }
+
 if($('.slider').length){
 	slider.init();
 }

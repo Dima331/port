@@ -52,9 +52,9 @@ const preloader = (function () {
             
             const imgs = imgPaths.toArray();
             
-            //export default function() {
+           // export default function() {
               loadImages(imgs);
-            //}
+           // }
         },
     };
 }());
