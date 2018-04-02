@@ -32,28 +32,27 @@ var data2 = [{
 ];*/
 
 
-
 const $ = require('jquery');
 
 
 var data1 = [{
     title: "Описание процеса работы 1",
-    image: "../../port/build/assets/images/content/work-1.png",
+    image: "assets/images/content/work-1.png",
     description: "HTML, CSS, JAVASCRIPT"
 },
 {
     title: "Описание процеса работы 2",
-    image: "../../port/build/assets/images/content/work-2.png",
+    image: "assets/images/content/work-2.png",
     description: "HTML, CSS, JAVAS"
 },
 {
     title: "Описание процеса работы 3",
-    image: "../../port/build/assets/images/content/work-3.png",
+    image: "assets/images/content/work-3.png",
     description: "HTML, CSS, JAV"
 },
 {
     title: "Описание процеса работы 4",
-    image: "../../port/build/assets/images/content/work-4.png",
+    image: "assets/images/content/work-4.png",
     description: "HTML, CSS"
 }
 ];
