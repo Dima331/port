@@ -1,0 +1,67 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = titleeeeee
+
+block content
+    .wrapper
+        .full-menu
+            ul.nav.nav_header
+                li.nav__item
+                    a(href='my-works').nav__item-link.block-title Мои работы
+                li.nav__item
+                    a(href='about').nav__item-link.block-title Обо мне
+                li.nav__item
+                    a(href='blog').nav__item-link.block-title Блог
+                li.nav__item
+                    a(href='index').nav__item-link.block-title Авторизация       
+        include ../common/header.pug
+        main.main
+            section.section.about
+                .about__left
+                    .about__left-title
+                        .title-block
+                            .title-block-pic
+                                svg.title-block-svg
+                                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#about_header")        
+                            h1.block-title Обо мне
+                            //.title-block__border    
+                    .about__left-content.user-description
+                        .user-description__image
+                            img(src="/images/content/face.jpg", alt="full phote").user-description__avatar
+                        .user-description__title
+                            h2.block-subtitle Кто я
+                        .user-description__text.text-content
+                            p Я супер веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!      
+                .about__right
+                    .about__right-title
+                        h2.block-subtitle.block-subtitle_width Чем я могу быть вам полезен  
+                    .about__right-text.text-content
+                        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                    include ../common/skill.pug
+            section.section.map
+                .yandex-map#map
+                .map__contact
+                    
+                    h2.block-subtitle Контакты
+                
+                    ul.contacts__list.contacts__list_margin
+                        li.contacts__item
+                            svg.contacts__item-icon
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#skype")
+                            .contacts__item-title skype_kdn
+                        li.contacts__item    
+                            svg.contacts__item-icon
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#envelope2")
+                            .contacts__item-title astahov@gmail.com
+                        li.contacts__item
+                            svg.contacts__item-icon
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#phone")
+                            .contacts__item-title +79211 123 23 23
+                        li.contacts__item
+                            svg.contacts__item-icon
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#map_marker")
+                            .contacts__item-title Новосибирск
+        footer.footer
+            include ../common/footer.pug

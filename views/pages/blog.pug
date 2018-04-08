@@ -1,0 +1,81 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = title
+
+block content
+    .wrapper
+        .full-menu
+            ul.nav.nav_header
+                li.nav__item
+                    a(href='my-works').nav__item-link.block-title Мои работы
+                li.nav__item
+                    a(href='about').nav__item-link.block-title Обо мне
+                li.nav__item
+                    a(href='blog').nav__item-link.block-title Блог
+                li.nav__item
+                    a(href='index').nav__item-link.block-title Авторизация     
+        header.header.header_blog 
+            .header__social
+                ul.social
+                    li.social__item.social__item_margin
+                        a.social__item-link(href='#')
+                            svg.social__item-svg.social__item-svg_header
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#vk") 
+                    li.social__item.social__item_margin
+                        a.social__item-link(href='#')
+                            svg.social__item-svg.social__item-svg_header
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#github") 
+                    li.social__item.social__item_margin
+                        a.social__item-link(href='#')
+                            svg.social__item-svg.social__item-svg_header
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#in") 
+            .header__hamburger.hamburger
+                button.hamburger__switch.hamburger__switch_htx
+                    span hamburger
+            
+            .header__placeholder.header__placeholder_blog 
+                svg.header__placeholder-title
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#blog_header")
+            
+            .header__content
+                .user
+                    .user__pic
+                        img(src="/images/content/face.jpg", alt="face").user__pic-img
+                    .user__description.user__description_margin
+
+                        .block-title.block-title_blog.block-subtitle_white Блог
+
+                        .user__description-info.user__description-info_margin Статьи, которые я написал
+            .triangle.tringle_fill_white
+                svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle__pic
+                    polygon(points="0,0   0,86   500.8,86   500.8,75.5").traingle__pic-left.traingle__pic-left_white
+                    polygon(points="1000,0   1000,86   500,86   500,75.5").traingle__pic-right.traingle__pic-right_white
+        
+        main.main
+            h1.visually-hidden Блог
+            section.section.blog
+                aside.blog__left
+                    ul.blog-menu
+                        each  index, val in items 
+                            li.blog-menu__item
+                                button(href=`#ex${val+1}`).blog-menu__item-link=index.title
+                    button.blog__left-button
+                .blog__right
+
+                    each  index, val in items 
+                
+                        article.blog-descripshion(id=`ex${val+1}`)
+                            h2.blog-descripshion-title=index.title
+                            .blog-descripshion-date
+                                - 
+                                    var date= new Date(index.date).toLocaleDateString('ru', { 
+                                                    year: 'numeric', 
+                                                    month: '2-digit', 
+                                                    day: '2-digit'
+                                                    })
+                                time.time(datetime="2018-03-22")= date
+                            .blog-descripshion-text.text-content
+                                p= index.body
+        footer.footer.footer_position
+            include ../common/footer.pug
