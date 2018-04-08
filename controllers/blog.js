@@ -1,4 +1,4 @@
-/*module.exports.blog = function (req, res) {
+module.exports.blog = function (req, res) {
     const sendObj = {
         title: 'My Blog'
     };
@@ -20,4 +20,4 @@
         }
     ];
     res.render('pages/blog', Object.assign({}, sendObj, { items }));
-}*/
+}

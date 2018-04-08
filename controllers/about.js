@@ -1,11 +1,12 @@
-/*module.exports.index = function (req, res) {
-    const sendObj = {
-        title: 'Главная страница',
-        msg: req.query.msg
-    };
-    res.render('pages/index', Object.assign({}, sendObj));
-}*/
-
+module.exports.about = function (req, res) {
+    res.render('pages/about', {
+        titleeeeee: 'Обо мне'
+        //,
+        //msg: req.query.msg
+    });
+    //res.render('pages/index', Object.assign({}, sendObj));
+}
+/*
 const nodemailer = require('nodemailer');
 const config = require('../config.json');
 
@@ -43,4 +44,4 @@ module.exports.sendEmail = function (req, res) {
         }
         res.redirect('/?msg=Письмо успешно отправлено');
     });
-}
+}*/

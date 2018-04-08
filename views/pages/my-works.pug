@@ -1,6 +1,6 @@
 extends ../main.layout.pug
 block variables
-    - var title = 'Мои работы'
+    - var title =title
 
 block content
     .wrapper  
@@ -20,32 +20,32 @@ block content
                     li.social__item.social__item_margin
                         a.social__item-link(href='#')
                             svg.social__item-svg.social__item-svg_header
-                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#vk") 
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#vk") 
                     li.social__item.social__item_margin
                         a.social__item-link(href='#')
                             svg.social__item-svg.social__item-svg_header
-                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#github") 
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#github") 
                     li.social__item.social__item_margin
                         a.social__item-link(href='#')
                             svg.social__item-svg.social__item-svg_header
-                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#in") 
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#in") 
             .header__hamburger.hamburger
                 button.hamburger__switch.hamburger__switch_htx
                     span toggle menu
             .header__placeholder 
                 svg.header__placeholder-title
-                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#portfolio_header")
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#portfolio_header")
             .header__content
                 .user
                     .user__pic
-                        img(src="assets/images/content/face.jpg", alt="face").user__pic-img
+                        img(src="/images/content/face.jpg", alt="face").user__pic-img
                     .user__description
                         .user__description-name Владимир Астахов
                         .user__description-info Личный сайт разработчика
             .header__arrow
                 button.arrow-down
                     svg.arrow-down-svg
-                        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
+                        use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#arrow_down")
             .triangle.tringle_fill_white
                 svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle__pic
                     polygon(points="0,0   0,86   500.8,86   500.8,75.5").traingle__pic-left.traingle__pic-left_white
@@ -56,7 +56,7 @@ block content
                     .title-block
                         .title-block-pic
                             svg.title-block-svg.title-block-svg_width
-                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#works_header")        
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#works_header")        
                         h1.block-title Мои работы
                 include ../common/slider.pug
 
@@ -77,7 +77,7 @@ block content
                         li.slider__item
                             .slider__item-left
                                 .slider__item-left-pic
-                                    img(src="assets/images/content/work-1.png", alt="#")    
+                                    img(src="/images/content/work-1.png", alt="#")    
                             .slider__item-right
                                 .info__slider
                                     .block-subtitle.block-subtitle-slider Сайт школы онлайн образования
@@ -85,23 +85,23 @@ block content
                                     .info__slider-btn 
                                         a(href="#").info__slider-btn-link 
                                             svg.info__slider-btn-svg
-                                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#link")
+                                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#link")
                                             span Посмотреть сайт
                 //.myworks__slider-left
                 //.myworks__slider-right
             section.section.about-me
                 .about-me__background
-                    img(src="assets/images/content/bg-work2.jpg", alt="#").about-me__background-img
+                    img(src="/images/content/bg-work2.jpg", alt="#").about-me__background-img
                 .about-me__content
                     .title-block
                         .title-block-pic.title-block-pic_top
                             svg.title-block-svg.title-block-svg_width
-                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#about_header")        
+                                use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#about_header")        
                         h2.block-title.block-title-about-me Что обо мне говорят
                     ul.about-me__reviews.reviews
                         li.reviews__item
                             .reviews__item-pic 
-                                img(src="assets/images/content/face_teacher.jpg", alt="teacher").reviews__item-img
+                                img(src="/images/content/face_teacher.jpg", alt="teacher").reviews__item-img
                             blockquote.reviews__item-description.quot  
                                 p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, ea earum provident laboriosam exercitationem mollitia asperiores velit quasi sequi suscipit vero harum, recusandae ullam voluptate, vitae molestiae ipsum consequatur eos!
                                 cite.quot__who
@@ -111,7 +111,7 @@ block content
                                         p Lorem ipsum
                         li.reviews__item
                             .reviews__item-pic 
-                                img(src="assets/images/content/face_teacher_2.jpg", alt="teacher").reviews__item-img
+                                img(src="/images/content/face_teacher_2.jpg", alt="teacher").reviews__item-img
                             blockquote.reviews__item-description.quot
                                 p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, ea earum provident laboriosam exercitationem mollitia asperiores velit quasi sequi suscipit vero harum, recusandae ullam voluptate, vitae molestiae ipsum consequatur eos!
                                 cite.quot__who
@@ -121,7 +121,7 @@ block content
                                         p Lorem ipsum
                 .about-me__blur
                     .blur-wrapper
-                        form(action="#" id="message").form.communications
+                        form(action="mail/" id="message").form.communications
                             h2.block-subtitle.block-subtitle_margin Связаться со мной
                             .form-inbut
                                 .form__row.input-icon(v-bind:class="{ error : Error.IsName, formMargin : FormMargin.FormName }")
@@ -155,7 +155,7 @@ block content
                 .about-me__arrow.arrow-down
                     button(href="#").about-me__arrow-link
                         svg.arrow-down-svg
-                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprite/sprite.svg#arrow_down")
+                            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#arrow_down")
 
         footer.footer
             include ../common/footer.pug
