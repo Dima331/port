@@ -1,0 +1,122 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Добро пожаловать'
+
+block content
+    #forest
+      .authorization-btn
+        button.authorization-btn__link Авторизоваться
+        
+      main.main.flipper  
+        .welcome.front
+          h1.visually-hidden Главная страница автора
+          .welcome__content.welcome__content_margin
+            .welcome__pic
+              img(src="/images/content/face.jpg" alt="face").welcome__pic-img
+            .welcome__description.description-info
+              .description-info__name Владимир Астахов
+              .description-info__about Личный сайт веб разработчика
+            ul.social.social_margin
+              li.social__item
+                a.social__item-link(href='#')
+                  svg.social__item-vk.social__item-svg
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#vk") 
+              li.social__item
+                a.social__item-link(href='#')
+                  svg.social__item-git.social__item-svg
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#github") 
+              li.social__item
+                a.social__item-link(href='#')
+                  svg.social__item-in.social__item-svg
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#in") 
+          nav.nav.menu
+            ul.menu__list
+              li.menu__item
+                a.menu__item-link(href='my-works') Мои работы
+              li.menu__item
+                a.menu__item-link(href='about') Обо мне
+              li.menu__item
+                a.menu__item-link(href='blog') Блог
+        .welcome.back
+          .welcome__content.welcome__content_margin
+            form.form.form_margin(action="#")
+              .form__row.form__row_margin-title
+                  h2.block-subtitle.block-subtitle_white Авторизуйтесь
+              
+              
+              .form__row.form__row_spacebetwin.input-icon(v-bind:class="{ error : Error.IsLogin, formMargin : FormMargin.FormLogin } ")
+                .input-icon__label
+                  svg.input-icon__icon(v-bind:class="{ iconRed : Error.IsLogin }")
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#login") 
+                label(for="login").visually-hidden Логин
+                input(type="text", name="login" placeholder="Логин" id="login" v-model="name").input-icon__login
+                .input-icon__error(v-bind:class="{ errorOpacity : Error.IsLogin }")
+                  .input-icon__error-text Вы не ввели логин
+
+
+
+
+              .form__row.form__row_spacebetwin.input-icon(v-bind:class="{ error : Error.IsPassword, formMargin : FormMargin.FormPassword }")
+                .input-icon__label
+                  svg.input-icon__icon(v-bind:class="{ iconRed : Error.IsPassword }")
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#password")  
+                label(for="password").visually-hidden Пароль
+                input(type="password", name="password" placeholder="Пароль" id="password" v-model="password").input-icon__password
+                .input-icon__error(v-bind:class="{ errorOpacity : Error.IsPassword }")  
+                  .input-icon__error-text Вы не ввели пароль
+             
+             
+             
+              .form__row(v-bind:class="{formMargin : FormMargin.FormChecked }")   
+                label(for="checkbox").form__row-torggle 
+                  span.visually-hidden Я человек
+                  input(type="checkbox", name="checkbox" value="Я человек" id="checkbox" v-model="checked").form__toggle-input
+                  .form__toggle-fake
+                    svg.form__toggle-fake_flag.form__toggle-fake_check
+                      use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/sprite.svg#check")
+                  .form__title Я человек
+                  .input-icon__error.input-icon__error_top(v-bind:class="{ errorOpacity : Error.IsChecked }")  
+                    .input-icon__error-text Только для людей
+             
+             
+             
+              .form__row.form__row-text
+                p Вы точно не робот?
+              .form__row.form__row_last(v-bind:class="{formMargin : FormMargin.FormPicked }")
+                label(for="radio" ).form__row-torggle 
+                  span.visually-hidden Да
+                  input(type="radio", name="radio" value="Да" id="radio" v-model="picked").form__toggle-input
+                  .form__toggle-fake.form__toggle-fake_radio
+                    .form__toggle-fake_flag.form__toggle-fake_dot
+                  .form__title Да  
+                label(for="radio_2").form__row-torggle 
+                  span.visually-hidden Не уверен
+                  input(type="radio", name="radio" id="radio_2" value="Нет" v-model="picked").form__toggle-input
+                  .form__toggle-fake.form__toggle-fake_radio
+                    .form__toggle-fake_flag.form__toggle-fake_dot
+                  .form__title Не уверен  
+                .input-icon__error.input-icon__error_top(v-bind:class="{ errorOpacity : Error.IsPicked }")  
+                  .input-icon__error-text Только для людей   
+           
+           
+              .form__row.form__row_error(v-bind:style="display") Неправельно введен логин или пароль
+                
+          ul.menu__list
+            li.menu__item
+              button.menu__item-link#main На главную
+            li.menu__item
+              button(v-on:click="come(name,password,checked,picked)").menu__item-link#ToComeIn Войти
+      .footer-copyrigh
+        .footer-copyrigh__text   © Владимир Астахов | создано с любовью в LoftSchool | 2018 
+      img(src="/images/content/water.jpg", alt="test").visually-hidden
+      img(src="/images/content/water-maps.jpg", alt="test").visually-hidden  
+    .preloader
+      .preloader__spinner
+        .preloader__percents 0%  
+        svg(version="1.1" id="preloader__wave" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="95.113px" viewBox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve")
+          g(fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10")
+            path(fill="none" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005")
+            path(fill="none" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684")
+            path(fill="none" stroke="#fff" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801	c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362")
+    

@@ -1,28 +1,9 @@
-## Gulp-webpack
+#### Для работы с проектом необходимо запустить комманды:
+* npm install
+* npm start (это запустит сервер с express)
+* npm run dev (это запустит dev-сервер:8080 с HMR для разработки на VUE)
 
-## Барков Дмитрий
-
-#### Для работы сборки у вас должны быть установлены
-* npm 5
-* gulp-cli
-
-#№ Сборка соситоит из плагинов:
-* browser-sync
-* del
-* gulp
-* gulp-pug
-* gulp-sass
-* gulp-rename
-* gulp-sourcemaps
-* gulp-webpack
-* webpack
-* gulp-svg-sprite
-* gulp-svgmin
-* gulp-cheerio
-* gulp-replace
-* gulp-cache
-* gulp-imagemin
-* imagemin-pngquant
-* gulp-cssnano
-* gulp-autoprefixer
-* gulp-uncss 
+#### Что бы собрать проект
+1. npm run build
+2. npm run server
+3. Проект будет доступен по адресу localhost:3000
